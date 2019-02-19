@@ -15,3 +15,6 @@ describe("filter", () => {
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
 });
+
+//(number > 10 ? 1 : 0);
+//if the statement before ? is true, return 1, else return 0.

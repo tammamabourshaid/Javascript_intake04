@@ -1,4 +1,4 @@
-const { calculate } = require("./calculate");
+const {calculate} = require("./calculate");
 
 describe("calculator", () => {
   it("should calc 1 + 1", () => expect(calculate(1, "+", 1)).toBe(2));
