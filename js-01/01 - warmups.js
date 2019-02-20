@@ -26,9 +26,11 @@ function getMaxNumbers(numbers){
    }
    return biggest;  
 } 
-//multiply by 5
+//returns a function that can multuply by 5
 function getMultiplyFn(){
-    return number => number * 5;
+ return function (number) {
+     return number * 5;
+    }
 }
 
 module.exports = {add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn};

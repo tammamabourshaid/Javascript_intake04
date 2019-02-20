@@ -3,7 +3,7 @@ const { filter } = require("./filter");
 describe("filter", () => {
   it("should filter an array for number larger than 10", () => {
     const array = [1, 15, 20, 10, 12, 13];
-    const filterFn = number => number > 10;
+    const filterFn = number => number > 10;//checkerFn
     const filteredArray = [15, 20, 12, 13];
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
