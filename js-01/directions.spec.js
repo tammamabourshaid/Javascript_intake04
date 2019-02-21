@@ -22,4 +22,3 @@ describe("shortenDirections", () => {
       shortenDirections(["EAST", "NORTH", "NORTH", "NORTH", "WEST"])
     ).toEqual(["NORTH", "NORTH", "NORTH"]));
 });
- 
