@@ -1,8 +1,8 @@
 const getAverage = numbers => {
-    const size = numbers.length;
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const sum = numbers.reduce(reducer);
-    const average = sum / size;
+    const size = numbers.length,
+        reducer = (accumulator, currentValue) => accumulator + currentValue,
+        sum = numbers.reduce(reducer),
+        average = sum / size;
     return average;
 };
 

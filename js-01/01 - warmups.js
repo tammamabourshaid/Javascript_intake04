@@ -26,4 +26,4 @@ const getMultiplyFn = () => {
     return multipyFn;
 };
 
-module.exports = { add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn };
+module.exports = { add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn }
