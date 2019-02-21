@@ -1,5 +1,16 @@
-let filter = (array, filterFn = number => (number > 10 ? 1 : 0)) => {
+const filter=(array,filterFn) => {
 
-    return array.filter(filterFn);
- }
+    let filteredArray=[];
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        if(filterFn(element)===true){
+        filteredArray.push(element)
+    
+    }
+    
+    return filteredArray;
+    }
+}
+
+ 
 module.exports={filter};

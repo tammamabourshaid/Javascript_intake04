@@ -1,6 +1,7 @@
 function getMedian(numbers) {
     // median of [3, 5, 4, 4, 1, 1, 2, 3] = 3
-    var median = 0, numsLen = numbers.length;
+    var median = 0,
+     numsLen = numbers.length;
     numbers.sort();
  
     if (
