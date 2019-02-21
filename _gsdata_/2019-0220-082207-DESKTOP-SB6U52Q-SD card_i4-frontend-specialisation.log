@@ -1,0 +1,11 @@
+2019-02-20 08:22:07: -- Analysis Started by User
+2019-02-20 08:22:07: Changes: 3, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 165
+2019-02-20 08:22:07: Left to Right: Delete File: 3 
+2019-02-20 08:22:07: -- Analysis Complete. Time 00:00:00, Speed: Many files/s
+2019-02-20 08:22:07: 
+2019-02-20 08:22:09: == Sync Started by User
+2019-02-20 08:22:09: Delete File 'E:/FrontEnd/i4-frontend-specialisation-master/js-01/average.js'
+2019-02-20 08:22:09: Delete File 'E:/FrontEnd/i4-frontend-specialisation-master/js-01/calculate.js'
+2019-02-20 08:22:09: Delete File 'E:/FrontEnd/i4-frontend-specialisation-master/js-01/calculatePolish.js'
+2019-02-20 08:22:09: == Sync Complete. Time: 00:00:00, Speed: 0 bytes/s, OK: 3, Errors: 0
+2019-02-20 08:22:09: 
