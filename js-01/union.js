@@ -1,11 +1,7 @@
-function getUnion(array1, array2) {
-    let intersection = array1.filter(x => array2.includes(x));
-    let difference = array1.filter(x => !array2.includes(x));
-    let difference = array1
-        .filter(x => !array2.includes(x))
-        .concat(array2.filter(x => !array1.includes(x)));
-    let union = [...array1, ...array2];
-    return union;
-}
+const getUnion = (firstArray, secondArray) => {
+    const sortedFirstArray = firstArray.sort((first, second) => first - second);
+    const sortedSecondArray = secondArray.sort((first, second) => first - second);
+    return sortedFirstArray.filter(number => sortedSecondArray.includes(number));
+};
 
 module.exports = { getUnion };

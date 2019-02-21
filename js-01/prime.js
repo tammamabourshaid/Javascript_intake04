@@ -1,19 +1,24 @@
-function isPrime(n) {
+function isPrime(number) {
 
-    if (n === 1) {
-        return "toBeFalsy";
+    
+  if (number < 2) {
+    return false;
+  }
+
+  if (number === 2) {
+    return true;
+  } else if (number % 2 === 0) {
+    return false;
+  }
+ 
+  for (var i = 3; i*i <= number; i += 2) {
+    if (number % i === 0) {
+      return false;
     }
-    else if (n === 2) {
-        return "toBeTruthy";
-    } else {
-        for (var x = 2; x < n; x++) {
-            if (n % x === 0) {
-                return "toBeFalsy";
-                break;
-            }
-        }
-        return "toBeTruthy";
-    }
+  }
+  return true;
+
 }
+    
 
 module.exports = { isPrime };
