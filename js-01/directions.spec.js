@@ -1,7 +1,7 @@
 const { shortenDirections } = require("./directions");
 
 describe("shortenDirections", () => {
-  it("shoud go west", () =>
+  it("should go west", () =>
     expect(
       shortenDirections([
         "NORTH",
@@ -22,3 +22,4 @@ describe("shortenDirections", () => {
       shortenDirections(["EAST", "NORTH", "NORTH", "NORTH", "WEST"])
     ).toEqual(["NORTH", "NORTH", "NORTH"]));
 });
+ 
