@@ -14,4 +14,18 @@ describe("filter", () => {
     const filteredArray = [];
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
+
+  it("should allow everything", () => {
+    const now = new Date();
+    expect(
+      filter([undefined, null, false, 0, "foo", 3.13, {}, now], () => true)
+    ).toEqual([undefined, null, false, 0, "foo", 3.13, {}, now]);
+  });
+
+  it("should filter only falses, regardless of the datatype", () => {
+    const array = [0, "", false, true, 1, 5.5, "hello", null];
+    const filterFn = value => !value;
+    const filteredArray = [0, "", false, null];
+    expect(filter(array, filterFn)).toEqual(filteredArray);
+  });
 });
