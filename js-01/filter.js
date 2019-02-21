@@ -1,18 +1,36 @@
 
-//function filter(array){
-   // let bigger=[];
-   // var count=array.length;
-    
-   // for(var i=0;i<count;i++)
-      
-//if (array[i]>10)bigger.push(array[i])
+// function filter(array) {
+//   let bigger = [];
+//   let count = array.length;
 
-  //  return bigger;
-//}
+//   for (let i = 0; i < count; i++)
 
-let filter=(array,filterFn=number=>(number>10?1:0))=>{
+//     if (array[i] > 10) bigger.push(array[i])
+//   return bigger;
 
-    return array.filter(filterFn);
+// }
+
+// if (array[i] > 10 ? 1 : 0) {
+
+//   return [];
+
+// }
+
+
+
+const filter = (array, filterFn) => {
+  let filteredArray = [];
+  for (let i = 0; i < array.length; i++) {
+    const el = array[i];
+    if (filterFn(el) === true) {
+      filteredArray.push(el)
+    }
+  }
+  return filteredArray;
+
 }
 
-     module.exports={filter};
+
+
+
+module.exports = { filter };
