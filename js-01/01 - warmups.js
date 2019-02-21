@@ -13,10 +13,17 @@ function greeting(name) {
 function isAdult(number) {
     return number > 18;
 }
-function getMaxNumbers(number){
-    return number==9 || number==-1;
+function getMaxNumbers(numbers){
+    return Math.max.apply(null,numbers);
 }
+function mulipleFn(number) {
+    return number * 5;
+  }
+  
+  function getMultiplyFn() {
+    return mulipleFn;
+  }
 
-module.exports = { add, subtract, greeting, isAdult,getMaxNumbers };
+module.exports = { add, subtract, greeting, isAdult,getMaxNumbers,getMultiplyFn };
 
 
