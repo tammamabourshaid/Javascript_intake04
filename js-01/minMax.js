@@ -1,8 +1,6 @@
-const  getMinMaxNumber=(array) => {
-
-  const max = Math.max.apply(null, array) // 4
-
-  const min = Math.min.apply(null, array) // 1
- return [min,max]
+const getMinMaxNumber = (array) => {
+  const max = Math.max.apply(null, array)
+  const min = Math.min.apply(null, array)
+  return [min, max]
 }
 module.exports={getMinMaxNumber};
