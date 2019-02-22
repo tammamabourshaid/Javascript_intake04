@@ -9,4 +9,10 @@ describe("getMedian", () => {
 
   it("should get median of an odd list", () =>
     expect(getMedian([2, 3, 4, 5])).toBe(3.5));
+<<<<<<< HEAD
+=======
+  
+    it("should get median of an odd list", () =>
+    expect(getMedian([4, 6, 8, 9, 10, 52])).toBe(8.5));
+>>>>>>> 500c18524cfb23b0f2588e3901d788ae2bf00373
 });

@@ -14,6 +14,7 @@ describe("filter", () => {
     const filteredArray = [];
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
+<<<<<<< HEAD
 
   it("should allow everything", () => {
     const now = new Date();
@@ -28,4 +29,6 @@ describe("filter", () => {
     const filteredArray = [0, "", false, null];
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
+=======
+>>>>>>> 500c18524cfb23b0f2588e3901d788ae2bf00373
 });
