@@ -21,4 +21,5 @@ describe("shortenDirections", () => {
     expect(
       shortenDirections(["EAST", "NORTH", "NORTH", "NORTH", "WEST"])
     ).toEqual(["NORTH", "NORTH", "NORTH"]));
+    
 });

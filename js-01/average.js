@@ -1,4 +1,3 @@
-//get average
 function getAverage(numbers){
     const divisor = numbers.length;
     let sum = 0;
@@ -8,5 +7,7 @@ function getAverage(numbers){
     }
     return sum / divisor;
 }
+
+
 
 module.exports = {getAverage};

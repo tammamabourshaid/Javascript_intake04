@@ -14,5 +14,6 @@ function filter(numbers, checkerFn){
     }
     return filteredArray;
 }
+
  
 module.exports = {filter};
