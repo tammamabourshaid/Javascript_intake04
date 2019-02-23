@@ -1,8 +1,9 @@
 const shortenDirections = directions => {
     let vertical = 0,
-        horizontal = 0;
+        horizontal = 0,
+        size = directions.length;
 
-    for (let times = 0; times < directions.length; times++) {
+    for (let times = 0; times < size; times++) {
         const direction = directions[times];
         switch (direction) {
             case "NORTH":

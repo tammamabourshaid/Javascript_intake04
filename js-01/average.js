@@ -3,6 +3,7 @@ const getAverage = numbers => {
         reducer = (accumulator, currentValue) => accumulator + currentValue,
         sum = numbers.reduce(reducer),
         average = sum / size;
+
     return average;
 };
 
