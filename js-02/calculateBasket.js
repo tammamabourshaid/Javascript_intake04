@@ -10,10 +10,9 @@ const convertIntoArray = list => {
 };
 
 const calculateTotal = list => {
-    const reducer = ((accumulator, currentValue) => {
+    const total = list.reduce((accumulator, currentValue) => {
         return accumulator + (currentValue.amount * currentValue.price);
-    }, 0),
-    total = list.reduce(reducer);
+    }, 0);
     return total;
 };
 
