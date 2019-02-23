@@ -18,10 +18,12 @@ function shortenDirections(directions){
             break;
     
         }
+        const shortenedDirections = [];
         const putDirectionsTime=function(direction,times){
             for (let index = 0; index < times; index++) {
-                shortenDirections.push(direction);
-
+                shortenedDirections.push(direction);
+            }
+        };
                 if(horizentol>0){
                     putDirectionsTime("EAST",horizentol);
                     
@@ -37,9 +39,9 @@ function shortenDirections(directions){
         
         
     }
-    return shortenDirections
+    return shortenedDirections;
 }
-        }
-    }
 }
+    
+
 module.exports={shortenDirections};

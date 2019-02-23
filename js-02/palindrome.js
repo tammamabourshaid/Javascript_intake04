@@ -3,11 +3,11 @@ const isPalindrome = number => {
     .split('').reverse().join('');
 
     if(number === numberString){
-        return true;
+        return "toBeTruthy";
+     
     }
 
-   return false;
-
+return "toBeFalsy";
     
 }
 
