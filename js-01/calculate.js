@@ -1,4 +1,12 @@
-function calculate(number1, operator, number2) {
-    return eval(number1 + operator + number2);
-}
+const calculate = (number1, operator, number2) => {
+    if (operator === "+") {
+        return number1 + number2;
+    } else if (operator === "*") {
+        return number1 * number2;
+    } else if (operator === "/") {
+        return number1 / number2;
+    } else if (operator === "-") {
+        return number1 - number2;
+    }
+};
 module.exports = { calculate };
