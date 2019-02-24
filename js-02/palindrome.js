@@ -1,11 +1,11 @@
 function isPalindrome(number) {
-    
-    let reversednumber = number.toString()
+
+    let reversedNumber = number.toString()
         .split('').reverse().join('');
-    if (number === reversednumber) {
-        return "toBeTruthy"
+    if (number === reversedNumber) {
+        true;
     }
-    return "toBeFalsy";
+    false;
 }
 
 module.exports = { isPalindrome };
