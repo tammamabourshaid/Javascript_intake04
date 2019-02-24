@@ -6,6 +6,12 @@ const getDifference = (array1, array2) => {
     return uniqueNumbers;
 };
 
+const concatenate = (array1, array2) => {
+    const concatenatedArray = array1.concat(array2);
+    return concatenatedArray;
+};
+
+
 const sort = array => {
     const sortedArray = array.sort((digit1, digit2) => digit1 - digit2);
     return sortedArray;
@@ -16,11 +22,6 @@ const getUniqueNumbers = array => {
         return array.indexOf(digit) === array.lastIndexOf(digit)
     });
     return uniqueNumbers;
-};
-
-const concatenate = (array1, array2) => {
-    const concatenatedArray = array1.concat(array2);
-    return concatenatedArray;
 };
 
 module.exports = { getDifference };
