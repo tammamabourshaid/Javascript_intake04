@@ -1,22 +1,22 @@
 const shortenDirections = directions => {
-    let vertical = 0,
-        horizontal = 0,
+    let horizontal = 0,
+        vertical = 0,
         size = directions.length;
 
     for (let times = 0; times < size; times++) {
         const direction = directions[times];
         switch (direction) {
-            case "NORTH":
-                vertical++;
-                break;
-            case "SOUTH":
-                vertical--;
-                break;
             case "EAST":
                 horizontal++;
                 break;
             case "WEST":
                 horizontal--;
+                break;
+            case "NORTH":
+                vertical++;
+                break;
+            case "SOUTH":
+                vertical--;
                 break;
         }
     }
@@ -28,19 +28,20 @@ const shortenDirections = directions => {
         };
     };
 
-    if (vertical > 0) {
-        putCorrectDirections("NORTH", vertical);
-    }
-    if (vertical < 0) {
-        putCorrectDirections("SOUTH", vertical * -1);
-    }
     if (horizontal > 0) {
         putCorrectDirections("EAST", horizontal);
     }
     if (horizontal < 0) {
         putCorrectDirections("WEST", horizontal * -1);
     }
-    
+    if (vertical > 0) {
+        putCorrectDirections("NORTH", vertical);
+    }
+    if (vertical < 0) {
+        putCorrectDirections("SOUTH", vertical * -1);
+    }
+    console.log(correctDirections);
+
     return correctDirections;
 };
 
