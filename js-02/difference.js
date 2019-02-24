@@ -1,7 +1,7 @@
 const getDifference = (array1, array2) => {
     const concadenatedArray = concatenate(array1, array2),
-        sortedConcatenatedArray = sort(concadenatedArray)
-    uniqueNumbers = getUniqueNumbers(sortedConcatenatedArray);
+        sortedConcatenatedArray = sort(concadenatedArray),
+        uniqueNumbers = getUniqueNumbers(sortedConcatenatedArray);
 
     return uniqueNumbers;
 };
