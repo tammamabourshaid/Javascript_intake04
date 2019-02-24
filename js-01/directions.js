@@ -40,7 +40,6 @@ const shortenDirections = directions => {
     if (vertical < 0) {
         putCorrectDirections("SOUTH", vertical * -1);
     }
-    console.log(correctDirections);
 
     return correctDirections;
 };
