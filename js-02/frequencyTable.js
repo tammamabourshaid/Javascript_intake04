@@ -1,9 +1,4 @@
-function getFrequencyTable(array){
-    var counts = {};
-
-for (var i = 0; i < array.length; i++) {
-  var num = array[i];
- return counts[num] = counts[num] ? counts[num] + 1 : 1;
-}
+const getFrequencyTable= array =>{
+  return array.reduce((previous, current) => (previous[current] = ++previous[current] || 1, previous), {})
 }
 module.exports={getFrequencyTable};
