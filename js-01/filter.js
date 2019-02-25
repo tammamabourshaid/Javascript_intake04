@@ -4,7 +4,7 @@ function filter(numbers, checker) {
         const number = numbers[position];
         const checkerOutput = checker(number);
         // checker has no logic here, it is just a function and we change the logic in Test
-        if (checkerOutput && typeof checkerOutput === "boolean") {
+        if (checkerOutput &&  checkerOutput === true) {
             filteredArray.push(number);
         }
     }
