@@ -14,6 +14,7 @@ const calculateTotal = list => {
   const total = list.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.amount * currentValue.price;
   }, 0);
+  
   return total;
 };
 
