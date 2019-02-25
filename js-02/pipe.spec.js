@@ -1,4 +1,4 @@
-const { pipe } = require("./pipe");
+const { pipe } = require("./pipe").default;
 
 describe("pipe", () => {
   it("should pass the result of the first function to the second and return the result", () => {
