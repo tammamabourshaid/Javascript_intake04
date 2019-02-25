@@ -20,4 +20,4 @@ const getDifference = function (array1, array2) {
     return difference;
 }
 
-module.exporters={getDifference};
+module.exports={getDifference};

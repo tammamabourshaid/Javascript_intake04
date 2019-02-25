@@ -6,4 +6,4 @@ const dateFormatter= date => {
         return '' + year + '-' + (month<=9 ? '0' + month : month) + '-' + (day <= 9 ? '0' + day : day+ date.getHours()
          + ":" + date.getMinutes() + "0");
     }
-module.exporters={dateFormatter};
+module.exports={dateFormatter};
