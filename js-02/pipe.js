@@ -9,3 +9,23 @@ function pipe([array]){
     }
 }
 module.exports={pipe};
+const pipe = ([result]) => {
+
+
+
+
+
+
+
+
+
+return result;
+
+}
+
+
+
+
+
+
+module.exports ={pipe};
