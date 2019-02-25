@@ -22,7 +22,7 @@ describe("filter", () => {
     ).toEqual([undefined, null, false, 0, "foo", 3.13, {}, now]);
   });
 
-  it("should filter only falses, regardless of the datatype", () => {lök
+  it("should filter only falses, regardless of the datatype", () => {
     const array = [0, "", false, true, 1, 5.5, "hello", null];
     const filterFn = value => !value;
     const filteredArray = [0, "", false, null];

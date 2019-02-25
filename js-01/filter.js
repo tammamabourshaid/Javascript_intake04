@@ -1,4 +1,3 @@
-
 const filter = (array, filterFn) => {
   let filteredArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -9,8 +8,6 @@ const filter = (array, filterFn) => {
   }
   return filteredArray;
 }
-
-
 
 module.exports = {
   filter
