@@ -2,6 +2,19 @@ const { calculateBasket } = require("./calculateBasket");
 
 describe("basketCalculator", () => {it("should calculate the total of a basket with products as an array", () => {
     const basket = [{product: "apple",amount: 4,price: 0.25},{product: "peach",amount: 5,price: 0.24},
+describe("basketCalculator", () => {
+  it("should calculate the total of a basket with products as an array", () => {
+    const basket = [
+      {
+        product: "apple",
+        amount: 4,
+        price: 0.25
+      },
+      {
+        product: "peach",
+        amount: 5,
+        price: 0.24
+      },
       {
         product: "bread",
         amount: 2,
