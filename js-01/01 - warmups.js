@@ -12,19 +12,20 @@ function greeting(name){
 
 function isAdult(age){
     if (age >17) {return true}
+    else {return false}
 }
 
-function getMaxNumbers(numbers[]){
-    
-    if (age >17) {return true}
+function getMaxNumbers(numbers){
+    return Math.max(...numbers)
 }
 
-it("should get the maximum number of an array of numbers", () =>
-    expect(getMaxNumbers([5, 9, 1, 8, 2, 4])).toBe(9));
+function multiplyFn(eini){
+  return eini*5
+}
+function getMultiplyFn(){
+  return multiplyFn;
+}
 
-  it("should get maximum number of an array of negative numbers", () =>
-    expect(getMaxNumbers([-5, -9, -3, -1])).toBe(-1));
 
-
-module.exports = {add, greeting, subtract, isAdult};
+module.exports = {add, greeting, subtract, isAdult, getMaxNumbers, getMultiplyFn};
 
