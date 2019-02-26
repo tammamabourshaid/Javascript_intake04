@@ -1,8 +1,6 @@
 function toPairs(city) {
-    return [city["population"], city["size"]];
 
+    return [["population", city.population], ["size", city.size]];
 }
 module.exports = { toPairs };
-
-
 

@@ -1,6 +1,6 @@
 function isPrime(number) {
 
-    
+
   if (number < 2) {
     return false;
   }
@@ -10,8 +10,8 @@ function isPrime(number) {
   } else if (number % 2 === 0) {
     return false;
   }
- 
-  for (var i = 3; i*i <= number; i += 2) {
+
+  for (var i = 3; i * i <= number; i += 2) {
     if (number % i === 0) {
       return false;
     }
@@ -19,6 +19,9 @@ function isPrime(number) {
   return true;
 
 }
-    
+
 
 module.exports = { isPrime };
+
+
+//google code!

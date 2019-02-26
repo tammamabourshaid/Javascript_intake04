@@ -3,7 +3,7 @@ function filter(numbers, checker) {
     for (let position = 0; position < numbers.length; position++) {
         const number = numbers[position];
         const checkerOutput = checker(number);
-        // checker has no logic here, it is just a function and we change the logic in Test
+        
         if (checkerOutput &&  checkerOutput === true) {
             filteredArray.push(number);
         }
@@ -11,3 +11,6 @@ function filter(numbers, checker) {
     return filteredArray;
 }
 module.exports = { filter };
+
+
+// checker has no logic here, it is just a function and we change the logic in Test

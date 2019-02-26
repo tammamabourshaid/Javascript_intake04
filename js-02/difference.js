@@ -17,3 +17,7 @@ function getDifference(array1, array2) {
 }
 
 module.exports = { getDifference };
+
+
+// both of the loops check if an element is present in on array and is
+// not in the second and it put that element in a new mutual array

@@ -3,3 +3,7 @@ function getFrequencyTable(array) {
 }
 
 module.exports = { getFrequencyTable };
+
+
+
+//i have to get how many times an element occured in an araay and print the element with it
