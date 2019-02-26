@@ -13,6 +13,7 @@ const sort = array => {
 
 const isSimilar = (array1, array2) => {
     const union = array1.filter(digit => array2.includes(digit));
+
     return union;
 };
 

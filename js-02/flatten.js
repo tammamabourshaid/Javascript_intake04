@@ -7,7 +7,7 @@ const flattenArray = array => {
     (accumulator, currentValue) =>
       accumulator.concat(
         isArray(currentValue) ? flattenArray(currentValue) : currentValue),[]);
-        
+
   return flatten;
 };
 

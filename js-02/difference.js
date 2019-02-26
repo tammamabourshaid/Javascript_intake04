@@ -1,27 +1,27 @@
 const getDifference = (array1, array2) => {
-    const concadenatedArray = concatenate(array1, array2),
-        sortedConcatenatedArray = sort(concadenatedArray),
-        uniqueNumbers = getUniqueNumbers(sortedConcatenatedArray);
+  const concadenatedArray = concatenate(array1, array2),
+    sortedConcatenatedArray = sort(concadenatedArray),
+    uniqueNumbers = getUniqueNumbers(sortedConcatenatedArray);
 
-    return uniqueNumbers;
+  return uniqueNumbers;
 };
 
 const concatenate = (array1, array2) => {
-    const concatenatedArray = array1.concat(array2);
-    return concatenatedArray;
+  const concatenatedArray = array1.concat(array2);
+  return concatenatedArray;
 };
 
-
 const sort = array => {
-    const sortedArray = array.sort((digit1, digit2) => digit1 - digit2);
-    return sortedArray;
+  const sortedArray = array.sort((digit1, digit2) => digit1 - digit2);
+  return sortedArray;
 };
 
 const getUniqueNumbers = array => {
-    const uniqueNumbers = array.filter((digit) => {
-        return array.indexOf(digit) === array.lastIndexOf(digit)
-    });
-    return uniqueNumbers;
+  const uniqueNumbers = array.filter(digit => {
+    return array.indexOf(digit) === array.lastIndexOf(digit);
+  });
+
+  return uniqueNumbers;
 };
 
 module.exports = { getDifference };
