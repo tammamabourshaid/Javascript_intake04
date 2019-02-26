@@ -1,6 +1,6 @@
 function filter(input){
     let largerThanTen = input > 10;
-    rturn largerThanTen
+    return largerThanTen
   }
   
 
