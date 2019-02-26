@@ -1,16 +1,17 @@
-function calculatePolish(mathFn, number1, number2){
-    switch(mathFn){
+function calculatePolish(mathSymbol, number1, number2) {
+    
+    switch (mathSymbol) {
         case "+":
-        return number1 + number2;
+            return number1 + number2;
         case "-":
-        return number1 - number2;
+            return number1 - number2;
         case "*":
-        return number1 * number2;
+            return number1 * number2;
         case "/":
-        return number1 / number2;
+            return number1 / number2;
         default:
-        console.log("not a math function");
+            console.log("Not a math symbol");
     }
 }
 
-module.exports = {calculatePolish};
+module.exports = { calculatePolish };

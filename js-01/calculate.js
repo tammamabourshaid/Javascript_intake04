@@ -1,16 +1,17 @@
-function calculate(number1, mathFn, number2){
-    switch(mathFn){
+function calculate(number1, mathSymbol, number2) {
+
+    switch (mathSymbol) {
         case "+":
-        return number1 + number2;
+            return number1 + number2;
         case "-":
-        return number1 - number2;
+            return number1 - number2;
         case "*":
-        return number1 * number2;
+            return number1 * number2;
         case "/":
-        return number1 / number2;
+            return number1 / number2;
         default:
-        console.log("not a math function");
+            console.log("Not a math symbol");
     }
 }
 
-module.exports = {calculate};
+module.exports = { calculate };

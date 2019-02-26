@@ -1,6 +1,7 @@
 function flatten(array){
-
+    
     return [].concat.apply([], array);
+    
 }
 
     //OPTION 2
@@ -15,6 +16,6 @@ function flatten(array){
     //     }
     //     return merged;
     // }    
-    
+flatten(([1, [2], [[3, 4]]]));   
 
 module.exports = {flatten};

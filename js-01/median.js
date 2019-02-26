@@ -1,31 +1,25 @@
-function getMedian(numbers){
+function getMedian(array) {
+
     let median;
-    //precondition
-    //if(numbers && numbers.length)
 
-    //find median of an array even length(2,3,4,5)
-    if(isLengthEven(numbers)){
-        const firstNumber = numbers[numbers.length / 2 - 1];
-        const secondNumber = numbers[numbers.length / 2];
-        median = (firstNumber + secondNumber) / 2;
-        return median;
+    if (array.length === 0) {
+        return "Array is empty";
     }
-    //find median of an array odd numbers (5,4,1,2,3), (50,3,1,1,2)
-    //else if(isLengthOdd(numbers)){
-    else{
-        const divident = numbers.length - 1;
+    else if (isLengthEven(array)) {
+        const numberOne = array[array.length / 2 - 1];
+        const numberTwo = array[array.length / 2];
+        median = (numberOne + numberTwo) / 2;
+    }
+    else {
+        const divident = array.length - 1;
         const medianPosition = divident / 2;
-        median = numbers.sort()[medianPosition]; //gives an undefined
-        return median;
+        median = array.sort()[medianPosition];
     }
+    return median;
 }
 
-function isLengthEven(numbers){
-    return numbers.length % 2 == 0;
+function isLengthEven(array) {
+    return array.length % 2 == 0;
 }
 
-function isLengthOdd(numbers){
-    return numbers.length % 2 == 1;
-}
-
-module.exports = {getMedian};
+module.exports = { getMedian };

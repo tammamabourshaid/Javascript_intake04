@@ -1,13 +1,13 @@
-function getAverage(numbers){
-    const divisor = numbers.length;
-    let sum = 0;
-    for (let position = 0; position < numbers.length; position++) {
-        const number = numbers[position];
-        sum = sum + number;
+function getAverage(array) {
+
+    const divisor = array.length;
+    let total = 0;
+
+    for (let position = 0; position < array.length; position++) {
+        const number = array[position];
+        total = total + number;
     }
-    return sum / divisor;
+    return total / divisor;
 }
 
-
-
-module.exports = {getAverage};
+module.exports = { getAverage };

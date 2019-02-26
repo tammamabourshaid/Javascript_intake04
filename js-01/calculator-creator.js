@@ -1,5 +1,5 @@
-function createOperation(operation){
-    return operation;
+function createOperation(operationFn) {
+    return operationFn;
 }
 
-module.exports = {createOperation};
+module.exports = { createOperation };
