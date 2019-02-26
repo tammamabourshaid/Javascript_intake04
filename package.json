@@ -1,0 +1,16 @@
+{
+  "name": "frontend-specialisation",
+  "version": "1.0.0",
+  "description": "Exercises for the Frontend Specialisation",
+  "main": "exercises.js",
+  "scripts": {
+    "test": "jest",
+    "testLesson01": "jest js-01"
+  },
+  "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
