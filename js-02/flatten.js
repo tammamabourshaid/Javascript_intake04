@@ -2,17 +2,19 @@ const flatten = array => {
   return flattenArray(array);
 };
 
-const flattenArray = array => {
-  const flatten = array.reduce(
-    (accumulator, currentValue) =>
+const flattenArray = someArray => {
+  const array = [],
+    reducer = (accumulator, currentValue) =>
       accumulator.concat(
-        isArray(currentValue) ? flattenArray(currentValue) : currentValue),[]);
+        isArray(currentValue) ? flattenArray(currentValue) : currentValue),
+    flatten = someArray.reduce(reducer, array);
 
   return flatten;
 };
 
 const isArray = array => {
-  return Array.isArray(array);
+  const isArray = Array.isArray(array)
+  return isArray;
 };
 
 module.exports = { flatten };
