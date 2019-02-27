@@ -26,4 +26,5 @@ function multiplyFn(number) {
 function getMultiplyFn() {
     return multiplyFn;
 }
-module.exports = { subtract, add, greeting, isAdult, getMaxNumbers, multiplyFn, getMultiplyFn };
+module.exports =
+    { subtract, add, greeting, isAdult, getMaxNumbers, multiplyFn, getMultiplyFn };

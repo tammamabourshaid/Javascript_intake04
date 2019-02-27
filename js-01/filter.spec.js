@@ -28,4 +28,5 @@ describe("filter", () => {
     const filteredArray = [0, "", false, null];
     expect(filter(array, filterFn)).toEqual(filteredArray);
   });
+
 });

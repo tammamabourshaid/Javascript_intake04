@@ -28,7 +28,6 @@ function shortenDirections(directions) {
         }
     };
 
-
     if (horizontal > 0) {
         putDirectionsTimes("EAST", horizontal)
     }

@@ -5,7 +5,6 @@
  * development setup like IDE, Node.js, and jest is
  * working.
  */
-
 const {
   add,
   subtract,

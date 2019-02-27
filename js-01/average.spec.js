@@ -6,4 +6,5 @@ describe("mathematical functions", () => {
 
   it("should calculate the avage with non-integers", () =>
     expect(getAverage([2, 3])).toBe(2.5));
+
 });

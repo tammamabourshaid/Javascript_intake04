@@ -7,4 +7,5 @@ describe("prime", () => {
   it("should identify 10 as prime", () => expect(isPrime(10)).toBeFalsy());
   it("should identify 125 as prime", () => expect(isPrime(125)).toBeFalsy());
   it("should identify 997 as non-prime", () => expect(isPrime(5)).toBeTruthy());
+
 });

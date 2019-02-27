@@ -8,4 +8,5 @@ describe("calculator", () => {
   it("should calc 20 / 4", () => expect(calculate(20, "/", 5)).toBe(4));
 
   it("should calc 5 - 6", () => expect(calculate(5, "-", 6)).toBe(-1));
+
 });

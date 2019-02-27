@@ -8,5 +8,4 @@ function getMinMaxNumber(array) {
     return minMax;
 }
 
-
 module.exports = { getMinMaxNumber };

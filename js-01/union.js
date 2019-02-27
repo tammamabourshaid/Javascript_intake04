@@ -4,4 +4,5 @@ function getUnion(array1, array2) {
     const unionNumbers = sortedArray1.filter(number => sortedArray2.includes(number));
     return unionNumbers;
 }
+
 module.exports = { getUnion };

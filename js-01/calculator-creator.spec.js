@@ -29,4 +29,5 @@ describe("calculator-creator", () => {
 
     expect(divide(multiply(5, 4), subtract(20, 10))).toBe(2);
   });
+
 });

@@ -12,5 +12,4 @@ function getMedian(values) {
     else
         return (values[half - 1] + values[half]) / 2.0;
 }
-
 module.exports = { getMedian };
