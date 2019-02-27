@@ -9,4 +9,8 @@ describe("getMedian", () => {
 
   it("should get median of an odd list", () =>
     expect(getMedian([2, 3, 4, 5])).toBe(3.5));
+
+  it("should ensure that the sort is working", () => {
+    expect(getMedian([11, 1, 2, 3, 4])).toBe(3);
+  });
 });

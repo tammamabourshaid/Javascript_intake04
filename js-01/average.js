@@ -1,4 +1,7 @@
-function getAverage (array){
-return array.reduce((a, b) => a + b) / array.length;
+function getAverage(array) {
+    const avg = array.reduce((a, b) => a + b) / array.length;
+    return avg;
 }
-module.exports={getAverage};
+
+getAverage([5, 10, 11, 1, 3]);
+module.exports = { getAverage };
