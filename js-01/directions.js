@@ -21,7 +21,7 @@ function shortenDirections(directions) {
     }
 
     const shortenedDirections = [];
-    const putDirectionsTimes = function (direction, times) {
+    const putDirectionsTimes = function(direction, times) {
         for (let i = 0; i < times; i++) {
             shortenedDirections.push(direction);
         }

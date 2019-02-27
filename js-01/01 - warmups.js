@@ -1,30 +1,29 @@
-function add(number1, number2){
+function add(number1, number2) {
     return number1 + number2;
 }
 
 
-function subtract (number1,number2){
+function subtract(number1, number2) {
     return number1 - number2;
 }
 
-function greeting(name){
+function greeting(name) {
     return "Hello " + name;
 }
 
-function isAdult (age){
-    return age>10;
+function isAdult(age) {
+    return age > 10;
 }
 
-function getMaxNumbers (number){
-    return Math.max.apply(null,number);
+function getMaxNumbers(number) {
+    return Math.max.apply(null, number);
 }
 
-function multiplyFn (number){
-    return number * 5 ;
+function multiplyFn(number) {
+    return number * 5;
 }
 
-function getMultiplyFn (){
+function getMultiplyFn() {
     return multiplyFn;
 }
-module.exports={subtract, add, greeting, isAdult, getMaxNumbers, multiplyFn , getMultiplyFn};
-
+module.exports = { subtract, add, greeting, isAdult, getMaxNumbers, multiplyFn, getMultiplyFn };
