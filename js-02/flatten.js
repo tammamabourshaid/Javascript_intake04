@@ -6,12 +6,4 @@ function flatten(array) {
 
 
 
-
-
-
-
-
-
-
-
 module.exports = {flatten};

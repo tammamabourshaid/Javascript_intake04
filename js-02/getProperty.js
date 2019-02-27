@@ -1,22 +1,19 @@
 
-function getProperty(name,string){
-
-
-
-    
-         if (name.containValue(value)) {
-            const element = name[value];
-            if(element === string){
-               return true;
-            }
-         }
-      
-      
-   return string[value];
-    
    
-
-}
+   const getProperty = (object, property) => {
+      return property.split('.').reduce((a, b) => a&&a[b] || null, object);
+      /* FOR EXPLAINING THE ABOVE || EASIER TO UNDERSTAND */
+      // return property.split(".").reduce((a, b) => {
+      //   if(a && a[b]) {
+      //     return a[b];
+      //   }
+      //   return null;
+      // }, object);
+    };
+    
+    module.exports = {
+      getProperty
+    }
 
 
 

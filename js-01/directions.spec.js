@@ -25,3 +25,4 @@ describe("shortenDirections", () => {
   it("should first print out the horizontals and then the verticals", () =>
     expect(shortenDirections(["SOUTH", "EAST"])).toEqual(["EAST", "SOUTH"]));
 });
+
