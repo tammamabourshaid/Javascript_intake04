@@ -18,5 +18,5 @@ describe("getUnion", () => {
     const array2 = [5, 6, 7, 8];
     expect(getUnion(array1, array2)).toEqual([]);
   });
-  
+
 });
