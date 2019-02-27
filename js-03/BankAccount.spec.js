@@ -1,4 +1,4 @@
-const { BankAccount } = require("./BankAccount.js");
+const { BankAccount } = require("./BankAccount");
 
 describe("BankAccount allows to despoit and withdraw money. It should also tell us the curent balance.", () => {
   it("should handle a normal use case", () => {

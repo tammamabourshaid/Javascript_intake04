@@ -16,3 +16,6 @@ module.exports = { getProperty };
 
 // }
 
+// first arrgumen is objct, property
+/return object[property]
+
