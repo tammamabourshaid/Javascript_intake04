@@ -32,4 +32,5 @@ describe("basketCalculator", () => {
 
     expect(calculateBasket(basket)).toBe(13.11);
   });
+
 });

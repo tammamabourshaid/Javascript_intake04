@@ -7,5 +7,4 @@ const isPalindrome = number => {
     }
    return false;
 }
-
 module.exports={isPalindrome};

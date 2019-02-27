@@ -6,4 +6,5 @@ describe("dateFormatter", () => {
 
   it("should format 1999-01-01 1:00", () =>
     expect(dateFormatter(new Date("1999-01-01 1:00"))).toBe("1999-01-01 1:00"));
+
 });

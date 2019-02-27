@@ -8,5 +8,4 @@ function pipe([array]) {
         return first *= array[i]
     }
 }
-
 module.exports = { pipe };

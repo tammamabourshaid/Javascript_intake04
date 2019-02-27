@@ -6,5 +6,4 @@ function calculateBasket(basket) {
     }
     return totalAmount;
 }
-
 module.exports = {calculateBasket};

@@ -10,4 +10,5 @@ function getProperty([objects]) {
 
     return result;
 }
+
 module.exports = { getProperty };

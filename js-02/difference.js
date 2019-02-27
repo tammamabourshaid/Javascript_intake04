@@ -22,5 +22,4 @@ const concatenate = (array1, array2) => {
     const concatenatedArray = array1.concat(array2);
     return concatenatedArray;
 };
-
 module.exports = { getDifference };

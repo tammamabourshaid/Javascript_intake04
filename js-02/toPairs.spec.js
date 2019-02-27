@@ -15,4 +15,5 @@ describe("toPairs", () => {
 
     expect(toPairs(graz)).toEqual([["population", 286292], ["size", 12748]]);
   });
+  
 });

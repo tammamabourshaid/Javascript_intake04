@@ -6,4 +6,5 @@ describe("getFrequencyTable", () => {
     const expectedFrequencyTable = { "1": 3, "3": 1, "5": 2 };
     expect(getFrequencyTable(array)).toEqual(expectedFrequencyTable);
   });
+
 });

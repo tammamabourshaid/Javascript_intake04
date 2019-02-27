@@ -17,4 +17,5 @@ function dateFormatter(date) {
 
     return year + '-' + monthIndex + '-' + day + ' ' + hour + ":" + minute + seconds;
 }
+
 module.exports = { dateFormatter };
