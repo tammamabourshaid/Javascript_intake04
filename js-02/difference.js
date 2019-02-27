@@ -13,7 +13,7 @@ const sort = array => {
 
 const getUniqueNumbers = array => {
     const uniqueNumbers = array.filter((digit) => {
-        return array.indexOf(digit) === array.lastIndexOf(digit)
+        return array.indexOf(digit) === array.lastIndexOf(digit);
     });
     return uniqueNumbers;
 };
