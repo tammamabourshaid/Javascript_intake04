@@ -1,10 +1,8 @@
 function flatten(array) {
-
-    return array.reduce(function(flat, toFlatten) {
-        return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+    return array.reduce(function(flat, toflatten) {
+        return flat.concat(Array.isArray(toflatten) ? flatten(toflatten) : toflatten);
     }, []);
-
-
 }
+
 
 module.exports = { flatten };
