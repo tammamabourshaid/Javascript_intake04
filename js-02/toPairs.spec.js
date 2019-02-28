@@ -5,8 +5,7 @@ describe("toPairs", () => {
     const vienna = { population: 1868000, size: 414.87 };
 
     expect(toPairs(vienna)).toEqual([
-      ["population", 1868000],
-      ["size", 414.87]
+      ["population", 1868000],      ["size", 414.87]
     ]);
   });
 
