@@ -1,4 +1,9 @@
-function getAverage(Array) {
-    return Array.reduce((a, b) => a + b) / Array.length;
-}
-module.exports = { getAverage };
+function getAverage(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    return sum / numbers.length;
+  }
+  
+  module.exports = { getAverage };

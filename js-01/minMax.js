@@ -1,10 +1,19 @@
-function getMinMaxNumber(array) {
+function getMinMaxNumber(numbers) {
+  let maxNumber = numbers[0];
+  let minNumber = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i];
 
-    const min = Math.min(...array);
-    const max = Math.max(...array);
-    let minMax = [];
-    minMax.push(min);
-    minMax.push(max);
-    return minMax;
+    if (number > maxNumber) {
+      maxNumber = number;
+    }
+    if (number < minNumber) {
+      minNumber = number;
+    }
   }
-  module.exports={getMinMaxNumber};
+
+  return [minNumber, maxNumber];
+}
+
+module.exports = { getMinMaxNumber };
+

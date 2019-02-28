@@ -1,16 +1,14 @@
-function filter(numbers, checker){
+function filter(array, filterFn) {
     const filteredArray = [];
-    for (let position = 0; position < numbers.length; position++) {
-        const number = numbers[position];
-        const checkerOutput = checker(number);
-        //returns a boolean that is defined in the test, abstract filter
-        //to pass 2 test, checker should always return a boolean
-        //typeof name === "boolean" makes sure that name is boolean
-   
-        if(checkerOutput && typeof checkerOutput === "boolean"){
-            filteredArray.push(number);
-        }
+  
+    for (let i = 0; i < array.length; i++) {
+      const el = array[i];
+      if (filterFn(el) === true) {
+        filteredArray.push(el);
+      }
     }
+  
     return filteredArray;
-}
-module.exports={filter}
+  }
+  
+  module.exports = { filter };

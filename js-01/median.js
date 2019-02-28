@@ -1,16 +1,11 @@
-function getMedian(values){
-    values.sort(function(a,b){
-    return a-b;
-  });
- 
-  if(values.length ===0) return 0
- 
-  var half = Math.floor(values.length / 2);
- 
-  if (values.length % 2)
-    return values[half];
-  else
-    return (values[half - 1] + values[half]) / 2.0;
- }
- 
- module.exports = { getMedian };
+function getMedian(numbers) {
+  numbers.sort(sort);
+  if (numbers.length % 2 === 0) {
+    const left = numbers.length / 2;
+    return (numbers[left - 1] + numbers[left]) / 2;
+  } else {
+    return numbers[numbers.length / 2 - 0.5];
+  }
+}
+
+module.exports = { getMedian };
