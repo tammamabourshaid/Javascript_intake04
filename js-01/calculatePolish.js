@@ -1,6 +1,21 @@
-function calculatePolish(number1, operator, number2) {
-    return eval(operator + number1 + number2)
+function calculatePolish(operator, number1, number2) {
+    if (operator === "+") {
+        return number1 + number2;
 
+    }
+    else if (operator === "*") {
+        return number1 * number2;
+    }
+    else if (operator === "/") {
+
+        return number1 / number2;
+
+    }
+    else if (operator === "-") {
+
+        return number1 - number2;
+
+    }
 }
 
 module.exports = { calculatePolish };

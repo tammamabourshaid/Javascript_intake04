@@ -5,9 +5,7 @@ function getMinMaxNumber(array) {
         max = Math.max(...array);
 
     minMax.push(min);
-    minMax.push(max); 
-
-
+    minMax.push(max);
 
     return minMax;
 }

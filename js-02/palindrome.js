@@ -6,7 +6,6 @@
 // console.log(palindrom);
 // return palindrom;
 
-
 // var isPalindrome = function (string) {
 //     if (string == string.split('').reverse().join('')) {
 //         alert(string + ' is palindrome.');
@@ -20,11 +19,11 @@
 //    return s == s.split("").reverse().join("") ? true : false;
 //}
 
-function isPalindrome(number){
+function isPalindrome(number) {
     let reversedNumber = number.toString().split("").reverse().join("");
-    if (number.toString()===reversedNumber){
+    if (number.toString() === reversedNumber) {
         return true;
     }
 }
 
-module.exports={isPalindrome};
+module.exports = { isPalindrome };

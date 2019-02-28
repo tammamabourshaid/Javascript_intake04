@@ -6,3 +6,4 @@ describe("palindrome", () => {
   it("1001 is a palindrome", () => expect(isPalindrome(1001)).toBeTruthy());
   it("101 is a palindrome", () => expect(isPalindrome(101)).toBeTruthy());
 });
+

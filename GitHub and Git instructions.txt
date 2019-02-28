@@ -54,8 +54,13 @@ resolve conflict with partner (only if both updated same line in the same class)
 1- get permition frome your partner
 
 
-
-
+----------------------------
+echo "# frontEnd" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/badisalim/frontEnd.git
+git push -u origin master
 
 
 -------------------------------------
