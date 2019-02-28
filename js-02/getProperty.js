@@ -1,4 +1,5 @@
-const getProperty = obj => {
-    let identity = obj.getNestedValue[key];
-    return(identity);
+const getProperty = (nestedObj, pathArr) => {
+    return pathArr.reduce((obj, key) =>
+        (obj && obj[key] !== 'undefined') ? obj[key] : null, nestedObj);
 }
+module.exports={getProperty};

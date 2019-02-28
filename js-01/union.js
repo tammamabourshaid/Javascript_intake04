@@ -1,19 +1,18 @@
-const getUnion = (array1,array2) => {
-    const similarnumber=[];
-    for (let index = 0; index < array1.length; index++) {
-        const element1 = array1[index];
-    }
-    for (let i = 0; i < array2.length; i++) {
-        const element = array2[i];
-        
-    }if(element1===element){
-        similarnumber.push(element)
-    }else{
-        array2.nextInt(element)
-    }
-    return similarnumber;
-}
-modul.exports={getUnion};      
+const getUnion=function(array1, array2){
+    const unions = [];
+    for (i = 0; i < array1.length; i++) {
+      const currentElement = array1[i];
+      for (j = 0; j < array2.length; j++) {
+        if (array2[j] === currentElement) {
+          unions.push(currentElement);
+          break;
+        }
+      }
+    } 
+    unions.sort(sort);
+    return unions;
+  }
+module.exports={getUnion};      
     
     
  
