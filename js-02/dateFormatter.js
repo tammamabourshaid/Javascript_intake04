@@ -1,6 +1,20 @@
-function dateFormatter(date){
-    return "" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
-    date.getHours() + ":" + date.getMinutes();    
+function dateFormatter(givenDate) {
+
+    const year = givenDate.getFullYear();
+    const month = givenDate.getMonth() + 1;
+    const date = givenDate.getDate();
+    const hours = givenDate.getHours();
+    const minutes = givenDate.getMinutes();
+
+
+    return year + "-" + fix(month) + "-" + fix(date) + " " + hours + ":" + fix(minutes);
 }
 
-module.exports = {dateFormatter};
+function fix(number) {
+    if (number < 10) {
+        return "0" + number;
+    }
+    return number;
+}
+
+module.exports = { dateFormatter };

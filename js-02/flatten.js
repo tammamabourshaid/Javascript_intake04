@@ -1,21 +1,27 @@
-function flatten(array){
-    
-    return [].concat.apply([], array);
-    
+function flatten(array) {
+    return reduce(array);
+
 }
 
-    //OPTION 2
-    //return array.reduce(function(arrayOne, arrayTwo){ return arrayOne.concat(arrayTwo);});
+const reduce = function (array, concatenated = []) {
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
 
-    //OPTION 3
-    // let merged = [];
-    
-    // for (let index = 0; index < array.length; index++) {
-    //     if(array[index].constructor === Array){
-    //         merged = [].concat.apply([], array);
-    //     }
-    //     return merged;
-    // }    
-flatten(([1, [2], [[3, 4]]]));   
+        if (Array.isArray(element)) {
+            reduce(element, concatenated);
+        }
+        else {
+            concatenated.push(element);
+        }
+    }
+    return concatenated;
+};
 
-module.exports = {flatten};
+
+//options for one level arrays
+
+//reduce(function(arrayOne, arrayTwo){ return arrayOne.concat(arrayTwo);});
+//[].concat.apply([],array);
+
+
+module.exports = { flatten };
