@@ -1,16 +1,21 @@
-class Observable{
-    constructor(){
-         this.subscribetion=0;
-        
+class Observable {
+
+    constructor() {
+        this.array = [];
+
     }
-    add(number){
-        return this.subscribetion+=number;
+    add(number) {
+        this.array.push(number);
     }
-    subscribe(){
-        return this.subscribetion * 2;
+    subscribe(fn) {
+        const subscribtion = [];
+        for (let index = 0; index < this.array.length; index++) {
+            const element = this.array[index];
+            const elementFunction = fn(element);
+            subscribtion.push(elementFunction);
+        }
+        this.array = [];
+        return subscribtion;
     }
 }
-
-
- 
-module.exports={Observable};
+module.exports = { Observable };
