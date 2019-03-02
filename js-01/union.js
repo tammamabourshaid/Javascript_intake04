@@ -7,7 +7,8 @@ const getUnion = (array1, array2) => {
 };
 
 const sort = array => {
-    const sorted = array.sort((digit1, digit2) => digit1 - digit2);
+    const sorted = array.sort((digit1, digit2) => (digit1 - digit2));
+    
     return sorted;
 };
 

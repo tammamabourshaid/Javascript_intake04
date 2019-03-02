@@ -1,5 +1,6 @@
 const filter = (array, filterFn) => {
     const filteredArray = [];
+    
     for (let position = 0; position < array.length; position++) {
         const number = array[position],
             filterOutput = filterFn(number);
@@ -7,6 +8,7 @@ const filter = (array, filterFn) => {
             filteredArray.push(number);
         }
     }
+
     return filteredArray;
 };
 

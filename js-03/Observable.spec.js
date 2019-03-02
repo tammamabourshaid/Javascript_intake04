@@ -1,7 +1,7 @@
 const { Observable } = require("./Observable");
 
 describe(`
-  An Observable emits values that are processd by a map function. 
+  An Observable emits values that are processed by a map function. 
   We can also add new value to the observables.`, () => {
   it("should multiply it by 2", () => {
     const observable = new Observable();

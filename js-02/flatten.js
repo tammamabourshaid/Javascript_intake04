@@ -1,4 +1,4 @@
-const flatten = array => {
+const flatten = array => {  
   return flattenArray(array);
 };
 
@@ -14,6 +14,7 @@ const flattenArray = someArray => {
 
 const isArray = array => {
   const isArray = Array.isArray(array)
+
   return isArray;
 };
 

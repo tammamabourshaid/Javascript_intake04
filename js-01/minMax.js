@@ -1,4 +1,4 @@
-const getMinMaxNumber = (array) => {
+const getMinMaxNumber = array => {
     const minNumber = Math.min(...array),
         maxNumber = Math.max(...array),
         minMax = [minNumber, maxNumber];

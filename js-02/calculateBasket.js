@@ -12,10 +12,10 @@ const getValue = list => {
 };
 
 const calculateTotal = list => {
-  const reducer = (accumulator, currentValue) => {
-    return accumulator + (currentValue.amount * currentValue.price);
-  };
-  const total = list.reduce(reducer, 0);
+  const initialValue = 0,
+    reducer = (accumulator, currentValue) =>
+      (accumulator + (currentValue.amount * currentValue.price)),
+    total = list.reduce(reducer, initialValue);
 
   return total;
 };

@@ -1,8 +1,6 @@
 class BankAccount {
 
-  constructor() {
-    this.balance = 0;
-  }
+  constructor() { this.balance = 0; }
 
   deposit(amount) {
     return this.balance += amount;

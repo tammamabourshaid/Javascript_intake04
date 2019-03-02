@@ -1,8 +1,5 @@
 class Basket {
-
-  constructor() {
-    this.total = 0;
-  }
+  constructor() { this.total = 0; }
 
   put(times, product) {
     return this.total += (times * product.price);
@@ -14,7 +11,6 @@ class Basket {
 }
 
 class Product {
-
   constructor(product, price) {
     this.product = product;
     this.price = price;

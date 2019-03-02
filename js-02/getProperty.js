@@ -4,7 +4,6 @@ const getProperty = (object, anyProperty) => {
     property = split.reduce(reducer, object);
 
   return property;
-
 };
 
 module.exports = { getProperty };
