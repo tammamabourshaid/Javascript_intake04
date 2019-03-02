@@ -15,7 +15,7 @@ describe("pipe", () => {
     expect(pipe([initial, multiply, multiply, multiply, multiply])).toBe(16);
   });
 
-  it("should return 1 if there are no functions", () => {
+  it("should return 0 if there are no functions", () => {
     expect(pipe([])).toBe(0);
   });
 });
