@@ -1,16 +1,14 @@
-function pipe(){
 
-            
-        const formula = (accumulator, currentValue) =>
-            (accumulator (currentValue ));0
     
-        const result = value.reduce(formula, 0);
-        console.log(result);
-    
-        return result;
-    
+        const pipe = functions => {
+            const initialValue = 0,
+              reducer = ((accumulator, currentFunction) =>
+                (currentFunction(accumulator))),
+              toPipe = functions.reduce(reducer, initialValue);
+          
+            return toPipe;
+          };
 
 
 
-}
 module.exports={pipe};
