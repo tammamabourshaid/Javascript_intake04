@@ -12,6 +12,6 @@ function pipe(functions) {
         } return formerValue;
     }
 }
-console.log(pipe([]));
+
 module.exports = { pipe };
 
