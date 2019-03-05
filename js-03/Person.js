@@ -3,37 +3,38 @@ class Person {
         this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
-        this.father = [];
-        this.mother = [];
+        this.father = "";
+        this.mother = "";
         this.child = [];
-
+ 
     }
-    getFirstName() {
+    getFirstname() {
         return this.firstName;
     }
+    getBirthdate() {
+        return this.date;
+    }
     setFather(name) {
-        this.father += name;
+        this.father = name;
     }
     setMother(name) {
-        this.mother += name;
+        this.mother = name;
     }
     addChild(name) {
-        this.child += name;
+        this.child.push(name);
     }
     getChildren() {
-        return this.child;
+        return this.child.sort((child1, child2) => child1.getBirthdate() - child2.getBirthdate());
     }
     getSiblings() {
-        return this.child;
+        return this.mother.child;
     }
-    getParents(){
-        return this.father,this.mother;
+    getParents() {
+        return [this.mother, this.father];
     }
-
-}
-module.exports = {
+ 
+ 
+ }
+ module.exports = {
     Person
-};
-
-// it did not work
-//should I keep track of the children in the constructer inside an array? or is there a better way?
+ };

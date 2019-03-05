@@ -1,6 +1,14 @@
 function toPairs(city) {
 
-    return [["population", city.population], ["size", city.size]];
-}
-module.exports = { toPairs };
+    let final = [];
+    let keys = Object.keys(city);
 
+    keys.forEach(key => {
+        final.push([key, city[key]]);
+    });
+
+    return final.sort();
+}
+module.exports = {
+    toPairs
+};
