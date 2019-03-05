@@ -45,3 +45,4 @@ console.log("Name: " + bankAccount.getName());
 console.log("Available balance:" + bankAccount.getBalance() + " Euro");
 
 
+    
