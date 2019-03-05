@@ -1,18 +1,21 @@
 class NumberGuesser{
-    constructor(guessnumber){
-        this.guessnumber=guessnumber;
+    constructor(number){
+        this.number=number;
+        this.tries=0;
     }
     guess(number){
-        let tryNumber=0;
-    
-      if (number< 3 ==="below"&& number==5 ==="hit"&& number>6 ==="over"){
-          tryNumber++
-      }
-            
-            return number;
-    
+        this.tries++;
+        if(number > this.number){
+            return "above";
+        }if(number < this.number){
+            return "below";
+        }else{
+            return "hit";
+        }
+      
     }
     getTries(){
-        return guess();
+        return this.tries;
     }
 }
+module.exports={NumberGuesser};
