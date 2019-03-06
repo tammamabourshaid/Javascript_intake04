@@ -31,3 +31,9 @@ describe(`
     ).toEqual([true, true, true, "false"]);
   });
 });
+it("should map booleans", () => {
+  const numbers = [1,2,3,4,5];
+  expect(
+    mapOnlyStrings(numbers, number => number)
+  ).toEqual(["01", "02", "03", "04", "05"]);
+});
