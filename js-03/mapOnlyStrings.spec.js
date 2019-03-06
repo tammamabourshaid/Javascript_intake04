@@ -2,7 +2,7 @@ const { mapOnlyStrings } = require("./mapOnlyStrings");
 
 describe(`
   mapOnlyStrings is customised version of original map function.
-  It only maps if the output is a string. 
+  It only maps if the output of the mappingFunction is a string. 
   Otherwise it would return the input value.
 `, () => {
   it("should get the first letter", () => {
@@ -29,6 +29,17 @@ describe(`
     expect(
       mapOnlyStrings(conditions, condition => (condition ? true : "false"))
     ).toEqual([true, true, true, "false"]);
+  });
+
+  it("should map all numbers when transformed to strings", () => {
+    const numbers = [1, 2, 3, 4, 5];
+    expect(mapOnlyStrings(numbers, number => "0" + number)).toEqual([
+      "01",
+      "02",
+      "03",
+      "04",
+      "05"
+    ]);
   });
 });
 it("should map booleans", () => {
