@@ -2,32 +2,35 @@ class Person{
 constructor(firstname,lastname,date){
 this.firstname=firstname;
 this.lastname=lastname;
-this.arrayFather=[];
-this.arrayMother=[];
+this.father="";
+this.mother="";
 this.date=date;
 this.arrayChild=[];
 
 }
-setFathar(name){
-    return this.arrayFather+=name;
+setFather(name){
+    return this.father=name;
 }
 setMother(name){
-    return this.arrayMother+=name;
+    return this.mother=name;
 }
 getParents(){
-    return setFathar(name)+","+setMother(name);
+    return [this.mother,this.father];
 }
-getFirstName(){
+getFirstname(){
     return this.firstname;
 }
+getBirthday(){
+    return this.date;
+}
 addChild(name){
-    return this.arrayChild+=name;
+    return this.arrayChild.push(name);
 }
 getSiblings(){
-    return addChild(name).sort(year);
+    return this.mother.arrayChild;
 }
 getChildren(){
-    return addChild(name);
+    return this.arrayChild.sort((child1,child2)=>child1.getBirthday()-child2.getBirthday());
 }
 }
 module.exports={Person};
