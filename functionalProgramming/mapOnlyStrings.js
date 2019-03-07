@@ -18,6 +18,7 @@ map.set(true, 'bool1'); // a boolean key
 alert( map.get(1)   ); // 'num1'
 alert( map.get('1') ); // 'str1'
 
+
 const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog']
     
 // Secret Message.
