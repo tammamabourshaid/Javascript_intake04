@@ -1,4 +1,7 @@
-const { Basket, Product } = require("./Basket");
+const {
+  Basket,
+  Product
+} = require("./Basket");
 
 describe("Basket is a class where we can put products. It can also calculate the total price", () => {
   it("should calc with one product", () => {

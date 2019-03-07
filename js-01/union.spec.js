@@ -12,6 +12,12 @@ describe("getUnion", () => {
     const array2 = [9, 1, 4, 6, 1];
     expect(getUnion(array1, array2)).toEqual([1, 1]);
   });
+  
+  // it("should get the union with two apples", () => {
+  //   const array1 = [1, 1, 2];
+  //   const array2 = [1, 2, 2];
+  //   expect(getUnion(array1, array2)).toEqual([1, 2]);
+  // });
 
   it("should get the union with no matches", () => {
     const array1 = [1, 2, 3, 4];
