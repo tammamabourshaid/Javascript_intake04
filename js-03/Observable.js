@@ -10,6 +10,7 @@ class Observable {
     this.array = [];
     return applied;
   }
+  
 }
 
 module.exports = { Observable };

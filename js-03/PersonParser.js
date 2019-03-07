@@ -11,6 +11,7 @@ class PersonParser {
 
     return parse;
   }
+  
 }
 
 const transformIntoPerson = object => {

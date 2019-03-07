@@ -22,5 +22,6 @@ class NumberGuesser {
   getTries() {
     return this.tries;
   }
+
 }
 module.exports = { NumberGuesser };

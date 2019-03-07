@@ -24,21 +24,21 @@ describe(`
       ]);
     });
 
-  it("should map booleans", () => {
-    const conditions = [5 > 4, true !== false, null == undefined, "a" === "A"];
-    expect(
-      mapOnlyStrings(conditions, condition => (condition ? true : "false"))
-    ).toEqual([true, true, true, "false"]);
-  });
+    it("should map booleans", () => {
+      const conditions = [5 > 4, true !== false, null == undefined, "a" === "A"];
+      expect(
+        mapOnlyStrings(conditions, condition => (condition ? true : "false"))
+      ).toEqual([true, true, true, "false"]);
+    });
 
-  it("should map all numbers when transformed to strings", () => {
-    const numbers = [1, 2, 3, 4, 5];
-    expect(mapOnlyStrings(numbers, number => "0" + number)).toEqual([
-      "01",
-      "02",
-      "03",
-      "04",
-      "05"
-    ]);
+    it("should map all numbers when transformed to strings", () => {
+      const numbers = [1, 2, 3, 4, 5];
+      expect(mapOnlyStrings(numbers, number => "0" + number)).toEqual([
+        "01",
+        "02",
+        "03",
+        "04",
+        "05"
+      ]);
+    });
   });
-});
