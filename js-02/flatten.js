@@ -1,19 +1,13 @@
-function flatten(array){
-//const flattened = array.flat(length-1);
-//let merged = [].concat.apply([], array);
- return array.reduce(function (flat, toFlatten) {     
-      return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-    }, []);
+function flatten(array,flattenedArray=[]){
 
-
-}
-module.exports={flatten};
-    //const flattened = array.flat(length-1);
-    //let merged = [].concat.apply([], array);
-    return array.reduce(function (flat, toFlatten) {
-         return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-       }, []);
-    
-    
+  for (let i=0;i<array.length;i++){
+    const currentElement=array[i];
+    if (Array.isArray(currentElement)){
+      flattenedArray=flatten(currentElement,flattenedArray);
+      }else{
+        flattenedArray.push(currentElement);
+      }
+  }
+    return flattenedArray;
     }
     module.exports={flatten};
