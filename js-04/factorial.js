@@ -5,11 +5,5 @@ function factorial(num){
     }
     return fact;
 }
-// var factorial = function(n) {
-//     return n > 1
-//       ? n * factorial(n - 1)
-//       : n < 0
-//           ? n * factorial(n + 1)
-//           : 1;
-//   }
+
 module.exports={factorial};
