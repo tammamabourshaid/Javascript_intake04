@@ -18,5 +18,4 @@ describe("pipe", () => {
   it("should return 1 if there are no functions", () => {
     expect(pipe([])).toBe(0);
   });
-
 });

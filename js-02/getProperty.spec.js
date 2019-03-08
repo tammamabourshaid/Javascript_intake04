@@ -25,5 +25,4 @@ describe("getProperty", () => {
     const deepNested = { a: { b: { c: { d: { e: { f: "deep" } } } } } };
     expect(getProperty(deepNested, "a.b.c.d.e.f")).toBe("deep");
   });
-
 });

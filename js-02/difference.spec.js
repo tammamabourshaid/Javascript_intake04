@@ -18,5 +18,4 @@ describe("getDifference", () => {
     const array2 = [4, 3, 2, 1];
     expect(getDifference(array1, array2)).toEqual([]);
   });
-
 });

@@ -1,10 +1,19 @@
 const isPalindrome = number => {
-    let numberString=number.toString()
-    .split('').reverse().join('');
+    let numberString = number.toString()
+        .split('').reverse().join('');
 
-    if(number === numberString){
+    if (number === numberString) {
         return true;
     }
-   return false;
+    return false;
 }
-module.exports={isPalindrome};
+module.exports = {isPalindrome};
+
+//
+// const isPalindrome = (input) => {
+//     return input.toString().split("").reverse().join("") === input.toString()
+// };
+//
+// module.exports = {
+//     isPalindrome
+// };
