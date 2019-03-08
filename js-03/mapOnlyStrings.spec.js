@@ -45,6 +45,6 @@ describe(`
 it("should map booleans", () => {
   const numbers = [1,2,3,4,5];
   expect(
-    mapOnlyStrings(numbers, number => number)
+    mapOnlyStrings(numbers, number => "0" + number)
   ).toEqual(["01", "02", "03", "04", "05"]);
 });
