@@ -1,7 +1,6 @@
 function fromPairs(array) {
 
-    let object={};
-    let keys= Object.values(array);
+    
     
 
     

@@ -1,9 +1,10 @@
 class Basket {
-    constructor() {
+    constructor(Product) {
         this.Product = Product;
         this.totalPrice = 0;
 
     }
+
     getTotal() {
         return this.totalPrice;
     }
@@ -19,4 +20,7 @@ class Product {
 
     }
 }
-module.exports = { Basket, Product };
+module.exports = {
+    Basket,
+    Product
+};

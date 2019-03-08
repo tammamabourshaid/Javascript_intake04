@@ -1,4 +1,5 @@
 class Person {
+
     constructor(firstName, lastName, date) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -6,7 +7,7 @@ class Person {
         this.father = "";
         this.mother = "";
         this.child = [];
- 
+
     }
     getFirstname() {
         return this.firstName;
@@ -32,9 +33,7 @@ class Person {
     getParents() {
         return [this.mother, this.father];
     }
- 
- 
- }
- module.exports = {
+}
+module.exports = {
     Person
- };
+};

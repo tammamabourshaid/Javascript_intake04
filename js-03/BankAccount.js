@@ -2,6 +2,7 @@ class BankAccount {
     constructor() {
         this.balance = 0;
     }
+
     deposit(amount) {
         return this.balance += amount;
     }
@@ -12,4 +13,6 @@ class BankAccount {
         return this.balance;
     }
 }
-module.exports = {BankAccount}
+module.exports = {
+    BankAccount
+}
