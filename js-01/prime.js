@@ -1,21 +1,27 @@
-function isPrime(num) {
+// function isPrime(num) {
+//
+//     if (num === 2) {
+//         return true;
+//     } else if (num > 1) {
+//         for (var i = 2; i < num; i++) {
+//
+//             if (num % i !== 0) {
+//                 return true;
+//             } else if (num === i * i) {
+//                 return false
+//             } else {
+//                 return false;
+//             }
+//         }
+//     } else {
+//         return false;
+//     }
+//
+// }
 
-    if (num === 2) {
-        return true;
-    } else if (num > 1) {
-        for (var i = 2; i < num; i++) {
-
-            if (num % i !== 0) {
-                return true;
-            } else if (num === i * i) {
-                return false
-            } else {
-                return false;
-            }
-        }
-    } else {
-        return false;
-    }
-
+const isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false;
+    return num > 1;
 }
-module.exports = { isPrime };
+module.exports = {isPrime};
