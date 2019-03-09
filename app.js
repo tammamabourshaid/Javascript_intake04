@@ -1,36 +1,29 @@
-function swap(eini, eins, zwei) {
-    const temp = eini[eins];
-    eini[eins] = eini[zwei];
-    eini[zwei] = temp;
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
 }
 
-function permutate(list) {
-
-    var aussi = [];
-
-    mutate(list, list.length);
-
-    function mutate(list, n) {
-        var i;
-
-        if (n == 1) {
-            aussi.push(list.slice());
-        } else {
-            for (i = 0; i < n - 1; i++) {
-                mutate(list, n - 1);
-                if (n % 2) {
-                    swap(list, 0, n - 1);
-                } else {
-                    swap(list, i, n - 1);
-                }
-            }
-            mutate(list, n - 1);
-        }
-    }
-    return aussi.sort();
+class Basket {
+  constructor() { this.items = [];}
+  getItems() { return this.items; }
+  showItems() { console.log(this.items); }
+  calculatePrice() { console.log(this.items[0].name); }
+  put(zahl, eini) { this.items.push([zahl, eini]); }
+  getTotal() {
+    let total = 0;
+    this.items.forEach(function (element) { total = total + element[0] * element[1].price; });
+    return total;
+  }
 }
 
-module.exports = { permutate };
-
-console.log(permutate([1, 2, 3]));
-
+const basket = new Basket();
+const apple = new Product("apple", 0.3);
+const bread = new Product("bread", 2.5);
+const water = new Product("water", 0.5);
+basket.put(2, apple);
+basket.put(3, bread);
+basket.put(3, water);
+console.log(basket.getTotal());
+//console.log(basket.oaschloch);
