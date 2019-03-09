@@ -4,3 +4,6 @@ function factorial(number) {
 module.exports = {
     factorial
 };
+
+
+//found this on google instead of loop.
