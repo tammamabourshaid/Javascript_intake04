@@ -1,14 +1,14 @@
-function StringBuilder() {
-
-    this.sentence = "";
+class StringBuilder {
+    constructor() {
+        this.sentence = "";
+    }
+    append (word) {
+        this.sentence += word;
+    }
+    toString () {
+        return this.sentence;
+    }
 }
-StringBuilder.prototype.append = function (word) {
-    this.sentence += word;
-}
-StringBuilder.prototype.toString = function () {
-    return this.sentence;
-}
-
 module.exports = {
     StringBuilder
 };
