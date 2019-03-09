@@ -4,7 +4,7 @@
      }
      add(number, position) {
          if (position === undefined) {
-             return this.list.length;
+             return this.list.push(number);
          }
 
        else  return this.list.splice(position, 0, number);
