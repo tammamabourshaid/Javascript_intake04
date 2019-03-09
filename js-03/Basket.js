@@ -1,5 +1,5 @@
 class Basket {
-    constructor(Product) {
+    constructor() {
         this.Product = Product;
         this.totalPrice = 0;
 
