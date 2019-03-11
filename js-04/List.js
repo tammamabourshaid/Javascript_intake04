@@ -6,12 +6,8 @@ class List {
 
     if (typeof element && typeof index === "number") {
       append = this.elements.splice(index, 0, element);
-
-      return append;
     } else {
       append = this.elements.push(element);
-
-      return append;
     }
   }
 
