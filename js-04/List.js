@@ -6,7 +6,7 @@
          if (position === undefined) {
              return this.list.push(number);
          }
-
+        
        else  return this.list.splice(position, 0, number);
      }
      count() {
