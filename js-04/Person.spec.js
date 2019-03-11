@@ -25,4 +25,8 @@ Person has the properties firstname, lastname and the method introduce().
       "My name is Rudolf Buchbinder. I play the piano"
     );
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> ca0892fd8975c35508d6563b4b32882175664558

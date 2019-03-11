@@ -37,4 +37,8 @@ List is a class that allows us to add and get values from.`, () => {
 
     expect(list.toArray()).toHaveLength(5);
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> ca0892fd8975c35508d6563b4b32882175664558
