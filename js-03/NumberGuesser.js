@@ -3,7 +3,7 @@ function NumberGuesser() {
     var answer = 5;
     var guess = prompt("what you guess");
     for (i = 0; i < 5; i++) {
-    
+
         if (answer == guess) {
             alert("you geuss");
             break;
