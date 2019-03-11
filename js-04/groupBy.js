@@ -4,7 +4,7 @@ function groupBy(array, fn) {
 
     array.forEach(element => {
         let objectProperty = fn(element);
-        if (object[objectProperty] == undefined) {
+        if (object[objectProperty] === undefined) {
             object[objectProperty] = [];
             object[objectProperty].push(element);
         }else {
