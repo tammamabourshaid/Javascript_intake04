@@ -1,18 +1,21 @@
 class BankAccount {
+
+    constructor() {
+        this.balance = 0;
+    }
+
     deposit(amount) {
-        return this.amount;
+        return this.balance += amount;
 
     }
+
     withdraw(amount) {
-        return this.amount;
+        return this.balance -= amount;
 
     }
-    getBalance(BankAccount){
-        if (deposit === 0) {
-            return 0;
-        } else if (deposit > 0) {
-            balance = deposit - withdraw;
-        }
-        return balance;
+    
+    getBalance() {
+        return this.balance;
     }
 }
+module.exports = { BankAccount };

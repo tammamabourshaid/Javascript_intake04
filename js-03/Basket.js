@@ -1,5 +1,6 @@
 class Basket {
    constructor() {
+       this.products=[];
        this.totalPrice = 0;
 
    }
