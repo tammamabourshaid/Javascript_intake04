@@ -1,4 +1,6 @@
-const { List } = require("./List");
+const {
+  List
+} = require("./List");
 
 describe(`
 List is a class that allows us to

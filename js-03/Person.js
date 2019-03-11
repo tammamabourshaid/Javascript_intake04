@@ -32,7 +32,6 @@ class Person {
   addChild(child) {
     this.children.push(child);
   }
-  
 }
 const fritz = new Person("Fritz", "Huber");
 const gernot = new Person("Gernot", "Huber");
