@@ -12,6 +12,6 @@ function factorial(number) {
     return result;
 }
 
-console.log(factorial(9));
+// console.log(factorial(9));
 
 module.exports = { factorial };
