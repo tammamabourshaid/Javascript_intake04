@@ -1,9 +1,9 @@
 const getUnique = (numbers) => {
 
-    const value = ([...new Set(numbers)])
+    const values = ([...new Set(numbers)])
 
     // console.log(value);
-    return value.sort();
+    return values.sort((a, b) => a - b);
 }
 
 module.exports = { getUnique };

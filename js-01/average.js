@@ -1,12 +1,3 @@
-// function getAverage(array) {
-//     sum = 0;
-//    count = array.length;
-
-//    for ( i = 0; i < count; i++)
-//       sum = sum + array[i];
-//    return sum / count;
-// }
-
 
 const getAverage = (array) => {
 
@@ -18,7 +9,17 @@ const getAverage = (array) => {
    return average;
 }
 
-const array1=([2,3, 4,5,6]);
+const array1 = ([2, 3, 4, 5, 6]);
 console.log(getAverage(array1));
 
 module.exports = { getAverage };
+
+// function getAverage(array) {
+//     sum = 0;
+//    count = array.length;
+
+//    for ( i = 0; i < count; i++)
+//       sum = sum + array[i];
+//    return sum / count;
+// }
+

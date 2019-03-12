@@ -1,24 +1,22 @@
-
-// const a = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4].reduce(function (acc, curr) {
-//     if (typeof acc[curr] == 'undefined') {
-//       acc[curr] = 1;
-//     } else {
-//       acc[curr] += 1;
-//     }
-//   console.log();
-
-//     return console.log(acc);
-//   }, {});
-
-
 const data = [];
 const object = {};
-
 function getFrequencyTable(arr) {
   return arr.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), object)
 }
-
 console.log(getFrequencyTable(data))
 
+module.exports = { getFrequencyTable };
 
-module.exports = { getFrequencyTable };  
+// function getFrequencyTable(values) {
+//   const frequencyTable = {};
+//   for (let i = 0; i < values.length; i++) {
+//     const value = values[i];
+//     if (frequencyTable[value]) {
+//       frequencyTable[value]++;
+//     } else {
+//       frequencyTable[value] = 1;
+//     }
+//   }
+
+//   return frequencyTable;
+// }

@@ -1,4 +1,15 @@
 
+
+function isPalindrome(number) {
+    let reversedNumber = number.toString().split("").reverse().join("");
+    if (number.toString() === reversedNumber) {
+        return true;
+    }
+}
+
+module.exports = { isPalindrome };
+
+
 // const name = "54345";
 
 // function isPalindrom(name){
@@ -18,12 +29,3 @@
 //function isPalindrome(s) {
 //    return s == s.split("").reverse().join("") ? true : false;
 //}
-
-function isPalindrome(number) {
-    let reversedNumber = number.toString().split("").reverse().join("");
-    if (number.toString() === reversedNumber) {
-        return true;
-    }
-}
-
-module.exports = { isPalindrome };

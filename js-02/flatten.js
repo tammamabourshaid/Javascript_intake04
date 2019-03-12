@@ -18,14 +18,12 @@
 
 // ES5
 const flatten = function flatten(list) {
-    return list.reduce(function (a, b) {
+    const f = list.reduce(function (a, b) {
         return a.concat(Array.isArray(b) ? flatten(b) : b);
     }, []);
+
+
+    return f
 };
-
-
-
-
-
 
 module.exports = { flatten };

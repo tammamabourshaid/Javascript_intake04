@@ -11,7 +11,4 @@ const filter = (array, filterFn) => {
 
 }
 
-
-
-
 module.exports = { filter };

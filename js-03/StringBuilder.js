@@ -5,7 +5,7 @@ class StringBuilder {
     }
 
     append(string) {
-       return this.sentence +=string
+       return this.sentence += string;
     }
 
     toString() {
@@ -24,4 +24,20 @@ class StringBuilder {
 // // expected output: "World, Hello"
 // return str;
 // }
-module.exports = { StringBuilder }
+module.exports = { StringBuilder };
+
+
+// class StringBuilder {
+//     constructor() {
+//       this.finalString = "";
+//     }
+//     append(value) {
+//       this.finalString += value;
+//     }
+  
+//     toString() {
+//       return this.finalString;
+//     }
+//   }
+  
+//   module.exports = { StringBuilder };
