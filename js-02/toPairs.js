@@ -6,4 +6,4 @@ const toPairs = (obj) => {
     return pair.sort((a, b) => b[1] - a[1]);
 };
 
-module.exports = {toPairs}
+module.exports = { toPairs }
