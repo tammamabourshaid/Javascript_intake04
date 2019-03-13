@@ -9,3 +9,4 @@ describe("factorial should calculate the factorial of any number", () => {
 
   it("should calc factorial of 4", () => expect(factorial(4)).toBe(24));
 });
+

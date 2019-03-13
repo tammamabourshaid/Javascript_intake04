@@ -10,7 +10,8 @@ class AdderWithPromise {
     }
 
     sum() {
-        return new Promise(resolve => resolve(this.numberSum));
+        //return new Promise(resolve => resolve(this.numberSum));
+        return this.numberSum;
     }
     
 }
