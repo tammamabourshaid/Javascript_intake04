@@ -46,4 +46,103 @@ const min = Math.min(...array);
 minMax.push(min, max);
 
 console.log(minMax);
+//----------------------------
 
+const flights = [["Dmm", 'JED', '7:30am'], ["RYD", 'JED', '8:30pm'], ["MEK", 'JED', '10:30am']];
+flights.forEach(function (flight, i) {
+
+    [fromCity, toCity, Time] = flight
+
+    console.log(`${i+1}.A flight from ${fromCity} to ${toCity} at ${Time}`);
+    
+});
+
+
+function scaryClown() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('🤡');
+      },100 );
+    });
+  }
+  
+  async function msg1() {
+    const msg = await scaryClown();
+    console.log('Message:', msg);
+  }
+  
+  msg1(); // Message: 🤡 <-- after 2 seconds
+
+  function who() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('🤡');
+      }, 200);
+    });
+  }
+  
+   function what() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('lurks');
+      }, 300);
+    });
+  }
+  function where() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 500);
+  });
+}
+
+async function msg() {
+  const a = await who();
+  const b = await what();
+  const c = await where();
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg(); // 🤡 lurks in the shadows <-- after 1 second
+
+async function msg3() {
+    const [a, b, c] = await Promise.all([who(), what(), where()]);
+  
+    console.log(`${ a } ${ b } ${ c }`);
+  }
+  
+  msg3(); // 🤡 lurks in the shadows <-- after 500ms
+
+  function yayOrNay() {
+    return new Promise((resolve, reject) => {
+      const val = Math.round(Math.random() * 1); // 0 or 1, at random
+  
+      val ? resolve('Lucky!!') : reject('Nope 😠');
+    });
+  }
+  
+  async function msg() {
+    try {
+      const msg = await yayOrNay();
+      console.log(msg);
+    } catch(err) {
+      console.log(err);
+    }
+  }
+  
+  msg(); // Lucky!!
+  msg(); // Lucky!!
+  msg(); // Lucky!!
+  msg(); // Nope 😠
+  msg(); // Lucky!!
+  msg(); // Nope 😠
+  msg(); // Nope 😠
+  msg(); // Nope 😠
+  msg(); // Nope 😠
+  msg(); // Lucky!!
+
+
+  
+  
+  

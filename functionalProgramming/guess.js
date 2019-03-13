@@ -364,6 +364,7 @@ console.log(Ccc);
 // Sigrid,Mauerbach,female,\n  
 // Agnes,Tragschitz,female
 //     `;
-const numbers=[1,2,2,3,3,4,5];
-const value=[...new Set(numbers)];
+const numbers = [1, 2, 2, 3, 3, 4, 5];
+const value = [...new Set(numbers)];
 console.log(value);
+//----------------------------------
