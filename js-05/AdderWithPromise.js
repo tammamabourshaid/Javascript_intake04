@@ -13,7 +13,7 @@ class AdderWithPromise {
         resolve(sum);
       });
 
-    return promisedSum
+    return promisedSum;
   }
 }
 
