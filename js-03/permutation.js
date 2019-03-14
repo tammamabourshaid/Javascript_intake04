@@ -1,24 +1,25 @@
 function permutate(array) {
-    let result = [];
-    if (array.length === 1) {
-        result.push(array);
-        return result;
-    }
+    const permutations = [];
     for (let i = 0; i < array.length; i++) {
-        let firstCharachter = array[i];
-        let leftCharacters = array.substring(0, i) + array.substring(i + 1);
-
-        let innerPermutations = permutate(leftCharacters);
-        for (let b = 0; b < innerPermutations.length; b++) {
-            result.push(firstCharachter + innerPermutations[b]);
+      const arrayBeforeI = array.slice(0, i);
+      const arrayAfterI = array.slice(i + 1);
+      const reducedArray = arrayBeforeI.concat(arrayAfterI);
+      const permutation = [array[i]];
+      if (reducedArray.length > 0) {
+        const subPermutations = permutate(reducedArray);
+        for (let j = 0; j < subPermutations.length; j++) {
+          permutations.push(permutation.concat(subPermutations[j]));
         }
+      } else {
+        permutations.push(permutation);
+      }
     }
-    return result;
-
-}
-
-module.exports = { permutate };
-
+    return permutations;
+  }
+  
+  module.exports = {
+    permutate
+  };
 //google code!!
 
 //first I check if the arrays lenght is 1 then I just return that

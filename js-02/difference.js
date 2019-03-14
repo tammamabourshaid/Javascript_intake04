@@ -5,18 +5,18 @@ function getDifference(array1, array2) {
         if (!array2.includes(element)) {
             mutualElements.push(element);
         }
-
     });
     array2.forEach(element => {
         if (!array1.includes(element)) {
             mutualElements.push(element);
         }
-
     });
     return mutualElements;
 }
 
-module.exports = { getDifference };
+module.exports = {
+    getDifference
+};
 
 
 // both of the loops check if an element is present in on array and is
