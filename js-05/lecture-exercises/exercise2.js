@@ -5,9 +5,7 @@ const callback = (name, callback) => {
 };
 
 const promise = () => {
-  return new Promise(resolve => {
-    callback("Alexa", resolve);
-  });
+  return new Promise(resolve => callback("Alexa", resolve));
 };
 
 const asynFn = async () => {
