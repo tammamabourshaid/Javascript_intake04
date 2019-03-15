@@ -1,6 +1,6 @@
 const callback = (name, callback) => {
   setTimeout(() => {
-    callback(`Hello ${name}`);
+    callback(`Hello ${name}!`);
   }, 1000);
 };
 
@@ -11,9 +11,7 @@ const promise = () => {
 };
 
 const asynFn = async () => {
-  const promise = await promise();
-
-  return promise;
+  return await promise();
 };
 
-asynFn().then(e => console.log(e));
+asynFn().then(value => console.log(value));
