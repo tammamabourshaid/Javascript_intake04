@@ -4,16 +4,16 @@ const oldSchoolCallback = callback => {
   }, 1000);
 };
 
-const callbackPromise = number => {
+const callbackPromise = () => {
   return new Promise(resolve => {
-    resolve(oldSchoolCallback(number));
+    oldSchoolCallback(resolve);
   });
 };
 
-const callBackAsync = async number => {
-  return await number;
+const callBackAsync = async () => {
+  return await callbackPromise();
 };
 
-callBackAsync(1).then(value => {
+callBackAsync().then(value => {
   console.log(value);
 });
