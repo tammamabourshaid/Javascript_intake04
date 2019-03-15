@@ -19,5 +19,5 @@ const combineBothPromises = (resolve1, resolve2) => {
 };
 
 const test = combineBothPromises(promise(1), asyncFn(5))
-  .then(element => element.reduce((digit1, digit2) => digit1 + digit2))
-  .then(element => console.log(element));
+  .then(numbers => numbers.reduce((digit1, digit2) => digit1 + digit2))
+  .then(numbers => console.log(numbers));
