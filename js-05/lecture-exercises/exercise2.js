@@ -1,15 +1,19 @@
-const callback = callback => {
+const callback = (name, callback) => {
   setTimeout(() => {
-    callback();
-  }, 2000);
+    callback(`Hello ${name}`);
+  }, 1000);
 };
 
-const promise = (greeting, someone) => {
+const promise = () => {
   return new Promise(resolve => {
-    resolve(`${greeting} ${someone}`);
+    callback("Alexa", resolve);
   });
 };
 
-promise("Hello", "girl!").then(value => {
-  console.log(value);
-});
+const asynFn = async () => {
+  const promise = await promise();
+
+  return promise;
+};
+
+asynFn().then(e => console.log(e));
