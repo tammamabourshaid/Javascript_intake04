@@ -1,13 +1,19 @@
+const callback = (number, callback) => {
+  setTimeout(() => {
+    callback(number);
+  }, 1000);
+};
+
 const promise = number => {
-  return new Promise(resolve => resolve(number));
+  return new Promise(resolve => callback(number, resolve));
 };
 
 const asyncFn = async number => {
   return await promise(number);
 };
 
-const combineBothPromises = async (resolve1, resolve2) => {
-  const combined = await Promise.all([resolve1, resolve2]);
+const combineBothPromises = (resolve1, resolve2) => {
+  const combined = Promise.all([resolve1, resolve2]);
 
   return combined;
 };
