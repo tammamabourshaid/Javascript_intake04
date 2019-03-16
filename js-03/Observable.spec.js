@@ -9,7 +9,7 @@ describe(`
     observable.add(10);
     observable.add(15);
 
-    expect(observable.subscribe(number => number * 2)).toEqual([10, 20, 30]);
+    expect(observable.subscribe(e => e * 2)).toEqual([10, 20, 30]);
   });
 
   it("should remove the values once we called subscribe", () => {
