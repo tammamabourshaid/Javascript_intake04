@@ -17,5 +17,4 @@ function fromPairs(list) {
 
 
 
-
 module.exports = { fromPairs };
