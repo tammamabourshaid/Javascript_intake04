@@ -11,7 +11,8 @@ property's name and the other the value.
   });
 
   it("should create an object with array as value", () => {
-    expect(fromPairs([["colours", ["red", "blue", "yellow"]]])).toMatchObject({
+    expect(fromPairs(
+      [ ["colours",   ["red", "blue", "yellow"]     ]   ])).toMatchObject({
       colours: ["red", "blue", "yellow"]
     });
   });
