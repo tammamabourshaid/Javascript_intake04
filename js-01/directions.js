@@ -26,7 +26,7 @@ const shortenDirections = directions => {
     const putCorrectDirections = (direction, times) => {
         for (let position = 0; position < times; position++) {
             correctDirections.push(direction);
-        };
+        }
     };
 
     if (horizontal > 0) {
