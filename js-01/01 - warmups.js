@@ -1,29 +1,15 @@
-const add = (number1, number2) => {
-    return number1 + number2;
-};
+const add = (number1, number2) => number1 + number2;
 
-const subtract = (number1, number2) => {
-    return number1 - number2;
-};
+const subtract = (number1, number2) => number1 - number2;
 
-const greeting = name => {
-    return `Hello ${name}`;
-};
+const greeting = name => `Hello ${name}`;
 
-const isAdult = age => {
-    return age > 18;
-};
+const isAdult = age => age > 18;
 
-const getMaxNumbers = numbers => {
-    return Math.max(...numbers);
-};
+const getMaxNumbers = numbers => Math.max(...numbers);
 
-const multipyFn = number => {
-    return number * 5;
-};
+const multipyFn = number => number * 5;
 
-const getMultiplyFn = () => {
-    return multipyFn;
-};
+const getMultiplyFn = () => multipyFn;
 
 module.exports = { add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn }
