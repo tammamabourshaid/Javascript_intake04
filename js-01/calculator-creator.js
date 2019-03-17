@@ -1,5 +1,3 @@
-const createOperation = operation => {
-    return operation;
-};
+const createOperation = operation => operation;
 
 module.exports = { createOperation };
