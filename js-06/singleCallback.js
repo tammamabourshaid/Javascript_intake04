@@ -4,6 +4,6 @@ const singleCallback = callback => {
   }, 500);
 };
 
-const singleCallbackAsPromise = () => new Promise(resolve => resolve(1));
+const singleCallbackAsPromise = () => new Promise(resolve => singleCallback(resolve));
 
 module.exports = { singleCallback, singleCallbackAsPromise };
