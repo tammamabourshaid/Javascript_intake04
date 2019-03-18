@@ -4,7 +4,7 @@ const stringCallback = (name, callback) => {
   }, 500);
 };
 
-const stringCallbackAsPromise = name => new Promise(resolve => resolve(`Hello ${name}`));
+const stringCallbackAsPromise = name => new Promise(resolve => stringCallback(name, resolve));
 
 
 module.exports = { stringCallback, stringCallbackAsPromise };
