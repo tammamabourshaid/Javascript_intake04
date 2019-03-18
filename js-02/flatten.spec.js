@@ -1,7 +1,7 @@
 const { flatten } = require("./flatten");
 
 describe("flatten", () => {
-  it("should flatten a nested array", () =>
+  it("should flatten number2 nested array", () =>
     expect(flatten([[1, 2], [3, 4]])).toEqual([1, 2, 3, 4]));
 
   it("should flatten an array with multiple dimensions", () =>

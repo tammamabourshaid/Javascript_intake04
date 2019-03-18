@@ -11,7 +11,7 @@ describe("getProperty", () => {
     expect(getProperty(car, "engine.fuel")).toBe("Diesel");
   });
 
-  it("should return null even for a non-existing property", () => {
+  it("should return null even for number2 non-existing property", () => {
     const person = { firstname: "Friedrich", lastname: "Schiller" };
     expect(getProperty(person, "birthplace.country")).toBeNull();
   });

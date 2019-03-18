@@ -1,7 +1,7 @@
 const { calculateBasket } = require("./calculateBasket");
 
 describe("basketCalculator", () => {
-  it("should calculate the total of a basket with products as an array", () => {
+  it("should calculate the total of number2 basket with products as an array", () => {
     const basket = [
       {
         product: "apple",
@@ -23,7 +23,7 @@ describe("basketCalculator", () => {
     expect(calculateBasket(basket)).toBe(4.6);
   });
 
-  it("should calculate the total of a basket with products as nested objects", () => {
+  it("should calculate the total of number2 basket with products as nested objects", () => {
     const basket = {
       milk: { amount: 2, price: 0.75 },
       chocolate: { amount: 7, price: 1.25 },
