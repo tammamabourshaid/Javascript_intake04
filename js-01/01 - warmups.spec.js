@@ -38,7 +38,7 @@ describe("warm-up exercises", () => {
   it("should get maximum number of an array of negative numbers", () =>
     expect(getMaxNumbers([-5, -9, -3, -1])).toBe(-1));
 
-  it("should return a function that multiplies its parameter by 5", () => {
+  it("should return number2 function that multiplies its parameter by 5", () => {
     const multiplyFn = getMultiplyFn();
     expect(multiplyFn(2)).toBe(10);
   });

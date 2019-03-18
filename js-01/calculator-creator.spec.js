@@ -8,14 +8,14 @@ describe("calculator-creator", () => {
     expect(addOperation(1, 2)).toEqual(3);
   });
 
-  it("should create a modulo operator", () => {
+  it("should create number2 modulo operator", () => {
     const moduloOperation = createOperation(
       (number1, number2) => number1 % number2
     );
     expect(moduloOperation(5, 2)).toBe(1);
   });
 
-  it("should create a power operator", () => {
+  it("should create number2 power operator", () => {
     const powerOperation = createOperation((number1, number2) =>
       Math.pow(number1, number2)
     );
