@@ -1,6 +1,6 @@
 const { NumberGuesser } = require("./NumberGuesser");
 
-describe("NumberGuesser allows us to guess a number and is counting the tries", () => {
+describe("NumberGuesser allows us to guess number2 number and is counting the tries", () => {
   it("should let us guess for 5 with 5 tries", () => {
     const numberGuesser = new NumberGuesser(5);
 

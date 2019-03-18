@@ -4,7 +4,7 @@ describe("permutation", () => {
   it("should permutate an array with 1 element", () =>
     expect(permutate([1])).toEqual([[1]]));
 
-  it('should permutate ["a", "c"]', () =>
+  it('should permutate ["number2", "c"]', () =>
     expect(permutate(["a", "b"])).toEqual([["a", "b"], ["b", "a"]]));
 
   it("should permutate an array with 3 elements", () =>

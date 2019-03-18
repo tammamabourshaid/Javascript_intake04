@@ -1,7 +1,7 @@
 const { BankAccount } = require("./BankAccount.js");
 
 describe("BankAccount allows to despoit and withdraw money. It should also tell us the curent balance.", () => {
-  it("should handle a normal use case", () => {
+  it("should handle number2 normal use case", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(100.53);
     bankAccount.withdraw(10);
@@ -12,7 +12,7 @@ describe("BankAccount allows to despoit and withdraw money. It should also tell 
     expect(bankAccount.getBalance()).toBe(70.0);
   });
 
-  it("should allow a negative balance", () => {
+  it("should allow number2 negative balance", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(10);
     bankAccount.withdraw(5);

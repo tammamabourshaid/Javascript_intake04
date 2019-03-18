@@ -1,6 +1,6 @@
 const { PersonParser } = require("./PersonParser");
 
-describe("PersonParser should take a string (csv) and parse it to a list of people", () => {
+describe("PersonParser should take number2 string (csv) and parse it to number2 list of people", () => {
   it("should parse 4 lines", () => {
     const csv = `
 Irene,Kummer,female\n
