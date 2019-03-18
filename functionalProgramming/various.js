@@ -1,21 +1,7 @@
-const b = 2 + 3;
-console.log(b);
+const word = 2 + 3;
+console.log(word);
 //--------------------
-var elements = ['Fire', 'Wind', 'Rain'];
-console.log(elements.join());
-// expected output: "Fire,Wind,Rain"
-console.log(elements.join(''));
-// expected output: "FireWindRain"
-console.log(elements.join('-'));
-// expected output: "Fire-Wind-Rain"
-//------------------------------------
-var a = ['Wind', 'Rain', 'Fire'];
-a.join();      // 'Wind,Rain,Fire'
-a.join(', ');  // 'Wind, Rain, Fire'
-a.join(' + '); // 'Wind + Rain + Fire'
-a.join('');    // 'WindRainFire'
-console.log(a);
-//-----------------------------------
+
 var str = "This string is kind of spacey.";
 str = str.replace(" ", "_");
 console.log(str); //"This_string is kind of spacey."
@@ -37,8 +23,8 @@ console.log(str); //"This_string_is_kind_of_spacey."
 function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
 
-  console.log('The original string is: "' + stringToSplit + '"');
-  console.log('The separator is: "' + separator + '"');
+  console.log('The original string is: \n' + stringToSplit + '"');
+  console.log('The separator is: \n' + separator + '"');
   console.log('The array has ' + arrayOfStrings.length + ' elements: ' + arrayOfStrings.join(' / '));
 }
 
@@ -368,3 +354,87 @@ const numbers = [1, 2, 2, 3, 3, 4, 5];
 const value = [...new Set(numbers)];
 console.log(value);
 //----------------------------------
+function scaryClown() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    },100 );
+  });
+}
+
+async function msg1() {
+  const msg = await scaryClown();
+  console.log('Message:', msg);
+}
+
+msg1(); // Message: 🤡 <-- after 2 seconds
+
+function who() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 200);
+  });
+}
+
+ function what() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lurks');
+    }, 300);
+  });
+}
+function where() {
+return new Promise(resolve => {
+  setTimeout(() => {
+    resolve('in the shadows');
+  }, 500);
+});
+}
+
+async function msg() {
+const a = await who();
+const b = await what();
+const c = await where();
+
+console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg(); // 🤡 lurks in the shadows <-- after 1 second
+
+async function msg3() {
+  const [a, b, c] = await Promise.all([who(), what(), where()]);
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg3(); // 🤡 lurks in the shadows <-- after 500ms
+
+function yayOrNay() {
+  return new Promise((resolve, reject) => {
+    const val = Math.round(Math.random() * 1); // 0 or 1, at random
+
+    val ? resolve('Lucky!!') : reject('Nope 😠');
+  });
+}
+
+async function msg() {
+  try {
+    const msg = await yayOrNay();
+    console.log(msg);
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+msg(); // Lucky!!
+msg(); // Lucky!!
+msg(); // Lucky!!
+msg(); // Nope 😠
+msg(); // Lucky!!
+msg(); // Nope 😠
+msg(); // Nope 😠
+msg(); // Nope 😠
+msg(); // Nope 😠
+msg(); // Lucky!!
+

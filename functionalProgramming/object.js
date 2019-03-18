@@ -4,9 +4,9 @@ const icecreamColors = {
     vanilla: 'white',
     strawberry: 'red',
 }
-
+delete icecreamColors. vanilla;
 const colors = Object.values(icecreamColors);
-console.log("Object.values :" + "\n" + colors);
+console.log("Object.values :----" + "\n" + colors);
 // colors will be equal to ["brown", "white", "red"]
 //---------------------------------------------
 //Object.keys()
@@ -15,9 +15,8 @@ const icecreamColors1 = {
     vanilla: 'white',
     strawberry: 'red',
 }
-
 const types = Object.keys(icecreamColors1);
-console.log("Object.keys :" + "\n" + types);
+console.log("Object.keys :----" + "\n" + types);
 // types will be equal to ["chocolate", "vanilla", "strawberry"]
 //-------------------------------------------------
 //Object.entries()
@@ -26,9 +25,8 @@ const weather = {
     temperature: 24,
     humidity: 33,
 }
-
 const entries = Object.entries(weather);
-console.log("Object.entries :" + "\n" + entries);
+console.log("Object.entries :----" + "\n" + entries);
 // entries will be equal to
 // [['rain', 0], ['temperature', 24], ['humidity', 33]]
 //------------------------------------------------
@@ -37,12 +35,11 @@ const spreadableObject = {
     name: 'Robert',
     phone: 'iPhone'
 };
-
 const newObject = {
     ...spreadableObject,
     carModel: 'Volkswagen'
 }
-console.log("Object spread :" + "\n");
+console.log("Object spread :---add new object");
 console.log(newObject);
 
 // newObject will be equal to
@@ -50,10 +47,8 @@ console.log(newObject);
 //---------------------------------------------------------
 //Function Rest
 function displayArgumentsArray(...theArguments) {
-    console.log("Function Rest :" + "\n");
-    console.log(theArguments);
+    console.log("Function Rest :----" + "\n" + theArguments);
 }
-
 displayArgumentsArray('hi', 'there', 'bud');
 // Will print ['hi', 'there', 'bud']
 //------------------------------------------------------------
@@ -61,29 +56,35 @@ displayArgumentsArray('hi', 'there', 'bud');
 const frozenObject = {
     name: 'Robert'
 }
-
 Object.freeze(frozenObject);
-
 frozenObject.name = 'Henry';
-console.log("Object.freeze :");
-
+console.log("Object.freeze :----");
 console.log(frozenObject);
 
 // frozenObject will be equal to { name: 'Robert' }
 //-----------------------------------------------------------
 //Object.seal()
-
-
 const sealedObject = {
     name: 'Robert'
 }
-
 Object.seal(sealedObject);
-
 sealedObject.name = 'Bob';
-sealedObject.wearsWatch = true;
-console.log("Object.seal :")
-console.log(Object.seal(sealedObject));
-
-  // sealedObject will be equal to { name: 'Bob' }
+//sealedObject.wearsWatch = true;
+console.log("Object.seal :-----")
+console.log(sealedObject);
+// sealedObject will be equal to { name: 'Bob' }
 //----------------------------------------------------------
+//Object.assign()--------
+const firstObject = {
+    firstName: 'Robert'
+}
+const secondObject = {
+    lastName: 'Cooper'
+}
+const combinedObject = Object.assign(firstObject, secondObject);
+console.log('Object.assign()------');
+
+console.log(combinedObject);
+
+  // combinedObject will be equal to { firstName: 'Robert', lastName: 'Cooper' }
+  //------------------------------------------------------

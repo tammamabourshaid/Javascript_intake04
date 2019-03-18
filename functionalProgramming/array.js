@@ -1,9 +1,9 @@
 
+//devied numbers
 function operations(numbers) {
     const halves = numbers.map(x => x / 2);
     return halves;
 }// const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
-
 // const longWords = words.filter(word => word.length > 6);
 
 const numbers = [2, 4, 8, 10];
@@ -14,28 +14,30 @@ const otherNumbers = [5, 6, 7, 8, 9, 10];
 const otherAnswer = operations(otherNumbers);
 console.log(otherAnswer);
 //---------------------------------
-//Array.from()
+//Array.from()---devied word to strings.
 const newArray = Array.from('hello');
-console.log("Array.from:" + "\n" + newArray);
+console.log("Array.from:-----" + "\n" + newArray);
 // newArray will be equal to ['h', 'e', 'l', 'l', 'o']
-//---------------------------------------------
+//-----------------------------------
+//devied sentence or word to strings.
 const text = "I am Developpr";
 const textSplit = text.split("");
 console.log(textSplit);
 //-------------------------------------------
-//Array spread
+//Array spread-------------merg two arrays in one,it is like concat.
 const spreadableOne = [1, 2, 3, 4];
 const spreadableTwo = [5, 6, 7, 8];
-
+const combined1 = spreadableOne.concat(spreadableTwo)
 const combined = [...spreadableOne, ...spreadableTwo];
-console.log("Array spread :" + "\n" + combined);
+console.log("Array spread :-----" + "\n" + combined + '\n' + "concat :\n" + combined1);
 // combined will be equal to [1, 2, 3, 4, 5, 6, 7, 8]
 //---------
-//Remove an array element without mutating the original array.
+//slice----Remove an array element without mutating the original array.
 
 const animals = ['squirrel', 'bear', 'deer', 'salmon', 'rat'];
 const mammals = [...animals.slice(0, 3), ...animals.slice(4)];
-console.log("Array spread :" + "\n" + mammals);
+
+console.log("slice----Remove an array element:----" + "\n" + mammals);
 
 // mammals will be equal to ['squirrel', 'bear', 'deer', 'rat']
 //-----------------------------------------------------
@@ -45,104 +47,110 @@ const max = Math.max(...array);
 const min = Math.min(...array);
 minMax.push(min, max);
 
-console.log(minMax);
+console.log('Min&Max---- "\n' + minMax);
 //----------------------------
-
+//Reading from many arrays as object
 const flights = [["Dmm", 'JED', '7:30am'], ["RYD", 'JED', '8:30pm'], ["MEK", 'JED', '10:30am']];
 flights.forEach(function (flight, i) {
 
     [fromCity, toCity, Time] = flight
+    //flights.shift(0); 
+    // flights.pop(1);
 
-    console.log(`${i+1}.A flight from ${fromCity} to ${toCity} at ${Time}`);
-    
+    console.log(`${i + 1}.A flight from ${fromCity} to ${toCity} at${Time} `);
+}); const flights2 = flights.splice(0, 2)
+// Starting at index position 0, remove two elements
+console.log(flights);
+// Starting at index position 0, keap two elements
+console.log(flights2);
+//------------------------------------
+
+const list1 = ["bar", "baz", "foo", "qux"];
+// Starting at index position 1, remove two elements
+//output [ 'bar', 'qux' ]
+const test1 = list1.splice(1, 2)
+console.log(list1);
+// Starting at index position 1, keap two elements
+//output [ 'baz', 'foo' ]
+console.log(test1);
+//--------------------------------------
+const a = { firstName: 'Badi', lastName: 'Raslan' }
+console.log(a);
+console.log(Object.keys(a));
+console.log('Name\n' + Object.values(a));
+
+console.log(Object.values(a));
+console.log(Object.entries(a));
+//---------------------
+var array1 = ['a', 'b', 'c'];
+var iterator1 = array1.entries();
+array1.forEach(e => (console.log(iterator1.next().value)));
+
+//-------------------------
+var elements = ['Fire', 'Wind', 'Rain'];
+console.log(elements.join());
+// expected output: "Fire,Wind,Rain"
+console.log(elements.join(''));
+// expected output: "FireWindRain"
+console.log(elements.join('-'));
+// expected output: "Fire-Wind-Rain"
+//------------------------------------
+var a1 = ['Wind', 'Rain', 'Fire'];
+a1.join();      // 'Wind,Rain,Fire'
+a1.join(', ');  // 'Wind, Rain, Fire'
+a1.join(' + '); // 'Wind + Rain + Fire'
+a1.join('');    // 'WindRainFire'
+console.log(a1);
+//-----------------------------------
+var array1 = ['a', 'b', 'c'];
+
+array1.forEach(function (element) {
+    console.log(element);
 });
 
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+//----------------------------
+var array1 = [1, 2, 3];
 
-function scaryClown() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('🤡');
-      },100 );
-    });
-  }
-  
-  async function msg1() {
-    const msg = await scaryClown();
-    console.log('Message:', msg);
-  }
-  
-  msg1(); // Message: 🤡 <-- after 2 seconds
+console.log(array1.includes(2));
+// expected output: true
 
-  function who() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('🤡');
-      }, 200);
-    });
-  }
-  
-   function what() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('lurks');
-      }, 300);
-    });
-  }
-  function where() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('in the shadows');
-    }, 500);
-  });
-}
+var pets = ['cat', 'dog', 'bat'];
 
-async function msg() {
-  const a = await who();
-  const b = await what();
-  const c = await where();
+console.log(pets.includes('cat'));
+// expected output: true
 
-  console.log(`${ a } ${ b } ${ c }`);
-}
+console.log(pets.includes('at'));
+// expected output: false
+//---------------------------
+var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 
-msg(); // 🤡 lurks in the shadows <-- after 1 second
-
-async function msg3() {
-    const [a, b, c] = await Promise.all([who(), what(), where()]);
-  
-    console.log(`${ a } ${ b } ${ c }`);
-  }
-  
-  msg3(); // 🤡 lurks in the shadows <-- after 500ms
-
-  function yayOrNay() {
-    return new Promise((resolve, reject) => {
-      const val = Math.round(Math.random() * 1); // 0 or 1, at random
-  
-      val ? resolve('Lucky!!') : reject('Nope 😠');
-    });
-  }
-  
-  async function msg() {
-    try {
-      const msg = await yayOrNay();
-      console.log(msg);
-    } catch(err) {
-      console.log(err);
-    }
-  }
-  
-  msg(); // Lucky!!
-  msg(); // Lucky!!
-  msg(); // Lucky!!
-  msg(); // Nope 😠
-  msg(); // Lucky!!
-  msg(); // Nope 😠
-  msg(); // Nope 😠
-  msg(); // Nope 😠
-  msg(); // Nope 😠
-  msg(); // Lucky!!
+console.log(beasts.indexOf('bison'));
+// expected output: 1
 
 
-  
-  
-  
+
+console.log(beasts.indexOf('giraffe'));
+// expected output: -1
+//---------------------------
+var animals2 = ['Dodo', 'Tiger', 'Tiger', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals2.lastIndexOf('Dodo'));
+// expected output: 3
+console.log(animals2.indexOf('Tiger'));
+console.log(animals2.lastIndexOf('Tiger'));
+// expected output: 1
+// start from index 2
+console.log(animals2.indexOf('Tiger', 2));
+// expected output: 4
+
+
+
+
+
+
+
+
+
