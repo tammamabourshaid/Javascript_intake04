@@ -25,6 +25,10 @@ can be summed. The sum is returned as promise`, () => {
   it("should return 0 if no numbers have been set", async () => {
     expect(await new AdderWithPromise().sum()).toBe(0);
   });
+
+  it("should ensure that sum returns a promise", () => {
+    expect(new AdderWithPromise().sum().constructor).toBe(Promise);
+  });
 });
 
 
