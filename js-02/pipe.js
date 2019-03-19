@@ -1,31 +1,13 @@
-function pipe([array]){
-    if(array.length < 1 || array == undefined){
-        return 1;
-    }
-    let product=0;
-    let first=array[0];
-    while (i=1,i<array.length-1,i++){
-        return first*=array[i]
-    }
-}
-module.exports={pipe};
-const pipe = ([result]) => {
+function pipe(functionArray) {
 
+  let result = 0;
 
+  functionArray.forEach(element => {
+    result = element(result);
+  });
 
-
-
-
-
-
-
-return result;
-
+  return result;
 }
 
 
-
-
-
-
-module.exports ={pipe};
+module.exports = { pipe };

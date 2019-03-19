@@ -1,27 +1,11 @@
-function getProperty([objects]){
-    var objectToInspect;     
-    var result = [];
-        
-      for(objectToInspect = o; objectToInspect !== null; 
-            objectToInspect = Object.getPrototypeOf(objectToInspect)) {  
-            result = result.concat(
-                Object.getOwnPropertyNames(objectToInspect)
-            );  
-        }
-        
-        return result; 
-    
-}
-    var objectToInspect;
-    var result = [];
- 
-      for(objectToInspect = o; objectToInspect !== null;
-            objectToInspect = Object.getPrototypeOf(objectToInspect)) {
-            result = result.concat(
-                Object.getOwnPropertyNames(objectToInspect)
-            );
-        }
- 
-        return result;
- 
- }
+const getProperty = (object, anyProperty) => {
+    const split = anyProperty.split("."),
+        reducer = ((accumulator, currentValue) => (accumulator && accumulator[currentValue]) || null),
+        property = split.reduce(reducer, object);
+
+    return property;
+};
+
+
+
+module.exports = { getProperty };

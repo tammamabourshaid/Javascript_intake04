@@ -1,3 +1,6 @@
 function getFrequencyTable(array) {
-  };
-  module.exports={getFrequencyTable}
+  array.map(element => element + " :" + element.key);
+}
+
+module.exports = { getFrequencyTable };
+

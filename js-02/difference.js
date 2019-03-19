@@ -1,24 +1,19 @@
-function getDifference(Array1,Array2){
-    let difference=[]
-    difference = Array1.filter(element => !Array2.includes(element));
-}
-module.exports={getDifference};
-
 function getDifference(array1, array2) {
-    let resultArray = [];
+    let commonElements = [];
 
-    array2.filter(function (number) {
-        if (!array1.includes(number)) resultArray.push(number);
+    array1.forEach(element=>{
+        if (!array2.includes(element)){
+            commonElements.push(element);
+        }
     });
+    
+    array2.forEach(element => {
+        if (!array1.includes(element)) {
+            commonElements.push(element);
+        }
 
-    array1.filter(function (number) {
-        if (!array2.includes(number)) resultArray.push(number);
     });
-
-
-    return resultArray.sort();
-
+    return commonElements;
 }
-
 
 module.exports = { getDifference };
