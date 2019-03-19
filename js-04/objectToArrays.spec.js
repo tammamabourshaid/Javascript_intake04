@@ -1,4 +1,4 @@
-const { objectToArray } = require("./objectToArray");
+const { objectToArray } = require("./objectToArrays");
 
 describe("", () => {
   it("should deal with a normal object", () => {
