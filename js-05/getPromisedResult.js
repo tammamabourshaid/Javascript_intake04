@@ -1,5 +1,3 @@
-const getPromisedResult = promise => {
-  return promise;
-};
+const getPromisedResult = promise => promise;
 
 module.exports = { getPromisedResult };
