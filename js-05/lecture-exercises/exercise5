@@ -1,0 +1,6 @@
+Solved by creating three different classes:
+All are in the 'lecture-exercises' folder in 'js-05'
+
+1) CallbackBasket.js
+2) PromiseBasket.js
+3) AsyncAwaitBasket.js
