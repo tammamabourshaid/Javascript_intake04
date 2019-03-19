@@ -8,5 +8,4 @@ const mapCallbackToPromise = callbackBasedFn => {
   return transformedFn;
 };
 
-
 module.exports = { mapCallbackToPromise };

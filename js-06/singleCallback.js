@@ -1,8 +1,4 @@
-const singleCallback = callback => {
-  setTimeout(() => {
-    callback(1);
-  }, 500);
-};
+const singleCallback = callback => setTimeout(() => callback(1), 500);
 
 const singleCallbackAsPromise = () => new Promise(resolve => singleCallback(resolve));
 
