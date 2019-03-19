@@ -26,12 +26,12 @@ const getNumber = async function () {
 //     console.log(one+two);
 // };
 const addTwoNumbers = async function () {
-    let one;
-    addNumOne(num => one = num);
     const five = await getNumberFive();
-    setTimeout(() => {
-        console.log("result: ", one + five);
-    },1000)
+    addNumOne(function(number){
+      let one=number;
+      console.log("result: ", one + five);
+
+    })   
 
 };
 addTwoNumbers();

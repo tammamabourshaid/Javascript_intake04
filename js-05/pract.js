@@ -4,6 +4,7 @@ function nonMutatingSort(arr) {
 
  return [].concat(arr).sort(function(a,b){
    return a-b;
+   
  });
 }
 console.log(nonMutatingSort)
