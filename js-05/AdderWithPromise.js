@@ -8,7 +8,8 @@ class AdderWithPromise {
   }
 
   sum() {
-    const sum = this.numbers.reduce((digit1, digit2) => digit1 + digit2, 0),
+    const reducer = ((digit1, digit2) => (digit1 + digit2)),
+      sum = this.numbers.reduce(reducer, 0),
       promisedSum = new Promise(resolve => {
         resolve(sum);
       });
