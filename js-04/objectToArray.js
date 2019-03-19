@@ -1,7 +1,19 @@
 const objectToArray = object => {
-  const entries = Object.entries(object);
+  const array = [];
+  const keys = Object.keys(object);
 
-  return entries;
+  keys.forEach(property => {
+    const value = object[property];
+
+    if (typeof value === "object") {
+      keys.forEach(arrayOfNestedObject =>
+        array.push([value, ...arrayOfNestedObject]));
+    } else {
+      array.push([property, value]);
+    }
+  });
+
+  return array;
 };
 
 module.exports = { objectToArray };
