@@ -26,3 +26,5 @@ can be summed. The sum is returned as promise`, () => {
     expect(await new AdderWithPromise().sum()).toBe(0);
   });
 });
+
+
