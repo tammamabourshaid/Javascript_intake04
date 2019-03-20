@@ -1,4 +1,4 @@
-function getFrequency(eini) {
+function getFrequencyTable(eini) {
     let freq = {};
     for (let i = 0; i < eini.length; i++) {
         console.log('schleife');
@@ -13,4 +13,4 @@ function getFrequency(eini) {
     return freq;
 };
 
-module.exports = { getFrequency };
+module.exports = { getFrequencyTable };

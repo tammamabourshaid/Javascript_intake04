@@ -1,32 +1,21 @@
-const { createOperation } = require("./calculator-creator");
+getMedian = (eini) => {
+    sortNumber = (a, b) => {
+        return a - b;
+    }
+    eini.sort(sortNumber);
+    if (eini.length % 2 == 1) {
+        return eini[(eini.length - 1) / 2]
+    } else {
+        return ((eini[(eini.length / 2) - 1] + eini[eini.length / 2]) / 2)
+    }
+}
 
-describe("calculator-creator", () => {
-  it("should create an add operation", () => {
-    const addOperation = createOperation(
-      (number1, number2) => number1 + number2
-    );
-    expect(addOperation(1, 2)).toEqual(3);
-  });
-
-  it("should create a modulo operator", () => {
-    const moduloOperation = createOperation(
-      (number1, number2) => number1 % number2
-    );
-    expect(moduloOperation(5, 2)).toBe(1);
-  });
-
-  it("should create a power operator", () => {
-    const powerOperation = createOperation((number1, number2) =>
-      Math.pow(number1, number2)
-    );
-    expect(powerOperation(2, 8)).toBe(256);
-  });
-
-  it("should allow us to combine operators", () => {
-    const multiply = createOperation((number1, number2) => number1 * number2);
-    const divide = createOperation((number1, number2) => number1 / number2);
-    const subtract = createOperation((number1, number2) => number1 - number2);
-
-    expect(divide(multiply(5, 4), subtract(20, 10))).toBe(2);
-  });
-});
+let x = [5, 2, 4, 1, 3];
+let y = [50, 3, 1, 1, 2];
+let z = [11, 1, 2, 3, 4];
+let gerade = [2, 3, 4, 5];
+console.log(x);
+console.log(getMedian(x));
+console.log(getMedian(y));
+console.log(getMedian(z));
+console.log(getMedian(gerade));
