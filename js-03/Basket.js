@@ -21,6 +21,6 @@ class Basket {
   getTotal() {
     return this.total;
   }
-}
+};
 
 module.exports = { Product, Basket };
