@@ -22,7 +22,6 @@ const adder = () => {
             num3 = await thirdNumberProvider();
 
             console.log(num1 + num2 + num3);
-
         })
     });
 
