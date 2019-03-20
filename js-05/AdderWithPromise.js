@@ -1,14 +1,15 @@
-const readline = require("readline");
+class AdderWithPromise {
+    constructor() {
+        this.number = 0;
+    }
 
-const adder = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    add(number) {
+        return this.number += number;
+    }
 
-const add = function (number) {
-    return new Promise(resolve =>
-        adder.number(number, answer => resolve(answer))
-    );
-};
-add();
-module.exports = { AdderWithPromise }
+    sum() {
+        return new Promise(resolve => resolve(this.number));
+    }
+}
+
+module.exports = { AdderWithPromise };

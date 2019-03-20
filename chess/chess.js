@@ -2,8 +2,8 @@
 function chess (height, width) {
 
     for (let i = 1; i <= height; i++) {
-      var separator = '';
-      var row = '';
+      let separator = '';
+      let row = '';
   
       for (let j = 1; j <= width; j++) {
         separator += '--';
@@ -19,4 +19,4 @@ function chess (height, width) {
   }
   
 
-  chess(2,5);
+  chess(3,5);
