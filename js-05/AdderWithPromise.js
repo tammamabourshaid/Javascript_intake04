@@ -1,15 +1,16 @@
-const name= "tammam"
+class AdderWithPromise {
 
-const a= new Promise(resolve => resolve(name));
-a.then(number => console.log(number));
+    constructor() {
+        this.total = 0;
+    }
 
-    //
-    // const resolvePromise = function(resolve) {
-    // resolve(1);}
-    //
-    // const promise = new Promise(resolvePromise);
+    add(number) {
+        return this.total += number;
+    }
 
-    // another way of writing it:
-    // const promise = new Promise(function(resolve) {
-    // resolve(1);
-    // });
+    sum() {
+        return new Promise(resolve => resolve(this.total));
+    }
+}
+
+module.exports = { AdderWithPromise };
