@@ -32,7 +32,6 @@ const moveUnits = async () => {
   // const replaceOtherBlockWith = await ask("With which block?\n");
   // const replaceOtherSecond = chessBoard.map(value => value.toString().replace(chessBoard[replaceOtherBlock], replaceOtherBlockWith));
   console.log(replaceFirst);
-  
   readline.close();
 };
 

@@ -1,23 +1,18 @@
-const callback = (number, callback) => {
-  setTimeout(() => {
-    callback(number);
-  }, 1000);
+const callback = callback => setTimeout(() => callback(100), 500);
+
+const callbackBasedFn = value => console.log(value);
+
+const asyncFn = async () => await 69;
+
+const combineBothPromises = () => {
+  callback(number => {
+    const number1 = number;
+    asyncFn().then(async () => {
+      const number2 = await asyncFn(),
+        sum = number1 + number2;
+      console.log(sum);
+    });
+  });
 };
 
-const promise = number => {
-  return new Promise(resolve => callback(number, resolve));
-};
-
-const asyncFn = async number => {
-  return await promise(number);
-};
-
-const combineBothPromises = (resolve1, resolve2) => {
-  const combined = Promise.all([resolve1, resolve2]);
-
-  return combined;
-};
-
-const test = combineBothPromises(promise(1), asyncFn(5))
-  .then(numbers => numbers.reduce((digit1, digit2) => digit1 + digit2))
-  .then(numbers => console.log(numbers));
+combineBothPromises();
