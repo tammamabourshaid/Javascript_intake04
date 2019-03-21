@@ -12,4 +12,4 @@ const multipyFn = number => number * 5;
 
 const getMultiplyFn = () => multipyFn;
 
-module.exports = { add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn }
+module.exports = { add, subtract, greeting, isAdult, getMaxNumbers, getMultiplyFn };
