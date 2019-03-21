@@ -18,7 +18,9 @@ to that group.
       { name: "Lübeck", country: "Germany" }
     ];
 
-    expect(groupBy(cities, city => city.country.toLowerCase())).toEqual({
+    expect(
+      groupBy(cities, city => city.country.toLowerCase())
+    ).toEqual({
       austria: [{ name: "Vienna", country: "Austria" }],
       china: [
         { name: "Beijing", country: "China" },
