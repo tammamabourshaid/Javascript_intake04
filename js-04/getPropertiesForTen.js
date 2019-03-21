@@ -1,18 +1,18 @@
 function getPropertiesForTen(object) {
 
-    let propsMake10 = [];
+    let property = [];
     let keys = Object.keys(object);
 
     keys.forEach(key => {
         if (object[key].constructor === String) {
-            return;
-        }
+            // return;
+            }
         else if (parseInt(key) + parseInt(object[key]) === 10) {
-            propsMake10.push(key);
+            property.push(key);
         }
     });
 
-    return propsMake10;
+    return property;
 
 }
 
