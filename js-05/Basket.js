@@ -1,25 +1,31 @@
-class Basket{
-    constructor(){
-        this.basket=0;
-        
-    }
+class Basket {
+  constructor() {
+    this.products = [];
+
+  }
+
+  async put(product,callback) {
+
+   setTimeout(()=> {this.products.push(product);
+    callback();
+  },1000);
+  }
+  get(callback) {
+    setTimeout(() => {callback(this.products)  
+    }, 1000);
+
+
+  }
+  
+
+  }
+const basket=new Basket();
+basket.put("strawberry",function(){
+  basket.put("chocolate",function(){
+    basket.get(function(products){
+      console.log(products);
     
-    putBasket(products) {
-        this.basket+=products;
-    }
-   async getBasket(basket) {
-     return new Promise(resolve =>
-      ( resolve(basket))
-    );
-
-  };
-     async displayProducts(){
-    const shopping= await getBasket();
-    putBasket(basket=>{
-    const product1=basket;
-    console.log(shopping,product1);
+    });
+  });
 });
-  };
-}
 
-  displayProducts();

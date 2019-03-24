@@ -2,11 +2,8 @@ function provideNumber(callback) {
     setTimeout(() => callback(1), 1000);
 };
 
-const provideNumbertwo =()=> new Promise(resolve => resolve(1));
-// const provideNumberThree=async function(){
-//     const number=await provideNumbertwo();
-//     console.log(number)
-// }
+const provideNumbertwo =()=> new Promise(resolve => resolve(5));
+
 
 const add = function () {
     provideNumber(async function (number) {

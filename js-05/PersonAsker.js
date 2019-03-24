@@ -1,38 +1,37 @@
 class PersonAsker{
-    constructor(readlinMock){
-        this.readlinMock=readlinMock;
+    constructor(readlineMock){
+        this.readlineMock=readlineMock;
     
     }
-    readlinMock(question){
-    //     let answer = "";
-    // if (question === "What is your name?") {
-    //   answer = "Roger Federer";
-    // } else if (question === "Where do you come from?") {
-    //   answer = "Switzerland";
-    // }
-       return new Promise(resolve=>resolve(answer)); 
-    
+    async readlineMock(question){
+     return new Promise(resolve=>{
+           resolve(question);
+       })
+
     }
-   ask() {
-       const question1=await readlinMock.question("what is your name?");
-       const question2=await readlinMock.question("where are you from?");
+    async getInfo(){
+        return new Promise(resolve=>{
+            resolve(answer);
+        })
+    }
+    async showInfo(){
+        const ourAnswer=await getInfo(answer);
+        console.log(ourAnswer);
+    };
+   async ask() {
+       const question1=await this.readlineMock(question);
+       const question2=await this.readlineMock(question);
        console.log(question1);
        console.log(question2);
 
-       return question1+question2;
+    
    };
+
 }
-   
-// }
+const readlineMock=new PersonAsker();
+readlineMock.ask("where are you from?");
+readlineMock.getInfo("Roger Federer is from Switzerland")
 
 
-//  const getInfo=async function ( ) {
-//     const ask= await ask();
-//     const answer=await ask();
-//     console.log(ask);  
-//     console.log(answer);
-// };
-
-// getInfo();
 
 module.exports={PersonAsker};
