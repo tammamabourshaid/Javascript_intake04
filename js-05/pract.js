@@ -28,7 +28,7 @@ const nested = {
 //   console.log(Object.keys(europe));
 // });
 
-//const fs=require("fs");
+const fs=require("fs");
 function writeToFile(filename,data){
     return new Promise(resolve=>fs.writeFile(filename,data,resolve));
 }
