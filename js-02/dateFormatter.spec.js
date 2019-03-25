@@ -1,4 +1,4 @@
-const { dateFormatter } = require("./dateFormatter");
+const { dateFormatter } = require("./dateFormatter.js");
 
 describe("dateFormatter", () => {
   it("should format 2017-12-24", () =>
