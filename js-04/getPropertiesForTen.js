@@ -1,4 +1,4 @@
-
+ 
 function getPropertiesForTen(object) {
 
     let keys = Object.keys(object);
