@@ -13,13 +13,30 @@ function getMedian(array) {
     else {
         const divident = array.length - 1;
         const medianPosition = divident / 2;
-        median = array.sort()[medianPosition];
+        median = rearrange(array.sort())[medianPosition]
     }
     return median;
 }
 
 function isLengthEven(array) {
     return array.length % 2 == 0;
+}
+
+
+const rearrange = function (array) {
+    let arraySorted = [];
+    let arrayRest = [];
+    let checkpoint = 9;
+
+    array.forEach(element => {
+        if (element <= checkpoint) {
+            arraySorted.push(element);
+        }
+        else {
+            arrayRest.push(element);
+        }
+    });
+    return arraySorted.concat(arrayRest);
 }
 
 module.exports = { getMedian };
