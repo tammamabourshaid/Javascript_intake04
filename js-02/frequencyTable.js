@@ -10,7 +10,7 @@ const getFrequencyTable = function (array) {
         }
 
         else {
-            object[element] += 1;
+            object[element] ++;
         }
     });
     return object;
