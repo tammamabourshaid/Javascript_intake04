@@ -1,73 +1,65 @@
-class PropertyRemover {
-    constructor() {
-        this.propertyToBeRemoved = [];
+const products = [{
+        name: "Bread",
+        grossPrice: 1.21,
+        vat: 0.1
+    },
+    {
+        name: "Keyboard",
+        grossPrice: 18,
+        vat: 0.2
+    },
+    {
+        name: "Apple",
+        grossPrice: 0.11,
+        vat: 0.1
+    },
+    {
+        name: "Water",
+        grossPrice: 0.99,
+        vat: 0.1
     }
-    addPropertyToBeRemoved(eini) {
-        if (Array.isArray(eini)) {
-            this.propertyToBeRemoved.push(...eini);
-            console.log('yes');
-        } else {
-            this.propertyToBeRemoved.push(eini)
-            console.log('no');
-        }
+];
+
+const getProductForName = productName =>
+    products.find(product => product.name === productName);
+
+class BasketWithPromiseStore {
+    constructor() {
+        this.gross = 0; this.vat = 0;
+    }
+    put(eini) {
+        this.gross = this.gross + getProductForName(eini).grossPrice;
+        this.vat = this.vat + getProductForName(eini).vat;
+    }
+    getTotal() {}
+}
+
+/*
+class BasketWithCallbackStore {
+    constructor(store) {
+        this.gross = 0;
+        this.net = 0;
+    }
+    put(eini) {
 
     }
-    process(mensch) {
-        //        console.log(this.propertyToBeRemoved);
-        //        console.log(eini[this.propertyToBeRemoved]);
-        //        console.log(this.propertyToBeRemoved);
-        for (let i = 0; i < this.propertyToBeRemoved.length; i++) {
-            delete mensch[this.propertyToBeRemoved[i]];
+    getTotal() {
+        return {
+            net: ,
+            gross:
         }
-        return mensch;
     }
 }
-/*
-const person = { firstname: "Mel", lastname: "Gibson" };
-const propertyRemover = new PropertyRemover();
-propertyRemover.addPropertyToBeRemoved("lastname");
-const removedPerson = propertyRemover.process(person);
-console.log(removedPerson);
-*/
-/*
-const austria = {
-    population: 8773000,
-    capital: "Vienna",
-    size: 83879
-};
-const propertyRemover = new PropertyRemover();
-propertyRemover.addPropertyToBeRemoved("population");
-propertyRemover.addPropertyToBeRemoved("size");
-const onlyVienna = propertyRemover.process(austria);
-*/
-/*
-const austria = {
-    population: 8773000,
-    capital: "Vienna",
-    size: 83879
-  };
-  const propertyRemover = new PropertyRemover();
-  propertyRemover.addPropertyToBeRemoved(["population", "size"]);
-  const onlyVienna = propertyRemover.process(austria);
-*/
-/*
-const austria = {
-    population: 8773000,
-    capital: "Vienna",
-    size: 83879
-  };
 
-  const germany = {
-    population: 82790000,
-    capital: "Berlin",
-    size: 357386
-  };
 
-  const propertyRemover = new PropertyRemover();
-  propertyRemover.addPropertyToBeRemoved(["population", "size"]);
-  const onlyVienna = propertyRemover.process(austria);
-  const onlyBerlin = propertyRemover.process(germany);
+const basket = new BasketWithCallbackStore(new CallbackStore());
+await basket.put("apple", 2);const products = [
+    { name: "Bread", grossPrice: 1.21, vat: 0.1 },
+    { name: "Keyboard", grossPrice: 18, vat: 0.2 },
+    { name: "Apple", grossPrice: 0.11, vat: 0.1 },
+    { name: "Water", grossPrice: 0.99, vat: 0.1 }
+];
+await basket.put("water", 2);
+await basket.put("keyboard", 1);
 */
-
-console.log(onlyVienna);
-console.log(onlyBerlin);
+console.log(getProductForName("water").vat);
