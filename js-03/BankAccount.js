@@ -16,4 +16,9 @@ class BankAccount {
     }
 }
 
-module.exports = { BankAccount };
+const myBanlAccount = new BankAccount()
+myBanlAccount.de
+
+module.exports = {
+    BankAccount
+};

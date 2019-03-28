@@ -1,4 +1,4 @@
-const fs = require("fs"); // https://nodejs.org/api/fs.html
+ const fs = require("fs"); // https://nodejs.org/api/fs.html
 
 const nested = {
   europe: {
@@ -21,7 +21,7 @@ const nested = {
 };
 
 fs.writeFile("europe.json", JSON.stringify(nested), () =>
-  console.log("file has been written")
+  console.log("file 1 has been written")
 );
 
 
@@ -31,6 +31,8 @@ fs.readFile("europe.json", (err, content) => {
   } = JSON.parse(content);
   console.log(Object.entries(europe));
 });
+//-------------------------
+
 const array = ['Hello', 'World']
 const array1 = {
   a: ['Hello', 'World'],
@@ -44,16 +46,20 @@ console.log(JSON.stringify(array));
 console.log(array);
 console.log(JSON.stringify(array1));
 
-
+//-------------------
 function writeToFile(filename, data) {
   return new Promise(resolve => fs.writeFile(filename, data, resolve));
 }
-writeToFile("europe.txt", "Hellooooo").then(function () {
+  writeToFile("europe.txt1", "Hellooooo").then(function () {
 
-  console.log("file 2 has been writen");
+  fs.readFile("europe.txt1",  (err, content) => {
+  
+    console.log(`file 2 has been writen : ${content}`);
+    });
+   
 });
-
-fs.readFile("europe.txt", (err, content) => {
-  console.log(JSON.parse(content));
-
-});
+//--------------
+ fs.readFile("europe.txt", "utf8",  (err, content) => {
+  
+ console.log(`file 3 has been writen : ${content}`);
+ });

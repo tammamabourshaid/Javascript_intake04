@@ -27,10 +27,6 @@ const objectToArray = () => {
 
 
 
-
-
-
-
     // const nested = {
     //     objectToArray1: { firstname: "Hugo", lastname: "Schmidt" },
     //     obj: { "1": 5, "2": 7, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0 },

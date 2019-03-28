@@ -1,0 +1,24 @@
+{"nested":{
+    "BillaCo": {
+      "billa1": {
+        "codeNo": 8773001,
+        "productName": "Milk",
+        "price":1.49,
+        "vat":0.10,
+        "qty":100
+      },
+      "billa2": {
+        "codeNo": 8773002,
+        "productName": "Apple",
+        "price": 2,
+        "vat":0.15,
+        "qty":150
+      },
+     "billa3":{
+      "codeNo": 8773003,
+        "productName": "coffee",
+        "price": 6.5,
+        "vat":0.20,
+        "qty":200
+      
+      }}}}
