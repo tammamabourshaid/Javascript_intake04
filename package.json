@@ -9,7 +9,11 @@
   },
   "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
+  },
   "devDependencies": {
     "jest": "^24.1.0"
   }
