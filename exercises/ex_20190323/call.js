@@ -6,7 +6,7 @@ class Person {
 
 this.person = {
     setName: function(name) {
-        this.name = name;
+        this.product = name;
     },
     introduce: function() {
         console.log(`My name is ${this.name}`);
