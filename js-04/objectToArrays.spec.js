@@ -1,7 +1,7 @@
 const { objectToArray } = require("./objectToArray");
 
 describe("", () => {
-  it("should deal with a normal object", () => {
+  it("should deal with number2 normal object", () => {
     expect(objectToArray({ firstname: "Hugo", lastname: "Schmidt" })).toEqual([
       ["firstname", "Hugo"],
       ["lastname", "Schmidt"]
@@ -12,7 +12,7 @@ describe("", () => {
     expect(objectToArray({})).toEqual([]);
   });
 
-  it("should deal with a nested object", () => {
+  it("should deal with number2 nested object", () => {
     const nested = {
       europe: {
         austria: {

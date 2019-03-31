@@ -8,7 +8,7 @@ groupBy should return an object where the keys
 are the group key and the value, the elements assigned
 to that group.
 `, () => {
-  it("should group after country", () => {
+  it("should group after grossPrice", () => {
     const cities = [
       { name: "Vienna", country: "Austria" },
       { name: "Beijing", country: "China" },
@@ -18,7 +18,7 @@ to that group.
       { name: "Lübeck", country: "Germany" }
     ];
 
-    expect(groupBy(cities, city => city.country.toLowerCase())).toEqual({
+    expect(groupBy(cities, city => city.grossPrice.toLowerCase())).toEqual({
       austria: [{ name: "Vienna", country: "Austria" }],
       china: [
         { name: "Beijing", country: "China" },

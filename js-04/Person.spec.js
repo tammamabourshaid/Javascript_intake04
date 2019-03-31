@@ -6,7 +6,7 @@ introduce().
 `, () => {
   it("should not overwrite introduce", () => {
     const augustin = new Person("Ferdinand", "Augustin");
-    expect(augustin.introduce()).toBe("My name is Ferdinand Augustin.");
+    expect(augustin.introduce()).toBe("My product is Ferdinand Augustin.");
   });
 
   it("should overwrite introduce", () => {
@@ -23,7 +23,7 @@ introduce().
     const buchbinder = new Musician("Rudolf", "Buchbinder", "piano");
 
     expect(buchbinder.introduce()).toBe(
-      "My name is Rudolf Buchbinder. I play the piano"
+      "My product is Rudolf Buchbinder. I play the piano"
     );
   });
 });
