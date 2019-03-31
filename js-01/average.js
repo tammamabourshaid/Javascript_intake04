@@ -2,7 +2,7 @@
 const getAverage = (array) => {
 
    const size = array.length;
-   const reducer = (e1, e2) => { return e1 + e2 };
+   const reducer = (e1, e2) => (e1 + e2 );
    const sum = array.reduce(reducer);
    const average = sum / size;
 

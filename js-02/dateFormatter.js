@@ -1,4 +1,3 @@
-
 function dateFormatter(anyDate) {
 
     const date = new Date(anyDate);
@@ -17,12 +16,12 @@ function dateFormatter(anyDate) {
         correctDate = date.getFullYear() + "-" + correctMonth + "-" + correctDay + " " +
         date.getHours() + ":" + correctMinutes;
 
-
-
     return correctDate;
 }
 
-module.exports = { dateFormatter };
+module.exports = {
+    dateFormatter
+};
 
 
 

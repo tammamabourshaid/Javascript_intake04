@@ -16,8 +16,15 @@ class BankAccount {
     }
 }
 
-const myBanlAccount = new BankAccount()
-myBanlAccount.de
+
+const bankAccount = new BankAccount();
+bankAccount.deposit(100.53);
+bankAccount.withdraw(10);
+bankAccount.withdraw(7.95);
+bankAccount.withdraw(8.45);
+bankAccount.withdraw(4.13);
+console.log(bankAccount.balance);
+
 
 module.exports = {
     BankAccount

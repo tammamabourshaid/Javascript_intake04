@@ -1,30 +1,31 @@
 class BasketWithCallbackStore {
-    constructor(store) {
-        this.store = store;
-        this.total = {
-            gross: 0,
-            net: 0
-        }
-    }
+  constructor(callbackStore) {
+    this.callbackStore = callbackStore;
+    this.total = {
+      net: 0.0,
+      gross: 0.0
+    };
+  }
 
-    put(product, amount) {
-        return new Promise(resolve => {
-                const firstLetterUpperCased = product.charAt(0).toUpperCase() + product.slice(1);
-                this.store.getProductForName(firstLetterUpperCased, element => {
-                    this.total.gross += element.grossPrice * amount;
-                    this.total.net += (element.grossPrice / ((element.vat + 1)) * amount);
-                    // console.log(this.total);
-                    
-                    resolve(element);
-                });
-        });
-    }
+  put(productName, amount) {
+    const name = this.capitalise(productName);
+    return new Promise(resolve => {
+      this.callbackStore.getProductForName(name, product => {
+        const net = product.grossPrice / (1 + product.vat);
+        this.total.net += net * amount;
+        this.total.gross += product.grossPrice * amount;
+        resolve();
+      });
+    });
+  }
 
-    getTotal() {
-        return this.total;
-    }
+  getTotal() {
+    return this.total;
+  }
+
+  capitalise(word) {
+    return `${word[0].toUpperCase()}${word.slice(1)}`;
+  }
 }
 
-module.exports = {
-    BasketWithCallbackStore
-}
+module.exports = { BasketWithCallbackStore };

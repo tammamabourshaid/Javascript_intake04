@@ -24,7 +24,6 @@ fs.writeFile("europe.json", JSON.stringify(nested), () =>
   console.log("file 1 has been written")
 );
 
-
 fs.readFile("europe.json", (err, content) => {
   const {
     europe

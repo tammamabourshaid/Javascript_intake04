@@ -13,6 +13,13 @@ function calculateBasket(list) {
 
 
 }
+const totalPrice=(list2)=>{
+    const value2=Object.values(list2)
+    formula2=(acc,curr)=>(acc,(curr.price*curr.amount));
+const totalprice=value2.reduce(formula2,0)
+return totalprice;
+}
 
+//console.log(totalPrice(3,2));
 
-module.exports = { calculateBasket };
+module.exports = { calculateBasket,totalPrice };

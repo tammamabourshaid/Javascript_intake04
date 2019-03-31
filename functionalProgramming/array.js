@@ -1,9 +1,8 @@
-
 //devied numbers
 function operations(numbers) {
     const halves = numbers.map(x => x / 2);
     return halves;
-}// const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+} // const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
 // const longWords = words.filter(word => word.length > 6);
 
 const numbers = [2, 4, 8, 10];
@@ -26,7 +25,7 @@ console.log(textSplit);
 //-------------------------------------------
 //Array spread-------------merg two arrays in one,it is like concat.
 const spreadableOne = [1, 2, 3, 4];
-const spreadableTwo = [5, 6, 7, 8];
+const spreadableTwo = [5, 6,[4,3] ,7, 8];
 const combined1 = spreadableOne.concat(spreadableTwo)
 const combined = [...spreadableOne, ...spreadableTwo];
 console.log("Array spread :-----" + "\n" + combined + '\n' + "concat :\n" + combined1);
@@ -50,7 +49,11 @@ minMax.push(min, max);
 console.log('Min&Max---- "\n' + minMax);
 //----------------------------
 //Reading from many arrays as object
-const flights = [["Dmm", 'JED', '7:30am'], ["RYD", 'JED', '8:30pm'], ["MEK", 'JED', '10:30am']];
+const flights = [
+    ["Dmm", 'JED', '7:30am'],
+    ["RYD", 'JED', '8:30pm'],
+    ["MEK", 'JED', '10:30am']
+];
 flights.forEach(function (flight, i) {
 
     [fromCity, toCity, Time] = flight
@@ -58,7 +61,8 @@ flights.forEach(function (flight, i) {
     // flights.pop(1);
 
     console.log(`${i + 1}.A flight from ${fromCity} to ${toCity} at${Time} `);
-}); const flights2 = flights.splice(0, 2)
+});
+const flights2 = flights.splice(0, 2)
 // Starting at index position 0, remove two elements
 console.log(flights);
 // Starting at index position 0, keap two elements
@@ -74,7 +78,10 @@ console.log(list1);
 //output [ 'baz', 'foo' ]
 console.log(test1);
 //--------------------------------------
-const a = { firstName: 'Badi', lastName: 'Raslan' }
+const a = {
+    firstName: 'Badi',
+    lastName: 'Raslan'
+}
 console.log(a);
 console.log(Object.keys(a));
 console.log('Name\n' + Object.values(a));
@@ -96,10 +103,10 @@ console.log(elements.join('-'));
 // expected output: "Fire-Wind-Rain"
 //------------------------------------
 var a1 = ['Wind', 'Rain', 'Fire'];
-a1.join();      // 'Wind,Rain,Fire'
-a1.join(', ');  // 'Wind, Rain, Fire'
+a1.join(); // 'Wind,Rain,Fire'
+a1.join(', '); // 'Wind, Rain, Fire'
 a1.join(' + '); // 'Wind + Rain + Fire'
-a1.join('');    // 'WindRainFire'
+a1.join(''); // 'WindRainFire'
 console.log(a1);
 //-----------------------------------
 var array1 = ['a', 'b', 'c'];
@@ -145,12 +152,3 @@ console.log(animals2.lastIndexOf('Tiger'));
 // start from index 2
 console.log(animals2.indexOf('Tiger', 2));
 // expected output: 4
-
-
-
-
-
-
-
-
-

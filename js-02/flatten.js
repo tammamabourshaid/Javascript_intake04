@@ -21,9 +21,10 @@ const flatten = function flatten(list) {
     const f = list.reduce(function (a, b) {
         return a.concat(Array.isArray(b) ? flatten(b) : b);
     }, []);
-
-
+    
     return f
 };
 
-module.exports = { flatten };
+module.exports = {
+    flatten
+};
