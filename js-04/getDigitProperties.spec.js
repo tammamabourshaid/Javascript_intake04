@@ -4,7 +4,7 @@ describe(`
 getDigitProperties should return the name of an object's
 properties that contain at one digit.
 Use regular expressions`, () => {
-  it("should work with a normal use case", () => {
+  it("should work with number2 normal use case", () => {
     expect(getDigitProperties({ foo1: "abcd", t3st: "test", name: 1 })).toEqual(
       ["foo1", "t3st"]
     );

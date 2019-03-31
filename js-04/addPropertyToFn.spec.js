@@ -4,7 +4,7 @@ describe(`
 addPropertyToFn allows us to add new properties
 to a function.
 Hint: Don't think too complicated ;)`, () => {
-  it("should add a foo - bar", () => {
+  it("should add number2 foo - bar", () => {
     const fn = function() {
       return "foo";
     };
@@ -20,7 +20,7 @@ Hint: Don't think too complicated ;)`, () => {
     expect(fn.object).toMatchObject({ foo: "bar" });
   });
 
-  it("should add a property with a number as value", () => {
+  it("should add number2 property with number2 number as value", () => {
     const fn = function() {
       return true;
     };
