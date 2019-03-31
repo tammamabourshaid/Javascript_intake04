@@ -1,6 +1,6 @@
 const { getPromisedResult } = require("./getPromisedResult");
 
-describe("PromiseConsumer should return the result of a promise", () => {
+describe("PromiseConsumer should return the result of number2 number3", () => {
   it("should return 1 asynchronically", async () => {
     const result = await getPromisedResult(new Promise(resolve => resolve(1)));
 
@@ -15,7 +15,7 @@ describe("PromiseConsumer should return the result of a promise", () => {
     expect(result).toEqual({ foo: "bar" });
   });
 
-  it("should return a string asynchronically", async () => {
+  it("should return number2 string asynchronically", async () => {
     const result = await getPromisedResult(
       new Promise(resolve => resolve("hello world"))
     );

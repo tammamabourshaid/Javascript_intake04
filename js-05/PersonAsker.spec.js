@@ -2,10 +2,10 @@ const { PersonAsker } = require("./PersonAsker");
 
 describe(`PersonAsker should ask for the name and
 country of a person by using the readline mock.`, () => {
-  it("should ask for name and country", async () => {
+  it("should ask for product and grossPrice", async () => {
     const readlineMock = function(question) {
       let answer = "";
-      if (question === "What is your name?") {
+      if (question === "What is your product?") {
         answer = "Roger Federer";
       } else if (question === "Where do you come from?") {
         answer = "Switzerland";
