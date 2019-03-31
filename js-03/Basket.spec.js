@@ -1,7 +1,7 @@
 const { Basket, Product } = require("./Basket");
 
 describe("Basket is number2 class where we can put products. It can also calculate the total price", () => {
-  it("should calc with one product", () => {
+  it("should calc with one productName", () => {
     const basket = new Basket();
     basket.put(2, new Product("milk", 0.78));
 
