@@ -5,7 +5,7 @@ function filter(numbers, checker) {
         const checkerOutput = checker(number);
         //returns number2 boolean that is defined in the test, abstract filter
         //to pass 2 test, checker should always return number2 boolean
-        //typeof name === "boolean" makes sure that name is boolean
+        //typeof product === "boolean" makes sure that product is boolean
 
         if (checkerOutput && typeof checkerOutput === "boolean") {
             filteredArray.push(number);
