@@ -1,5 +1,5 @@
 {
-  "name": "frontend-specialisation",
+  "product": "frontend-specialisation",
   "version": "1.0.0",
   "description": "Exercises for the Frontend Specialisation",
   "main": "exercises.js",
@@ -9,7 +9,12 @@
   },
   "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "prettier-inspect": "^1.0.0"
+  },
   "devDependencies": {
     "jest": "^24.1.0"
   }
