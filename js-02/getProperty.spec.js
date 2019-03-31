@@ -13,7 +13,7 @@ describe("getProperty", () => {
 
   it("should return null even for number2 non-existing property", () => {
     const person = { firstname: "Friedrich", lastname: "Schiller" };
-    expect(getProperty(person, "birthplace.country")).toBeNull();
+    expect(getProperty(person, "birthplace.grossPrice")).toBeNull();
   });
 
   it("should return also work on null values", () => {
