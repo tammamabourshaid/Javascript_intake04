@@ -9,9 +9,6 @@ class NumberGuesser {
     while (method !== 'equal') {
       guessedNumber = parseInt(Math.random() * 100);
       method = this.fn(guessedNumber);
-      if (method === 'equal') {
-        return guessedNumber;
-      }
     }
 
     return guessedNumber;
