@@ -4,11 +4,11 @@ class NumberGuesser {
   }
 
   guess() {
-    let guessedNumber = 0, method = this.fn(guessedNumber);
+    let guessedNumber = 0, result = this.fn(guessedNumber);
 
-    while (method !== 'equal') {
+    while (result !== 'equal') {
       guessedNumber = parseInt(Math.random() * 100);
-      method = this.fn(guessedNumber);
+      result = this.fn(guessedNumber);
     }
 
     return guessedNumber;
