@@ -8,20 +8,20 @@ class NumberGuesser {
 
     guess() {
 
-        let guessedNumber = Math.floor(this.min + (Math.random() * (this.max - this.min)));
+        let guess = Math.floor(Math.random() * 100);
 
-        if (this.fn(guessedNumber) === "above") {
-            this.max = guessedNumber - 1;
-            guessedNumber = Math.floor(this.min + (Math.random() * (this.max - this.min)));
+        if (this.fn(guess) === "above") {
+            this.max = guess - 1;
+            guess = Math.floor(Math.random() * (this.max - this.min));
             return this.guess();
         }
-        else if (this.fn(guessedNumber) === "below") {
-            this.min = guessedNumber + 1;
-            guessedNumber = Math.floor(this.min + (Math.random() * (this.max - this.min)));
+        else if (this.fn(guess) === "below") {
+            this.min = guess + 1;
+            guess = Math.floor(this.min + (Math.random() * (this.max - this.min)));
             return this.guess();
         }
         else {
-            return guessedNumber;
+            return guess;
         }
     }
 }
