@@ -1,17 +1,21 @@
+
 class Observable {
     constructor() {
-        this.array = [];
+        this.value = [];
     }
-    add(number) {
-        this.array.push(number);
+    add(value) {
+        this.value.push(value);
+
     }
 
-    subscribe(fn) {
-        let sub = this.array.map(num => fn(num));
-        this.array = [];
-        return sub;
+    subscribe(mapFn) {
+        const mappedValues = this.value.map(mapFn);
+        this.value = [];
+        return mappedValues;
     }
-
 }
+
+
+
 
 module.exports = { Observable };

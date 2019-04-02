@@ -7,7 +7,7 @@
     "test": "jest",
     "testLesson01": "jest js-01"
   },
-  "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
+    "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
   "dependencies": {
     "dateformat": "^3.0.3"

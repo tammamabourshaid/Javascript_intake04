@@ -1,22 +1,24 @@
 
-function chess (height, width) {
 
-    for (let i = 1; i <= height; i++) {
-      let separator = '';
-      let row = '';
-  
-      for (let j = 1; j <= width; j++) {
-        separator += '--';
-        row+= '|';
+let one = ["R", "K", "B", "Q", "K", "B", "K", "R"];
+let two = ["P", "P", "P", "P", "P", "P", "P", "P"];
+let three = [" ", " ", " ", " ", " ", " ", " ", " "];
+let four = [" ", " ", " ", " ", " ", " ", " ", " "];
+let five = [" ", " ", " ", " ", " ", " ", " ", " "];
+let six = [" ", " ", " ", " ", " ", " ", " ", " "];
+let seven = ["P", "P", "P", "P", "P", "P", "P", "P"];
+let eight = ["R", "K", "B", "Q", "K", "B", "K", "R"];
 
-        row+= ' ';
-      }
-      separator += '-';
-      row+= '|';
-      console.log(separator);
-      console.log(row);
-    }
-  }
-  
+let chessBoard = [one, two, three, four, five, six, seven, eight];
 
-  chess(3,5);
+chessBoard.forEach(element => {
+  let empty = "";
+  element.forEach(elementInside => {
+    empty += "|" + elementInside;
+
+  });
+  empty += "|";
+  console.log(empty);
+
+  console.log("-----------------");
+});

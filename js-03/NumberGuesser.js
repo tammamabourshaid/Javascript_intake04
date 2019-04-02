@@ -4,7 +4,7 @@ class NumberGuesser {
         this.number = number;
         this.tries = 0;
     }
-    
+
     guess(number) {
         this.tries++;
         if (number > this.number) {

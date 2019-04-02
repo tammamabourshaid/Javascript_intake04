@@ -1,27 +1,31 @@
+// function objectToArray(object) {
+//       const arrays = [];
+//       Object.keys(object).forEach(key => {
+//         const value = object[key];
+//        console.log(value);
 
-function objectToArray(object) {
+//         if (typeof value === "object") {
+//           objectToArray(value).map(subArray => arrays.push([key, ...subArray]));
+//         } else {
+//           arrays.push([key, value]);
+//         }
+//       });
+//       console.log(arrays);
+//       return arrays;
+//     }
 
-   let newArray = [];
-
-
-   for (let key in object) {
-
-         newArray.push([key, object[key]]);
-  
-  
-
-
-   }
-
-   console.log(newArray);
-
-   return newArray;
+function objectToArray(object){
+      const arrays = [];
+      Object.keys(object).forEach(key => {
+            const element = object[key];
+            if(typeof element === "object"){
+                  objectToArray(element).map(subArray => 
+                        arrays.push([key, ...subArray]));
+            }else{
+                  arrays.push([key, element]);
+            }
+      })
+      return arrays;
 }
-
-
-
-
-
-
 
 module.exports = { objectToArray };
