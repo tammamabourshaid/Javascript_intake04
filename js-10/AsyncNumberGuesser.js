@@ -7,49 +7,53 @@ class AsyncNumberGuesser {
     }
 
 
-    guess() {
-
+    async guess() {
         let guess = Math.floor(Math.random() * 100);
-        return new Promise(resolve => {
-            this.fn(guess).then(result => {
-                if (result === "above") {
-                    this.max = guess - 1;
-                    guess = Math.floor(Math.random() * (this.max - this.min));
-                    resolve(this.guess());
-                }
-                else if (result === "below") {
-                    this.min = guess + 1;
-                    guess = Math.floor(this.min + (Math.random() * (this.max - this.min)));
-                    resolve(this.guess());
-                }
-                else {
-                    resolve(guess);
-                }
-            });
-        });
+        let result = await this.fn(guess);
+
+        if (result === "above") {
+            this.max = guess - 1;
+            guess = Math.floor(Math.random() * (this.max - this.min));
+            return this.guess();
+        }
+        else if (result === "below") {
+            this.min = guess + 1;
+            guess = Math.floor(this.min + (Math.random() * (this.max - this.min)));
+            return this.guess();
+        }
+        else {
+            return guess;
+        }
     }
 }
 
 
-// working solution with async/await
+//working solution with Promise
 
-// async guess() {
+// guess() {
+
 //     let guess = Math.floor(Math.random() * 100);
-//     let result = await this.fn(guess);
 
-//     if (result === "above") {
-//         this.max = guess - 1;
-//         guess = Math.floor(Math.random() * (this.max - this.min));
-//         return this.guess();
-//     }
-//     else if (result === "below") {
-//         this.min = guess + 1;
-//         guess = Math.floor(this.min + (Math.random() * (this.max - this.min)));
-//         return this.guess();
-//     }
-//     else {
-//         return guess;
-//     }
+//     return new Promise(resolve => {
+//         this.fn(guess).then(result => {
+//             if (result === "above") {
+//                 this.max = guess - 1;
+//                 guess = Math.floor(Math.random() * (this.max - this.min));
+//                 resolve(this.guess());
+//             }
+//             else if (result === "below") {
+//                 this.min = guess + 1;
+//                 guess = Math.floor(this.min + (Math.random() * (this.max - this.min)));
+//                 resolve(this.guess());
+//             }
+//             else {
+//                 resolve(guess);
+//             }
+//         });
+//     });
 // }
+
+
+
 
 module.exports = { AsyncNumberGuesser }
