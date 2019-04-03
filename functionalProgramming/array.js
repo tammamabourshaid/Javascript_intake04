@@ -50,17 +50,17 @@ console.log('Min&Max---- "\n' + minMax);
 //----------------------------
 //Reading from many arrays as object
 const flights = [
-    ["Dmm", 'JED', '7:30am'],
-    ["RYD", 'JED', '8:30pm'],
-    ["MEK", 'JED', '10:30am']
+    ["Dmm", 'JED', '7:30am', 1936],
+    ["RYD", 'JED', '8:30pm',1948],
+    ["MEK", 'JED', '10:30am',1958]
 ];
 flights.forEach(function (flight, i) {
 
-    [fromCity, toCity, Time] = flight
+    [fromCity, toCity, Time, flightNo] = flight
     //flights.shift(0); 
     // flights.pop(1);
 
-    console.log(`${i + 1}.A flight from ${fromCity} to ${toCity} at${Time} `);
+    console.log(`${i + 1}.A flight from ${fromCity} to ${toCity} at${Time} flightNo ${flightNo} `);
 });
 const flights2 = flights.splice(0, 2)
 // Starting at index position 0, remove two elements
@@ -91,7 +91,9 @@ console.log(Object.entries(a));
 //---------------------
 var array1 = ['a', 'b', 'c'];
 var iterator1 = array1.entries();
-array1.forEach(e => (console.log(iterator1.next().value)));
+console.log(array1.entries());
+
+//array1.forEach(e => (console.log(iterator1.next().value)));
 
 //-------------------------
 var elements = ['Fire', 'Wind', 'Rain'];
