@@ -19,14 +19,4 @@ const getDepth = function(object, currentDepth) {
   }
 };
 
-const europe = {
-  austria: {
-    population: 8773000,
-    capital: "Vienna",
-    size: 83879
-  }
-};
-
-console.log(getPropertiesDepth(europe));
-
 module.exports = { getPropertiesDepth };
