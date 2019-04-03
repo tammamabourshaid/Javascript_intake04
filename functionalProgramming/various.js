@@ -5,7 +5,8 @@ console.log(word);
 var str = "This string is kind of spacey.";
 str = str.replace(" ", "_");
 console.log(str); //"This_string is kind of spacey."
-var i = 0, strLength = str.length;
+var i = 0,
+  strLength = str.length;
 
 for (i; i < strLength; i++) {
 
@@ -67,7 +68,7 @@ var myString4 = 'ca,bc,a,bca,bca,bc';
 var splits4 = myString4.split(['a', 'b']);
 // myString.split(['a','b']) ist dasselbe wie myString.split(String(['a','b']))
 
-console.log(splits4);  //["c", "c,", "c", "c", "c"]
+console.log(splits4); //["c", "c,", "c", "c", "c"]
 //----------------------------
 var str2 = 'asdfghjkl';
 var strReverse = str2.split('').reverse(); // 'lkjhgfdsa'
@@ -358,7 +359,7 @@ function scaryClown() {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve('🤡');
-    },100 );
+    }, 100);
   });
 }
 
@@ -377,27 +378,28 @@ function who() {
   });
 }
 
- function what() {
+function what() {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve('lurks');
     }, 300);
   });
 }
+
 function where() {
-return new Promise(resolve => {
-  setTimeout(() => {
-    resolve('in the shadows');
-  }, 500);
-});
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 500);
+  });
 }
 
 async function msg() {
-const a = await who();
-const b = await what();
-const c = await where();
+  const a = await who();
+  const b = await what();
+  const c = await where();
 
-console.log(`${ a } ${ b } ${ c }`);
+  console.log(`${ a } ${ b } ${ c }`);
 }
 
 msg(); // 🤡 lurks in the shadows <-- after 1 second
@@ -422,7 +424,7 @@ async function msg() {
   try {
     const msg = await yayOrNay();
     console.log(msg);
-  } catch(err) {
+  } catch (err) {
     console.log(err);
   }
 }
@@ -437,4 +439,3 @@ msg(); // Nope 😠
 msg(); // Nope 😠
 msg(); // Nope 😠
 msg(); // Lucky!!
-

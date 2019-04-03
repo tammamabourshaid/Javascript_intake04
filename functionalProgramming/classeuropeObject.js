@@ -24,11 +24,11 @@ const europe = {
 }
 
 
- function writeData() {
+function writeData() {
     fs.writeFile("europe.json", JSON.stringify(europe), () =>
-            console.log("file europe has been written")
-            
-        )
- }
-    
- writeData(europe);
+        console.log("file europe has been written")
+
+    )
+}
+
+writeData(europe);

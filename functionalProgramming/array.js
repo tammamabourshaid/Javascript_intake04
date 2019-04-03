@@ -25,7 +25,7 @@ console.log(textSplit);
 //-------------------------------------------
 //Array spread-------------merg two arrays in one,it is like concat.
 const spreadableOne = [1, 2, 3, 4];
-const spreadableTwo = [5, 6,[4,3] ,7, 8];
+const spreadableTwo = [5, 6, [4, 3], 7, 8];
 const combined1 = spreadableOne.concat(spreadableTwo)
 const combined = [...spreadableOne, ...spreadableTwo];
 console.log("Array spread :-----" + "\n" + combined + '\n' + "concat :\n" + combined1);

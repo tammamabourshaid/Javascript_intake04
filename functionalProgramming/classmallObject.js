@@ -76,15 +76,10 @@
 
      }
  }
- 
+
  function writeToFile(filename, data) {
-    return new Promise(resolve => fs.writeFile(filename, data, resolve))
+     return new Promise(resolve => fs.writeFile(filename, data, resolve))
  }
- 
-writeToFile("mall.json", JSON.stringify(mall));
-console.log("file mall has been written");
 
-
-
-    
-     
+ writeToFile("mall.json", JSON.stringify(mall));
+ console.log("file mall has been written");

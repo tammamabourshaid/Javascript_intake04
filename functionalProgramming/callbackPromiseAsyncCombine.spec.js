@@ -1,10 +1,12 @@
-const {combinerAsync} = require("./callbackPromiseAsyncCombine.js");
+const {
+      combinerAsync
+} = require("./callbackPromiseAsyncCombine.js");
 
 describe("calculat numbers with combine callback,promise and async;)", () => {
-      it("should add a 1", async() => {
+      it("should add a 1", async () => {
 
-const sum = await combinerAsync();
-expect(sum).toBe(3);
+            const sum = await combinerAsync();
+            expect(sum).toBe(3);
       })
 })
 

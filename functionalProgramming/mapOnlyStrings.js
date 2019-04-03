@@ -5,12 +5,11 @@ function mapOnlyStrings(array) {
     console.log(array2.charAt(0));
 
     //return array;
-}
-; // Returns "f"
+}; // Returns "f"
 let map = new Map();
 
-map.set('1', 'str1');   // a string key
-map.set(1, 'num1');     // a numeric key
+map.set('1', 'str1'); // a string key
+map.set(1, 'num1'); // a numeric key
 map.set(true, 'bool1'); // a boolean key
 
 // remember the regular Object? it would convert keys to string
@@ -22,7 +21,7 @@ alert(map.get('1')); // 'str1'
 const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog']
 
 // Secret Message.
-const secretMessage = animals.map((animal) => animal[0])//.join('')
+const secretMessage = animals.map((animal) => animal[0]) //.join('')
 
 // Log.
 console.log(secretMessage) // "HelloWorld"

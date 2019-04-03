@@ -14,15 +14,15 @@ fs.readFile("mall.json", (err, content) => {
         billa
     } = JSON.parse(content);
     console.log((billa));
-   
-   
-    billa.billa1.product4 = {//add
+
+
+    billa.billa1.product4 = { //add
         Apple: "apple",
         amount: 5,
         price: 3
     }
     console.log(billa);
-    Object.entries(delete billa.billa1.product3);//delete
+    Object.entries(delete billa.billa1.product3); //delete
     console.log(billa);
 
 

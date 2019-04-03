@@ -1,4 +1,7 @@
-const vienna = { population: 1868000, size: 414.87 };
+const vienna = {
+    population: 1868000,
+    size: 414.87
+};
 const array1 = [1, 2, 3, 4]
 const array2 = [5, [6],
     [
@@ -30,5 +33,5 @@ const flatten = function flatten(list) {
 console.log(flatten(combine1))
 
 const _ = require("lodash");
- _.toPairs(vienna).sort();//sort((a,b)=>b[1] - a[1]);
+_.toPairs(vienna).sort(); //sort((a,b)=>b[1] - a[1]);
 console.log(_.toPairs(vienna).sort());

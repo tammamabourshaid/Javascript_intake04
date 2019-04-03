@@ -1,4 +1,3 @@
-
 const readline = require("readline");
 const number = readline.createInterface({
 
@@ -6,7 +5,7 @@ const number = readline.createInterface({
   output: process.stdout,
 
 });
-const ask = (callback)=> 
+const ask = (callback) =>
   new Promise(resolve =>
     number.question(callback, answer => resolve(answer)));
 
@@ -54,10 +53,3 @@ addNumbersToSum();
 // };
 
 // talkToPerson();
-
-
-
-
-
-
-

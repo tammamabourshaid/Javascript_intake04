@@ -1,4 +1,4 @@
-class ObjectAndArray{
+class ObjectAndArray {
 
     constructor() {
 
@@ -22,8 +22,8 @@ class ObjectAndArray{
     getTotal() {
 
     }
-    display(){
-        
+    display() {
+
     }
 
 }

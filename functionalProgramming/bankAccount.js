@@ -43,6 +43,3 @@ bankAccount.setAccountNumber("Account Number: " + 456789321)
 console.log(bankAccount.getAccountNumber());
 console.log("Name: " + bankAccount.getName());
 console.log("Available balance:" + bankAccount.getBalance() + " Euro");
-
-
-    

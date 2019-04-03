@@ -1,4 +1,6 @@
-const { classObject } = require("../functionalProgramming/classObject");
+const {
+    classObject
+} = require("../functionalProgramming/classObject");
 
 const moles = {
     hover: {

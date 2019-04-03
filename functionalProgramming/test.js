@@ -43,6 +43,5 @@ fs.readFile("mall.json", (err, content) => {
   console.log((hover));
 
   const ba = calculateBasket((hover.hover1));
-console.log((ba));
+  console.log((ba));
 });
-

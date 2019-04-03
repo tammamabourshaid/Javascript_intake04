@@ -10,8 +10,8 @@ class BasketAsync {
     }
 }
 const basket = new BasketAsync();
-basket.put("apple",  () =>{
-    basket.put("orange",  () =>{
+basket.put("apple", () => {
+    basket.put("orange", () => {
         console.log(basket.products);
     });
     console.log(basket.products);
@@ -39,5 +39,3 @@ basket.put("apple",  () =>{
 //                 });
 //             });
 //         });
-
-        

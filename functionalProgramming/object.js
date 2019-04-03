@@ -233,7 +233,7 @@ var US_COIN_VALUE = {
 };
 console.log(Object.freeze(US_COIN_VALUE));
 //---------------------
-var merge = function() {
+var merge = function () {
     var obj = {},
         i = 0,
         il = arguments.length,
@@ -280,4 +280,3 @@ console.log(merge(t1, t2, t3));
 console.log(merge({}, t1, {
     key1: 1
 }));
-
