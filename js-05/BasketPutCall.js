@@ -2,7 +2,7 @@ class Basket{
     constructor(){
         this.products=[];
     }
-    async put(product,callback) {
+     put(product,callback) {
 
         setTimeout(()=> {this.products.push(product);
          callback();

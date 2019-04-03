@@ -8,21 +8,23 @@ class BasketWithPromiseStore{
     };
     }
 
-    put(productName,amount,fn){
-        const name = this.capitalise(productName)
-        this.promiseStore.getProductForName(name,productName)
-        const net=product.grossPrice/(1+product.vat);
-        this.total.net += net * amount;
-        this.total.gross += product.grossPrice * amount;
-       fn(product);
+    put(name,amount,callback){
+        const productName=name.charAt(0).toUpperCase()+name.slice(1);
+        this.promiseStore.getProductForName(productName,product=>{
+        callback(product);
+            const net= product.grossPrice/(1+produc.vat);
+            this.total.net += net * amount;
+            this.total.gross += product.grossPrice * amount;
+            
+
+        });
     }
    
     getTotal(){
         return this.total;
 
     }
-    capitalise(word){
-        return `${word[0].toUpperCase()}${word.slice(1)}`;
-    }    
+    
+     
 }
 module.exports={ BasketWithPromiseStore };
