@@ -13,7 +13,7 @@ const getDepth = function(object, currentDepth) {
     for (let property in object) {
       depths.push(getDepth(object[property], currentDepth + 1));
     }
-    return depths.length;
+    return Math.max(...depths);
   } else {
     return currentDepth;
   }
