@@ -14,14 +14,14 @@
 //       return arrays;
 //     }
 
-function objectToArray(object){
+function objectToArray(object) {
       const arrays = [];
       Object.keys(object).forEach(key => {
             const element = object[key];
-            if(typeof element === "object"){
-                  objectToArray(element).map(subArray => 
+            if (typeof element === "object") {
+                  objectToArray(element).map(subArray =>
                         arrays.push([key, ...subArray]));
-            }else{
+            } else {
                   arrays.push([key, element]);
             }
       })
