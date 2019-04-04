@@ -33,7 +33,7 @@ const billaCo = {
 }
 
 fs.writeFile("billa.json", JSON.stringify(billaCo), () =>
-  console.log("file 1 has been written")
+  console.log("file billa has been written")
 );
 
 

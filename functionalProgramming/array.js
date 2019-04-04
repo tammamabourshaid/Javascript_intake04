@@ -51,8 +51,8 @@ console.log('Min&Max---- "\n' + minMax);
 //Reading from many arrays as object
 const flights = [
     ["Dmm", 'JED', '7:30am', 1936],
-    ["RYD", 'JED', '8:30pm',1948],
-    ["MEK", 'JED', '10:30am',1958]
+    ["RYD", 'JED', '8:30pm', 1948],
+    ["MEK", 'JED', '10:30am', 1958]
 ];
 flights.forEach(function (flight, i) {
 
@@ -154,3 +154,23 @@ console.log(animals2.lastIndexOf('Tiger'));
 // start from index 2
 console.log(animals2.indexOf('Tiger', 2));
 // expected output: 4
+
+
+var results = [
+    ["Luke May", 43, "male", "married"],
+    ["Sarah Saw", 54, "female", "single"],
+    ["Magac gose", 51, "male", "single"]
+];
+var keys = ["name", "age", "gender", "status"];
+
+var objectArray = []; // your result
+
+results.forEach(r => {
+    let obj = {};
+    r.forEach((r, i) => {
+        obj[keys[i]] = r;
+    });
+    objectArray.push(obj);
+});
+
+console.log(objectArray);

@@ -15,21 +15,13 @@ for (var i = 0; i < size; i++) {
 
 console.log(result);
 
-var results = [
-    ["Luke May", 43, "male", "married"],
-    ["Sarah Saw", 54, "female", "single"],
-    ["Magac gose", 51, "male", "single"]
-  ];
-  var keys = ["name", "age", "gender", "status"];
+
+  var str = ["|_A|,","◻B◼A","|_|_B|_|_|_|_|_|"];
+var str2= ["A"]
+for (var i = 0; i < 8; i++) {
   
-  var objectArray = []; // your result
   
-  results.forEach(r => {
-    let obj = {};
-    r.forEach((r, i) => {
-  obj[keys[i]] = r;
-    });
-    objectArray.push(obj);
-  });
-  
-  console.log(objectArray);
+}
+
+str = str ;console.log(str);
+  str2=str2;console.log(str2)
