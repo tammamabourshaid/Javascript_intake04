@@ -15,13 +15,14 @@ console.log(otherAnswer);
 //---------------------------------
 //Array.from()---devied word to strings.
 const newArray = Array.from('hello');
-console.log("Array.from:-----" + "\n" + newArray);
+console.log("Array.from:-----" + "\n" + newArray+newArray.length);
 // newArray will be equal to ['h', 'e', 'l', 'l', 'o']
 //-----------------------------------
 //devied sentence or word to strings.
 const text = "I am Developpr";
 const textSplit = text.split("");
-console.log(textSplit);
+console.log(textSplit+textSplit.length);
+//[ 'I', ' ', 'a', 'm', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'p', 'r' ]
 //-------------------------------------------
 //Array spread-------------merg two arrays in one,it is like concat.
 const spreadableOne = [1, 2, 3, 4];

@@ -19,6 +19,7 @@ const getDepth = function(object,currentDepth) {
   }
 };
 
+<<<<<<< HEAD:js-10/getPropertiesDepth.js
 const europe = {
   austria: {
     population: 8773000,
@@ -29,4 +30,6 @@ const europe = {
 
 console.log(getPropertiesDepth(europe));
 
+=======
+>>>>>>> 991b82c9720ccb3cc7b8ba0c623e342ec120908a:js-10/_getPropertiesDepth.js
 module.exports = { getPropertiesDepth };
