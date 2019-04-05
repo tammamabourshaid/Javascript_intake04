@@ -4,6 +4,6 @@ function getProperty(object, name) {
         return null;
     }
     return object[name];
-gi
+
 }
 module.exports = { getProperty };

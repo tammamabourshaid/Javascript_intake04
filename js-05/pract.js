@@ -23,10 +23,10 @@ const nested = {
 // fs.writeFile("europe.json", JSON.stringify(nested), () =>
 //   console.log("file has been written")
 // );
-// fs.readFile("europe.json", (err, content) => {
-//   const { europe } = JSON.parse(content);
-//   console.log(Object.keys(europe));
-// });
+fs.readFile("europe.json", (err, content) => {
+  const { europe } = JSON.parse(content);
+  console.log(Object.keys(europe));
+});
 
 const fs=require("fs");
 function writeToFile(filename,data){

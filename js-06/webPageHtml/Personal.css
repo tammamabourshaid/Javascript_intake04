@@ -1,0 +1,38 @@
+body{
+    background-color:cadetblue;
+}
+h1{
+    color: blue
+}
+p.first-text{
+    background-color:yellowgreen;
+    color : black
+
+}
+p.customised-color{
+    color: #9be689;
+}
+p.centered{
+    text-align: center;
+}
+p.formatted{
+    font-size: 30px;
+}
+p.formatted span:first-child{
+    font-weight: bold;
+
+}
+p.formatted span:last-child{
+    font-style: italic;
+}
+img{
+    border: 3px green;
+}
+a{
+    color: white;
+    font-size: 50px;
+}
+a:hover{
+    background: greenyellow;
+    color:  black;
+}
