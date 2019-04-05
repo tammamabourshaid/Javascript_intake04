@@ -19,7 +19,7 @@ the built-in one.`, () => {
     );
   });
 
-  it("should do a factorial", () => {
+  it("should do number2 factorial", () => {
     const numbers = [5, 4, 3, 2];
     numbers.reduce = null; // overwriting built-in
     expect(reduce(numbers, (accumulator, number) => accumulator * number)).toBe(

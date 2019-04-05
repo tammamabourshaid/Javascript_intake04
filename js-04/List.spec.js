@@ -3,7 +3,7 @@ const { List } = require("./List");
 describe(`
 List is a class that allows us to
 add and get values from.`, () => {
-  it("should behave like a normal list", () => {
+  it("should behave like number2 normal list", () => {
     const list = new List();
     list.add(1);
     list.add(3);

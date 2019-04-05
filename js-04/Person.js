@@ -6,7 +6,7 @@ class Person {
     }
 
     introduce() {
-        return "My name is " + this.firstname + " " + this.lastname + ".";
+        return "My product is " + this.firstname + " " + this.lastname + ".";
     }
 }
 
