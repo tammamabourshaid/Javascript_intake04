@@ -1,7 +1,7 @@
-const sortBy = (object, function) => {
+const sortBy = (object, fn) => {
     const sorted = object.sort((value1, value2) => {
-        if (function(value1) > function(value2)) { return 1; }
-        else if (function(value2) > function(value1)) { return -1; }
+        if (fn(value1) > fn(value2)) { return 1; }
+        else if (fn(value2) > fn(value1)) { return -1; }
         return 0;
     });
 
