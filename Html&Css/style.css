@@ -53,3 +53,8 @@ h2 {
 p {
     font-size: 20px;
 }
+
+.ui-icon-video{
+    height: 50%;
+    width:50%;
+}
