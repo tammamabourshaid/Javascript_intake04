@@ -1,6 +1,8 @@
 class classObject {
+    
     constructor(object) {
         this.object = object;
+        
     }
 
     put(property) {

@@ -10,12 +10,19 @@
                  code: 2541,
 
              },
-             product2: {
+             Milch: {
                  product: 'Milch',
                  amount: 3,
                  price: 1.2,
                  code: 2542,
-             }
+             },
+             product3: {
+                product: 'Apple',
+                amount: 2,
+                price: 1.5,
+                code: 2541,
+
+            },
          },
          hover2: {
              product1: {
@@ -25,7 +32,7 @@
                  code: 2543,
              },
              product2: {
-                 product: 'bread',
+                 product: 'Apple',
                  amount: 3,
                  price: 1.2,
                  code: 2544,
@@ -47,7 +54,7 @@
                  code: 2546,
              },
              product2: {
-                 product: 'salad',
+                 product: 'Apple',
                  amount: 3,
                  price: 0.9,
                  code: 2547,
@@ -66,6 +73,13 @@
                  price: 1.5,
                  code: 2549,
              },
+             product3: {
+                product: 'Apple',
+                amount: 2,
+                price: 1.5,
+                code: 2541,
+
+            },
              product2: {
                  product: 'chokolate',
                  amount: 3,

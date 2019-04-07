@@ -11,27 +11,21 @@ const wordStats = {
 
     },
     occurrencesList: (text) => {
- text=text.toLowerCase()
+        text = text.toLowerCase()
+        //  const text1=[]
+        //text=text1.push(text)
+        //console.log(text)
 
-// const text1=[]
-// text1.put(text)
-//console.log(text)
 
- 
-         return text.split(" ").reduce((prev, curr) => {
-           
+        return text.split(" ").reduce((prev, curr) => {
+
             prev[curr] = prev[curr] ? prev[[curr]] + 1 : 1;
-            
+
             return prev;
-            
+
         }, {});
-      }
-      
-
-//         });
-//     }
- }
-
+    }
+}
 
 module.exports = {
     wordStats

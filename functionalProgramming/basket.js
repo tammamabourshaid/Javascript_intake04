@@ -73,7 +73,7 @@ items[4] = {
 };
 items[5] = {
   prop1: "Tour Poster",
-  prop2: 9
+  prop2: 10
 };
 
 var sum = null; // Place to store the total cost
