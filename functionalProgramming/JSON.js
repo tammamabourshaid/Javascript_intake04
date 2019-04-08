@@ -30,6 +30,15 @@
    } = JSON.parse(content);
    console.log(Object.entries(europe));
  });
+
+
+function writeToFile(filename, data) {
+  return new Promise(resolve => fs.writeFile(filename, data, resolve));
+}
+//-------------------
+
+
+
  //-------------------------
 
  const array = ['Hello', 'World']

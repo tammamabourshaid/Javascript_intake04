@@ -1,6 +1,8 @@
 const fs = require("fs"); // https://nodejs.org/api/fs.html
 
-const {calculateBasket} = require("../js-02/calculateBasket");
+const {
+    calculateBasket
+} = require("../js-02/calculateBasket");
 
 fs.readFile("mall.json", (err, content) => {
 
@@ -43,7 +45,7 @@ fs.readFile("mall.json", (err, content) => {
     const calculateTotalForApple = () => {
         // const shopData = JSON.parse(content);
 
-        
+
         for (const shopName in mall) {
             const shopValue = mall[shopName]
             const applePurchases = [];
@@ -51,20 +53,20 @@ fs.readFile("mall.json", (err, content) => {
                 const basketValue = shopValue[basketName];
                 for (const productName in basketValue) {
                     const productValue = basketValue[productName];
-
                     if (productValue.product === "Apple") {
                         applePurchases.push(productValue);
                         console.log(productValue);
-                        console.log(shopName);
+                        console.log(basketName);
                     }
                 }
-               // console.log(basketName + basketValue);
-}console.log(`total sales for all Apple products in ${shopName}: `);
+                // console.log(basketName + basketValue);
+            }
+            console.log(`total sales for all Apple products in ${shopName}: `);
             const total = calculateBasket(applePurchases)
             // const total = applePurchases
             //     .map(product => product.amount * product.price)
             //     .reduce((a, b) => a + b, 0);
-            
+
         }
     }
     calculateTotalForApple();
