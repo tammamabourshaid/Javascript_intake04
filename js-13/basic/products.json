@@ -1,0 +1,6 @@
+[
+  { "name": "Bread", "grossPrice": 1.21, "vat": 0.1 },
+  { "name": "Keyboard", "grossPrice": 18, "vat": 0.2 },
+  { "name": "Apple", "grossPrice": 0.11, "vat": 0.1 },
+  { "name": "Water", "grossPrice": 0.99, "vat": 0.1 }
+]
