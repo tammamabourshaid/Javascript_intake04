@@ -1,0 +1,188 @@
+body {
+  font-family: "Poppins";
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #59D3FF;
+}
+
+p.firstHead {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.secondHead {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+
+
+p.pr-1 {
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+p.pr-2 {
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.leftside,
+.rightside {
+  display: inline-block;
+  padding: 10px;
+}
+
+.leftside {
+  vertical-align: top;
+  position: fixed;
+  width: 35%;
+  height: calc(100vh - 20px);
+  border-right: 2px solid #59D3FF;
+  max-width: 420px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rightside {
+  position: relative;
+  left: calc(35% + 20px);
+  width: calc(65% - 30px - 40px);
+  padding-right: 0;
+  margin-left: 30px;
+}
+
+section {
+  max-width: 650px;
+  position: relative;
+  margin-top: 50px;
+}
+
+section:before {
+  content: "";
+  width: 40px;
+  display: block;
+  height: 2px;
+  background-color: #59D3FF;
+  position: absolute;
+  left: -40px;
+  top: 16px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 1.4em;
+}
+
+h3+p {
+  margin-top: 0;
+}
+
+.fa-java {
+  font-size: 25px;
+  color: orange
+}
+
+.fa-js {
+  font-size: 25px;
+}
+
+.fa-html5 {
+  font-size: 25px;
+  color: red;
+}
+
+.fa-css3-alt {
+  font-size: 25px;
+  color: green;
+}
+
+.fa-angular {
+  font-size: 25px;
+  color: darkred;
+}
+
+.fa-futbol {
+  font-size: 20px;
+  color: limegreen;
+}
+
+.fa-video {
+  font-size: 15px;
+}
+
+.fa-utensils {
+  color: cornflowerblue;
+  font-size: 20px;
+}
+
+.fa-at {
+  color: blueviolet;
+  font-size: 20px;
+}
+
+.fa-phone {
+  color: lightgreen;
+  font-size: 20px;
+}
+
+.fa-map-marker-alt {
+  color: red;
+  font-size: 20px;
+}
+
+.fa-birthday-cake {
+  color: darkmagenta;
+  font-size: 20px;
+}
+
+.fa-linkedin {
+  color: lightskyblue;
+  font-size: 30px;
+}
+
+.fa-github {
+  font-size: 30px;
+  color: black;
+}
+
+.fa-university {
+  color: burlywood;
+  font-size: 25px;
+}
+
+.fa-pagelines{
+  font-size: 20px;
+  color: green;
+}
+.fa-plane{
+  font-size: 20px;
+}
+.fa-instagram{
+  font-size: 30px;
+  color: #EB2ABC;
+}
+.fa-book-open{
+  color: #FF943E;
+}
+
+.fa-desktop{
+  color: #E8CFAE;
+}
+

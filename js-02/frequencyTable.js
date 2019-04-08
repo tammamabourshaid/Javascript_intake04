@@ -1,8 +1,17 @@
-function getFrequencyTable(array) {
-    array.map(e => e + " :" + e.key);
+function getFrequencyTable(values) {
+    const frequencyTable = {};
+    for (let i = 0; i < values.length; i++) {
+        const value = values[i];
+        if (frequencyTable[value]) {
+            frequencyTable[value]++;
+        } else {
+            frequencyTable[value] = 1;
+        }
+    }
+
+    return frequencyTable;
 }
+
 module.exports = {
     getFrequencyTable
 };
-
-//i have to get how many times an element occured in an araay and print the element with it
