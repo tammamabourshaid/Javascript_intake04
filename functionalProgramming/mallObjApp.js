@@ -43,9 +43,10 @@ fs.readFile("mall.json", (err, content) => {
     const calculateTotalForApple = () => {
         // const shopData = JSON.parse(content);
 
-        const applePurchases = [];
+        
         for (const shopName in mall) {
             const shopValue = mall[shopName]
+            const applePurchases = [];
             for (const basketName in shopValue) {
                 const basketValue = shopValue[basketName];
                 for (const productName in basketValue) {
@@ -54,10 +55,11 @@ fs.readFile("mall.json", (err, content) => {
                     if (productValue.product === "Apple") {
                         applePurchases.push(productValue);
                         console.log(productValue);
+                        console.log(shopName);
                     }
                 }
                // console.log(basketName + basketValue);
-            }console.log(`total sales for all Apple products : `);
+}console.log(`total sales for all Apple products in ${shopName}: `);
             const total = calculateBasket(applePurchases)
             // const total = applePurchases
             //     .map(product => product.amount * product.price)

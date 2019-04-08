@@ -2,15 +2,40 @@ const fs = require("fs")
 
 fs.readFile("employees.json", (err, content) => {
 
-    const employees = JSON.parse(content);
-    console.log(employees);
+    const sections = JSON.parse(content);
     console.log('------------------');
-    employees.forEach(function (employee, i) {
+    sections.forEach(section => {
+        [sectionName, employees] = section;
+       // console.log(section);
 
-        [section, firstName, lastName,bierthday, salary] = employee
+        employees.forEach(function (employee, i) {
 
-        console.log(`${i + 1}-section : ${section}- firstName  :${firstName}- lastName  :${lastName}- bierthday :${bierthday}- salary  :${salary} `);
+            [firstName, lastName, bierthday, salary] = employee
+
+            console.log(`${i + 1}.${sectionName}- firstName  :${firstName}- lastName  :${lastName}- bierthday :${bierthday}- salary  :${salary} `);
+        });
     });
 
-    console.log(employees);
 })
+
+
+
+
+
+
+// const fs = require("fs")
+
+// fs.readFile("employees.json", (err, content) => {
+
+//     const employees = JSON.parse(content);
+//     console.log(employees);
+//     console.log('------------------');
+//     employees.forEach(function (employee, i) {
+
+//         [section, firstName, lastName,bierthday, salary] = employee
+
+//         console.log(`${i + 1}-section : ${section}- firstName  :${firstName}- lastName  :${lastName}- bierthday :${bierthday}- salary  :${salary} `);
+//     });
+
+//     console.log(employees);
+// })

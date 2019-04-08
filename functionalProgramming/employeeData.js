@@ -2,10 +2,10 @@ const fs = require("fs"); // https://nodejs.org/api/fs.html
 
 const employees = [
 
-    ["Section1" ,["Badi", "Raslan", "BirthDay", "7 - 04 - 1967", 'salarry', 2000],
-                 ["Adeeb", "Zidan", "BirthDay", '7 - 04 - 1995', 'salarry', 2500]
+    ["Section1" ,[["Badi", "Raslan",  "7 - 04 - 1967",  2000],
+                 ["Adeeb", "Zidan",  '7 - 04 - 1995',  2500]],
     ],
-    ['Section2', ['Aishana', 'Aishan', 'BirthDay', '7 - 04 - 1985', 'salarry', 3000]],
+    ['Section2', [['Aishana', 'Aishan', '7 - 04 - 1985', 3000]]],
 
 ]
 
