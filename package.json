@@ -10,6 +10,9 @@
   "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "password-validator": "^4.1.1",
     "prettier": "^1.16.4"
   },
   "devDependencies": {
