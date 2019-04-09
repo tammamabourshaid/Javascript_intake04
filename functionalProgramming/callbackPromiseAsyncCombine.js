@@ -44,66 +44,66 @@
   }
   //-----------------------------------------------
 
-  const numberProviderCallback1 = function (callback) {
-      setTimeout(() => callback(2), 950);
-  };
+//   const numberProviderCallback1 = function (callback) {
+//       setTimeout(() => callback(2), 950);
+//   };
 
-  const numberProviderPromise2 = function () {
-      return new Promise(resolve => resolve(3));
-  };
+//   const numberProviderPromise2 = function () {
+//       return new Promise(resolve => resolve(3));
+//   };
 
-  const numberProviderAsync2 = async function () {
-      return await 6;
-  }
+//   const numberProviderAsync2 = async function () {
+//       return await 6;
+//   }
 
-  const sum = function () {
-      return new Promise(resolve => {
-          numberProviderCallback1(async number => {
-              const number1 = await number;
-              const number2 = await numberProviderPromise2();
-              const number3 = await numberProviderAsync2();
-              resolve(number1 + number2 + number3);
-              console.log(`last line of code: ${number1 + number2 + number3}`);
-          });
-      });
-  }
-  sum()
-
-
-  module.exports = {
-      sum
-  }
-
-  //----------------------------------------
-
-  const add = (x, y) => {
-      console.log(x + y);
-
-  }
-  const callbackFn1 = (x, callback) => {
-      setTimeout(() => callback(x, 7), 1000)
-  }
-  callbackFn1(1, add);
+//   const sum = function () {
+//       return new Promise(resolve => {
+//           numberProviderCallback1(async number => {
+//               const number1 = await number;
+//               const number2 = await numberProviderPromise2();
+//               const number3 = await numberProviderAsync2();
+//               resolve(number1 + number2 + number3);
+//               console.log(`last line of code: ${number1 + number2 + number3}`);
+//           });
+//       });
+//   }
+//   sum()
 
 
-  const promiseFn = () => {
-      return new Promise((resolve => {
-          setTimeout(() => {
-              resolve(callbackFn1(2, add), callbackFn1(3, add), callbackFn1(4, add))
-          }, 500)
-      }));
-  };
-  promiseFn()
+//   module.exports = {
+//       sum
+//   }
 
-  const asyncFn = async () => await
-  setTimeout(() => {
-      return new Promise(resolve => {
-          resolve((add(5, 7)))
-      }, 3000)
-  });
+//   //----------------------------------------
 
-  asyncFn();
+//   const add = (x, y) => {
+//       console.log(x + y);
 
-  //------------------------------------------
-  const addNumber = number => new Promise(resolve => resolve(number));
-  addNumber(13).then(v => console.log(v))
+//   }
+//   const callbackFn1 = (x, callback) => {
+//       setTimeout(() => callback(x, 7), 1000)
+//   }
+//   callbackFn1(1, add);
+
+
+//   const promiseFn = () => {
+//       return new Promise((resolve => {
+//           setTimeout(() => {
+//               resolve(callbackFn1(2, add), callbackFn1(3, add), callbackFn1(4, add))
+//           }, 500)
+//       }));
+//   };
+//   promiseFn()
+
+//   const asyncFn = async () => await
+//   setTimeout(() => {
+//       return new Promise(resolve => {
+//           resolve((add(5, 7)))
+//       }, 3000)
+//   });
+
+//   asyncFn();
+
+//   //------------------------------------------
+//   const addNumber = number => new Promise(resolve => resolve(number));
+//   addNumber(13).then(v => console.log(v))
