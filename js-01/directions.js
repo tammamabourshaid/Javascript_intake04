@@ -24,7 +24,7 @@ function shortenDirections(anArray){
     while (x > 0){outputArray.push("EAST"); x--};
     while (x < 0){outputArray.push("WEST"); x++};
     while (y > 0){outputArray.push("NORTH"); y--};
-    while (x < 0){outputArray.push("SOUTH"); y++};
+    while (y < 0){outputArray.push("SOUTH"); y++};
     return outputArray;
   }
   module.exports = {shortenDirections};
