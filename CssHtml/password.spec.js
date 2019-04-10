@@ -1,29 +1,25 @@
 const {
-    password1,
-    password2,
-
+    checkPassword,
+    isLargerThan8,
+    isNumber,
+    isLowerCase,
+    isUpperCase,
+    verification
 } = require("./password");
 
 describe("password exercise", () => {
-    it("Please enter Password", () => expect(password1).toBe(''));
+    it("should give false if the passwords are empty", () => expect(checkPassword("", "")).toBe(false));
 
-    it("Please enter confirm password", () => expect(password2).toBe(''));
+    it("should give true if larger than 8", () => expect(isLargerThan8("".length > 8)).toBe(false));
 
-    it("\nPassword did not match: Please try again...", () => expect(passsword1).toBe(!password2));
+    it("should give true if contain number", () => expect(isNumber(/0-9/)).toBe(true));
 
-    it("Error: Password must contain at least eight characters!", () => expect(password1).toBe(false));
+    it("should give true if contain lowercase", () => expect(isLowerCase("/[a-z]/")).toBe(true));
 
-    it("Error: password must contain at least one number (0-9)!", () =>
-        expect(!ref.test(password1)).toBe(false));
-
-    it("Error: password must contain at least one lowercase letter (a-z)!", () => 
-        expect(!ref.test(password1)).toBe(false));
-
-        it("Error: password must contain at least one uppercase letter (A-Z)!", () =>
-            expect(!ref.test(password1)).toBe(false));
-
-        it("Password Match: Welcome to RaslanDesigners!", () => 
-
-            expect(password1).toBe(true));
-        });
+   it("should give true if contain Upperercase", () =>expect(isUpperCase("/[A-Z]/")).toBe(true));
     
+    it("should give false if not matches all", () => 
+        expect(verification("","")).toBe(false));
+
+    
+});
