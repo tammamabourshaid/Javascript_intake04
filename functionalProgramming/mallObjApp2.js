@@ -7,8 +7,10 @@ const {
 fs.readFile("mall.json", (err, content) => {
 
     const mall = JSON.parse(content);
-    console.log(mall.hover);
-    console.log('------------------');
+    console.log(Object.keys(mall));
+    console.log(`mall------------------+${mall}`);
+
+
 
     mall.billa.billa1.Apple = { //add
         product: "Apple",
