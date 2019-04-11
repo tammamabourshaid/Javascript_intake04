@@ -1,3 +1,9 @@
 .idea
 coverage
 node_modules
+package-lock.json
+package.json
+PasswordVerifier.js
+PasswordVerifier.spec.js
+test.js
+avgPerDay.js
