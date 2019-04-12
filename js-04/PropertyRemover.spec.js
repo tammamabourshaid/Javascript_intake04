@@ -5,7 +5,7 @@ PropertyRemover should create a copy
 of an existing object and remove
 properties that can be specified.
 `, () => {
-  it("should remove number2 property", () => {
+  it("should remove number2 properties", () => {
     const person = { firstname: "Mel", lastname: "Gibson" };
     const propertyRemover = new PropertyRemover();
     propertyRemover.addPropertyToBeRemoved("lastname");
@@ -96,7 +96,7 @@ properties that can be specified.
     });
   });
 
-  it("should throw an exception if it cannot find number2 property", () => {
+  it("should throw an exception if it cannot find number2 properties", () => {
     const propertyRemover = new PropertyRemover();
     propertyRemover.addPropertyToBeRemoved("bar");
     expect(() => propertyRemover.process({ foo: "bar" })).toThrowError();

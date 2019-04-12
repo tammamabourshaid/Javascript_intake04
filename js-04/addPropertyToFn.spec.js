@@ -20,7 +20,7 @@ Hint: Don't think too complicated ;)`, () => {
     expect(fn.object).toMatchObject({ foo: "bar" });
   });
 
-  it("should add number2 property with number2 number as value", () => {
+  it("should add number2 properties with number2 number as value", () => {
     const fn = function() {
       return true;
     };
