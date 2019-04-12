@@ -3,30 +3,28 @@ class PasswordVerifier {
         this.errorCount = 0;
     }
     verify(password) {
-        this.isLargerThan8Chars(password);
-        this.isNotNull(password);
-        this.hasOneLowercaseLetter(password);
-        this.hasOneUppercaseLettter(password);
-        this.hasOneNumber(password);
-
-
-        if (!this.hasOneLowercaseLetter(password)) {
-            return " Password is not OK!";
+       
+        
+        if(!this.isNotNull(password)){
+          
+            return false;
         }
 
-        if (this.isNotNull(password)) {
-            return "Password is ok!"
+        if (!this.hasOneLowercaseLetter(password)) {
+            return false;
         }
 
         if (this.errorCount == 0) {
-            return "password is strong";
+            return true;
         }
 
         if (this.errorCount < 3) {
-            return "password is OK";
+            return true;
         }
-        return "Password is not strong!";
+        return false;
     }
+
+
 
     isLargerThan8Chars(string) {
         if (string.length > 8) {
@@ -74,4 +72,4 @@ class PasswordVerifier {
 
 }
 let userInput = new PasswordVerifier();
-console.log(userInput.verify("11211!"));
+console.log(userInput.verify("eebm"));

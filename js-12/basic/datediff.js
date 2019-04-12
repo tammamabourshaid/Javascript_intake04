@@ -1,9 +1,9 @@
-const _ = require("moment");
+const moment = require("moment");
 
 function datediff(firstDate, secondDate) {
 
-    const first = _(firstDate).format("YYYY-MM-DD");
-    const second = _(secondDate);
+    const first = moment(firstDate).format("YYYY-MM-DD");
+    const second = moment(secondDate);
     let diffrence= second.diff(first,"days")
     return Math.abs(diffrence);
 }
