@@ -6,4 +6,4 @@ package.json
 PasswordVerifier.js
 PasswordVerifier.spec.js
 test.js
-avgPerDay.js
+weeks.js
