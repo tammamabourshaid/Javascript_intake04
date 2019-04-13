@@ -1,8 +1,8 @@
 const { temperatures } = require('../advanced/temperatures'),
-  { getAverageTemperaturePerDay } = require('../advanced/averageTemperaturePerDay');
+  { getAverage } = require('./average');
 
 const avgPerDay = () => {
-  return getAverageTemperaturePerDay(temperatures);
+  return getAverage(temperatures);
 };
 
 module.exports = { avgPerDay };
