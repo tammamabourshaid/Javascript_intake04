@@ -50,7 +50,7 @@ const verification = (password1, password2) => {
     return checkPassword(password1, password2) && isLargerThan8(password1) && isNumber(password1) && isLowerCase(password1) && isUpperCase(password1) ? true : false;
 }
 
-console.log(verification("1234567kL", "1234567kL"))
+console.log(verification("ll2lllllkL", "ll2lllllkL"))
 
 module.exports = {
     checkPassword,

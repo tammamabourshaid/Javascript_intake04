@@ -1,6 +1,6 @@
  const fs = require("fs"); // https://nodejs.org/api/fs.html
 
- const mall = {
+ const mall = [{
      hover: {
          hover1: {
              product1: {
@@ -89,7 +89,7 @@
          }
 
      }
- }
+ }]
 
  function writeToFile(filename, data) {
      return new Promise(resolve => fs.writeFile(filename, data, resolve))

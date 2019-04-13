@@ -1,4 +1,4 @@
-const { groupBy } = require("./groupBy");
+const { groupBy } = require("./groupByA");
 
 describe(`
 groupBy gets passed a group function that it applies

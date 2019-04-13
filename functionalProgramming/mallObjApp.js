@@ -21,8 +21,8 @@ fs.readFile("mall.json", (err, content) => {
     // console.log((billa));
 
     const addProduct = (product) => {
-        mall.billa.billa1.Applef = { //add with same name or other name
-            product: "Applee",
+        mall.billa.billa1.Apple = { //add with same name or other name
+            product: "AppleAdd",
             amount: 5,
             price: 3
         }
@@ -49,7 +49,8 @@ fs.readFile("mall.json", (err, content) => {
         const hover1 = calculateBasket((mall.hover.hover1));
         const hover2 = calculateBasket((mall.hover.hover2));
         const total = hover1 + hover2;
-        console.log("Hover sales: " + total)
+        const roundedTotal=Math.round(total)
+        console.log("Hover sales: " + roundedTotal)
         return total;
     }
 
@@ -69,9 +70,9 @@ fs.readFile("mall.json", (err, content) => {
         console.log(fn1 + fn2)
         return fn1 + fn2;
     }
-
+   
     totalSalesForAllBranches(totalSalesForHover(), totalSalesForBilla())
-
+ console.log('------------------');
 
     const calculateTotalForApple = () => {
 
@@ -89,16 +90,24 @@ fs.readFile("mall.json", (err, content) => {
                     applePurchases.push(productValue);
                     console.log(productValue);
                     console.log(basketName);
-                }
+                    
+                    
+                } 
+                
             }
             console.log(`total sales for all Apple products in ${shopName},branch-----${basketName} `);
-
+           
+            
             const total = calculateBasket(applePurchases)
+            
+            
             // const total = applePurchases
             //     .map(product => product.amount * product.price)
             //     .reduce((a, b) => a + b, 0);
-
+console.log('------------------');
         }
+        
     };
+  
     calculateTotalForApple();
-});
+});  

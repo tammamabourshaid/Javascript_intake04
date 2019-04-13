@@ -9,8 +9,8 @@ const getAverage = (array) => {
    return average;
 }
 
-const array1 = ([2, 3, 4, 5, 6]);
-console.log(getAverage(array1));
+// const array1 = ([2, 3, 4, 5, 6]);
+// console.log(getAverage(array1));
 
 module.exports = { getAverage };
 
