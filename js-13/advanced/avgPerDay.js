@@ -1,5 +1,4 @@
-const { temperatures } = require('../advanced/temperatures'),
-  { getAverage } = require('./average');
+const { temperatures } = require('../advanced/temperatures'), { getAverage } = require('./average');
 
 const avgPerDay = () => getAverage(temperatures);
 
