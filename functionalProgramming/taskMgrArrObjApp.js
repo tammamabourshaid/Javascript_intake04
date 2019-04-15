@@ -2,7 +2,7 @@ const fs = require('fs');
 const groupArray = require('group-array');
 
 
-fs.readFile('Array1.csv', (err, content) => {
+fs.readFile('Array1.json', (err, content) => {
     const Array1 = JSON.parse(content)
     fs.readFile('Array2.json', (err, content) => {
         const Array2 = JSON.parse(content)
@@ -30,6 +30,8 @@ fs.readFile('Array1.csv', (err, content) => {
                 console.log(groupArray(Array3, 'tag'))
 
                 console.log(groupArray(Array4, 'data.year', 'data.tag', 'data.month', 'data.day', 'data.content'));
+const e=Object.values(Array4)
+console.log(e);
 
 
             });
@@ -56,7 +58,7 @@ var data = [
     { type: "grape", color: "red", quantity: 4000 }
   ];
 
-  console.log(groupArray(data, ['color', 'quantity']));
+  console.log(groupArray(data, 'type','color', 'quantity'));
   
   var byType = function(d) {
     return d.type;
@@ -69,6 +71,6 @@ var data = [
   var byQuantity = function(d) {
     return d.quantity;
   };
-  console.log(nest(data, ['color', 'quantity']));
-  console.log(nest(data, [byType, byColor]));
-  console.log(nest(data, [byType, byQuantity]));
+  console.log(nest(data, [ 'quantity','color','type']));
+  
+  console.log(nest(data, [byColor,byType, byQuantity]));

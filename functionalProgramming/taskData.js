@@ -1,24 +1,33 @@
 const fs = require('fs');
-
 const Array1 = [{
         time: '12:00',
-        location: 'mall'
+        location: 'mall',
+        value1:5,
+        value2:2
     },
     {
         time: '9:00',
-        location: 'store'
+        location: 'store',
+        value1:5,
+        value2:3
     },
     {
         time: '9:00',
-        location: 'mall'
+        location: 'mall',
+        value1:5,
+        value2:4
     },
     {
         time: '12:00',
-        location: 'store'
+        location: 'store',
+        value1:5,
+        value2:5
     },
     {
         time: '12:00',
-        location: 'market'
+        location: 'market',
+        value1:5,
+        value2:6
     },
 ];
 
@@ -29,6 +38,7 @@ const Array2 = [{
         Value: 5,
 
     },
+
     {
         Phase: "Phase 1",
         Step: "Step 1",
@@ -124,7 +134,7 @@ var Array4 = [{
             month: 'jan',
             day: '01'
         },
-        content: '...'
+        content: '...task will be provide'
     },
     {
         data: {
@@ -304,7 +314,7 @@ var Array4 = [{
             month: 'feb',
             day: '01'
         },
-        content: '..hjhghghgghg.'
+        content: '...'
     },
     {
         data: {
