@@ -5,12 +5,12 @@ const {
     isLowerCase,
     isUpperCase,
     verification
-} = require("./password");
+} = require("./password3");
 
 describe("password exercise", () => {
     it("should give false if the passwords are empty", () => expect(checkPassword("", "")).toBe(false));
 
-    it("should give true if larger than 8", () => expect(checkPassword("1234567aS", "1234567aS")).toBe(true));
+    it("should give true if larger than 8", () => expect( isLargerThan8("1234567aS", "1234567aS")).toBe(true));
 
     it("should give true if contain number", () => expect(isNumber(1)).toBe(true));
 

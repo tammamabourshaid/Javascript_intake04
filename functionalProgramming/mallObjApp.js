@@ -10,6 +10,10 @@ fs.readFile("mall.json", (err, content) => {
     console.log((mall.hover));
     console.log('------------------');
     console.log(mall.billa);
+const mall1=Object.values(mall)
+console.log('mall1-------');
+console.log(mall1);
+
 
     // const {
     //     hover
