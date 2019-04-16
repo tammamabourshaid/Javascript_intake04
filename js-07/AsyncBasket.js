@@ -3,7 +3,7 @@ class AsyncBasket {
     this.products = [];
   }
 
-  put(product) {
+  put(product) { 
     return new Promise(resolve => setTimeout(() => resolve(this.products.push(product)), 500));
   }
 
