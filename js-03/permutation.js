@@ -13,7 +13,7 @@ const permutate = anyArray => {
     }
   };
 
-  permute(anyArray)
+  permute(anyArray);
 
   return result;
 };
