@@ -4,7 +4,7 @@ class AdderWithPromise {
   add(number) {
     const add = this.numbers.push(number);
 
-    return add;
+    return add; 
   }
 
   sum() {
