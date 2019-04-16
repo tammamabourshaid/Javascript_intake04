@@ -1,12 +1,10 @@
-const moment = require('moment');
+let moment = require('moment');
 
 const datediff = (date1, date2) => {
-  const dateOne = moment(date1).format('YYYY-MM-DD'),
-    dateTwo = moment(date2),
-    difference = dateTwo.diff(dateOne, 'days'),
-    absoluteDifference = Math.abs(difference);
-
-  return absoluteDifference;
+    const firstDate = moment(date1).format('YYYY-MM-DD');
+    const secondDate = moment(date2);
+    let difference = secondDate.diff(firstDate, 'days');
+        return Math.abs(difference);
 };
 
-module.exports = { datediff };
+module.exports = {datediff};
