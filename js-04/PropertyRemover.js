@@ -1,4 +1,5 @@
-const { deleteProperty } = require('../js-04/deleteProperty.js');
+const { deleteProperty } = require('../js-04/deleteProperty.js'),
+  { isPropertyNameIncluded } = require('../js-04/isPropertyNameIncluded.js');
 
 class PropertyRemover {
   constructor() {
@@ -15,15 +16,15 @@ class PropertyRemover {
 
   process(object) {
     const values = Object.values(object),
-      original = this.object = object,
+      originalObject = this.object = object,
       properties = this.array,
-      copyOfObject = Object.assign({}, original);
+      copyOfObject = Object.assign({}, originalObject),
+      propertiesString = properties.toString(),
+      valuesString = values.toString();
+
+    isPropertyNameIncluded(propertiesString, valuesString);
 
     properties.forEach(element => deleteProperty(copyOfObject, element))
-
-    if (properties.toString() === values.toString()) {
-      throw Error();
-    }
 
     return copyOfObject;
   }
