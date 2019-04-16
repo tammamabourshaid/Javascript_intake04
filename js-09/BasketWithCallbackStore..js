@@ -4,7 +4,7 @@ class BasketWithCallbackStore {
     this.total = {
       net: 0.0,
       gross: 0.0
-    };
+    }; 
   }
 
   put(productName, amount) {
