@@ -24,7 +24,7 @@ class PropertyRemover {
 
     isPropertyNameIncluded(propertiesString, valuesString);
 
-    properties.forEach(element => deleteProperty(copyOfObject, element))
+    properties.forEach(element => deleteProperty(copyOfObject, element));
 
     return copyOfObject;
   }
