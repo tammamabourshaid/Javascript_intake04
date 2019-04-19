@@ -3,21 +3,21 @@ const { deleteProperty } = require('../js-04/deleteProperty.js'),
 
 class PropertyRemover {
   constructor() {
-    this.array = []; this.object; this.property;
+    this.properties = []; this.object; this.property;
   }
 
   addPropertyToBeRemoved(property) {
     if (Array.isArray(property)) {
-      this.array = property;
+      this.properties = property;
     }
     const propertyToRemove = this.property = property;
-    this.array.push(propertyToRemove);
+    this.properties.push(propertyToRemove);
   }
 
   process(object) {
     const values = Object.values(object),
       originalObject = this.object = object,
-      properties = this.array,
+      properties = this.properties,
       copyOfObject = Object.assign({}, originalObject),
       propertiesString = properties.toString(),
       valuesString = values.toString();
