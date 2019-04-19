@@ -1,5 +1,4 @@
-const { deleteProperty } = require('../js-04/deleteProperty.js'),
-  { isPropertyNameIncluded } = require('../js-04/isPropertyNameIncluded.js');
+const { deleteProperty } = require('../js-04/deleteProperty.js'), { isPropertyNameIncluded } = require('../js-04/isPropertyNameIncluded.js');
 
 class PropertyRemover {
   constructor() {
