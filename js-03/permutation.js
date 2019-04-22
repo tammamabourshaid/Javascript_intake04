@@ -31,3 +31,4 @@ function permutate(eini) {
 }
 
 module.exports = { permutate };
+

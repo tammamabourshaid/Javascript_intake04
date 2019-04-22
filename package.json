@@ -7,10 +7,20 @@
     "test": "jest",
     "testLesson01": "jest js-01"
   },
-  "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
+  "author": " <Rainer Hahnekamp>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.4"
+  },
   "devDependencies": {
     "jest": "^24.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newaustriancodingschool/i4-frontend-specialisation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/newaustriancodingschool/i4-frontend-specialisation/issues"
+  },
+  "homepage": "https://github.com/newaustriancodingschool/i4-frontend-specialisation#readme"
 }
