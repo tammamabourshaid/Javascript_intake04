@@ -12,3 +12,6 @@ main.js
 styles.css
 .vscode
 launch.json
+tips-&-tricks.html
+tips-&-tricks.js
+easter-special/fetchComposerData.js
