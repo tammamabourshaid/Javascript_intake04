@@ -3,6 +3,7 @@ function checkPassword(form) {
     password2 = form.password2.value;
     alert("Password Match: Welcome to RaslanDesigners!")
     return verification(password1, password2);
+    
 }
 
 const checkPassword1And2 = (password1, password2) => {
@@ -43,9 +44,9 @@ const isUpperCase = password => {
     return regExp.test(password)
 }
 
-const verification = (password1, password2) => {
 
-    return checkPassword1And2(password1, password2) && isLargerThan8(password1) && isNumber(password1) && isLowerCase(password1) && isUpperCase(password1) ? true : verification === false;
+const verification = (password1, password2) => {
+    return checkPassword1And2(password1, password2) && isLargerThan8(password1) && isNumber(password1) && isLowerCase(password1) && isUpperCase(password1) ? true : false;
 
 }
 

@@ -12,10 +12,12 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "express": "^4.16.4",
+    "express-session": "^1.16.1",
     "group-array": "^0.3.3",
     "jshint": "^2.10.2",
     "lodash": "^4.17.11",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "task-manager": "^1.7.0"
   },
   "devDependencies": {
     "jest": "^24.1.0"

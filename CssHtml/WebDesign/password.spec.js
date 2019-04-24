@@ -1,14 +1,14 @@
 const {
-    checkPassword,
-    isLargerThan8,
+    checkPassword1And2,
     isNumber,
+    isLargerThan8,
     isLowerCase,
     isUpperCase,
     verification
-} = require("./password3");
+} = require("./password");
 
 describe("password exercise", () => {
-    it("should give false if the passwords are empty", () => expect(checkPassword("", "")).toBe(false));
+    it("should give false if the passwords are empty", () => expect(checkPassword1And2("", "")).toBe(false));
 
     it("should give true if larger than 8", () => expect( isLargerThan8("1234567aS", "1234567aS")).toBe(true));
 

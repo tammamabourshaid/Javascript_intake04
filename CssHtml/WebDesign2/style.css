@@ -31,8 +31,47 @@ h1 {
 
   color: rgba(213, 225, 235, 0.973);
 }
+div h2 {
+  width: 150px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:100px;}
+  75%  {background-color:green; left:0px; top:100px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
 
 h2 {
+  
   background: rgb(159, 180, 38);
   padding: 0.5em 1em;
   margin: 0;
@@ -55,6 +94,7 @@ h2 {
 /* Standard syntax */
 #div h2 {
   animation-timing-function: linear;
+  
 }
 
 
@@ -209,4 +249,60 @@ side-images2 img {
   flex-direction: column;
   padding: 10px;
   border-radius: 0%;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
+#square{
+  position: relative;
+  left:50px;
+  width: 100px;
+  height: 100px;
+  background:  rgb(251, 255, 0);
+
+ 
+}
+#oval {
+  position: relative;
+  left:50px;
+   width: 200px;
+  height: 100px;
+  background:  blue;
+  border-radius: 100px / 50px;
+}
+#triangle-up {
+  position: relative;
+  left:85px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgb(0, 255, 21);
+}
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }
