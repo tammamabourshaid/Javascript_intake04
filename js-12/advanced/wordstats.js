@@ -1,3 +1,5 @@
+const _ = require("lodash")
+
 const wordStats = {
   countWords: function(text) {
 
@@ -14,20 +16,23 @@ const wordStats = {
 
 },
 occurrencesList: function(text){
-    let wordSplit=text.split(" ");
-    let array=[...wordSplit];
-    let list={term:"" ,count:0}
-    console.log(list);
+    let textLower=text.toLowerCase();
+    let textArray = textLower.split(" ")
     
-    array.forEach(e =>{
-     if(e==="rose".ignoreUppercase||"is"||"a"){
-         list.push([e]);
-     }
-    });
+     let result = [];
+    for (let i = 0; i < 3; i++) {
+        const reg = new RegExp(textArray[i], "g");
+        const termObj = {term: textArray[i], count: textLower.match(reg).length}
+        
     
-    
-    
+        _.orderBy(termObj, (el) => el.term);
+         result.push(termObj);
+   
+        
+    }
+return result;
+
+},
 
 }
-};
 module.exports={wordStats};

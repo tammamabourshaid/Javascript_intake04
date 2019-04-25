@@ -7,8 +7,8 @@ class ReadlineHistory {
     start() {
     return new Promise(resolve =>{
       const recursiveFn=() => {
-       this.fn(function([item]) {
-          if(item !== "Quit"){
+       this.fn(function(item) {
+          if(item !== "quit"){
             this.history.push(item);
             recursiveFn();
           }else{

@@ -6,8 +6,7 @@ function datediff(first, second) {
 
   const result = Math.abs(date1.diff(date2, "days", true));
 
-  //console.log(date2.diff(date1,'days'));
-  //console.log(date2.diff(date2,'hours'));
+  
   if (result < 1) {
     return Math.floor(result);
   }

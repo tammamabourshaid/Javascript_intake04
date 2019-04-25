@@ -1,4 +1,4 @@
-const { avgPerDay } = require("./avgPerDay");
+const { avgPerDay } = require("./avgPerDay.js");
 
 describe(`In file history_export_2019-04-07, you will find a time-based
 series of weather measurements from Vienna.
