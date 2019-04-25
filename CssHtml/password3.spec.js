@@ -5,7 +5,7 @@ const {
     isLowerCase,
     isUpperCase,
     verification
-} = require("./password3");
+} = require("./password2");
 
 describe("password exercise", () => {
     it("should give false if the passwords are empty", () => expect(checkPassword1And2("", "")).toBe(false));
