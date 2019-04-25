@@ -1,4 +1,4 @@
-class NumberGuesser {
+class LimitedNumberGuesser {
 
   constructor(fn) {
     this.fn = fn;
@@ -8,7 +8,6 @@ class NumberGuesser {
     for (let guessedNumber = 0; guessedNumber <= 99; guessedNumber++) {
       const result = this.fn(guessedNumber);
       if (result === "equal") {
-        console.log(guessedNumber);
 
         return guessedNumber;
       }
@@ -16,4 +15,4 @@ class NumberGuesser {
   }
 }
 
-module.exports = { NumberGuesser };
+module.exports = { LimitedNumberGuesser };

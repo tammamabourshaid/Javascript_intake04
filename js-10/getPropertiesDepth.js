@@ -12,7 +12,6 @@ function getDepth(object, currentLevel) {
     if (typeof object === "object") {
         const depths = [];
         Object.keys(object).forEach(property => {
-            console.log(property);
             const depth = getDepth(object[property], currentLevel + 1);
             depths.push(depth);
         });
@@ -23,6 +22,8 @@ function getDepth(object, currentLevel) {
 }
 
 
-getPropertiesDepth(variant);
+
+
+
 
 module.exports = { getPropertiesDepth };

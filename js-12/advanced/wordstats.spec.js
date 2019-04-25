@@ -10,7 +10,7 @@ regular expressions for this exercise.`, () => {
   });
   it("should lookup the occurrences for a particular word", () => {
     const text = "I write this text, where I don't use lower cases for I";
-    expect(wordStats.occurrences("i", text)).toBe(3);
+    expect(wordStats.occurrences("i",text)).toBe(3);
   });
   it("should return a list with all words sorted after their occurrence", () => {
     const text = "Rose is a rose is a rose is a rose";

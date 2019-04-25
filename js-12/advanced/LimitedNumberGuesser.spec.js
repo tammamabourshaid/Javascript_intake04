@@ -1,4 +1,4 @@
-const { LimitedNumberGuesser } = require("./LimitedNumberGuesser");
+const { LimitedNumberGuesser } = require("./LimitedNumberGuesser").default;
 
 describe(`LimitedNumberGuesser should find a number
 from 0 - 99. It gets injected a function that,
