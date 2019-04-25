@@ -1,71 +1,71 @@
-class Basket {
-  constructor() {
-    this.obj = [];
-  }
+// class Basket {
+//   constructor() {
+//     this.obj = [];
+//   }
 
-  //this is with promise only
+//   //this is with promise only
 
   
-  //with promise
-  putPromise(product) {
-    return new Promise(resolve => resolve(product)).then(result => this.obj.push(result));
-  }
+//   //with promise
+//   putPromise(product) {
+//     return new Promise(resolve => resolve(product)).then(result => this.obj.push(result));
+//   }
 
-  //with async 
+//   //with async 
 
-thePutPromise(){
-  return new Promise(resolve=>resolve(product));
-}
+// thePutPromise(){
+//   return new Promise(resolve=>resolve(product));
+// }
 
-  async put(product) {
+//   async put(product) {
 
-    const theAsync = await this.thePutPromise(product);
-    this.obj.push(theAsync);
-    console.log(theAsync);
+//     const theAsync = await this.thePutPromise(product);
+//     this.obj.push(theAsync);
+//     console.log(theAsync);
 
-  }
-}
-
-
-//get Asynchronus
-getPromise() {
-  return new Promise(resolve => resolve(this.obj).then(console.log(this.obj)));
-}
+//   }
+// }
 
 
-//with async await
-
-getPromiseOf(){
-  return new Promise(resolve=>resolve(this.obj));
-}
-async get() {
-  const getAsync = await this.getPromise();
-  console.log(getAsync);
-
-}
+// //get Asynchronus
+// getPromise() {
+//   return new Promise(resolve => resolve(this.obj).then(console.log(this.obj)));
+// }
 
 
+// //with async await
 
-//callbak
-const fs = require('fs');
+// getPromiseOf(){
+//   return new Promise(resolve=>resolve(this.obj));
+// }
+// async get() {
+//   const getAsync = await this.getPromise();
+//   console.log(getAsync);
 
-fs.writeFile("file.txt","hi there", ()=> {
-  fs.readFile("file.txt",(error,data)=> {
-    console.log(data);
-  });
-});
-
-//with promise
-writePromise(){
-  return new Promise(resolve=>resolve(fs.writeFile("file.txt","hi there")).then(fs.readFile("file.txt",(error,data)=>console.log(data))));
-}
+// }
 
 
 
-//async await
+// //callbak
+// const fs = require('fs');
 
-thePromise (){
-  return new Promise(resolve(fs.writeFile("file.txt","hi there ")));
-}
-const readTheThing = await thePromise();
-fs.readFile(readTheThing);
+// fs.writeFile("file.txt","hi there", ()=> {
+//   fs.readFile("file.txt",(error,data)=> {
+//     console.log(data);
+//   });
+// });
+
+// //with promise
+// writePromise(){
+//   return new Promise(resolve=>resolve(fs.writeFile("file.txt","hi there")).then(fs.readFile("file.txt",(error,data)=>console.log(data))));
+// }
+
+
+
+// //async await
+
+// thePromise (){
+//   return new Promise(resolve(fs.writeFile("file.txt","hi there ")));
+// }
+// const readTheThing = await thePromise();
+// fs.readFile(readTheThing);

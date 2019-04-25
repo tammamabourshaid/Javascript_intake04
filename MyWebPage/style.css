@@ -4,16 +4,6 @@ body {
   margin: 0;
   animation: pulse 5s infinite;
  }
- /*
-@keyframes pulse{
-  0%{
-    background-color: rgb(20, 9, 1)
-  }
-  100%{
-    background-color: whitesmoke
-  }
-} */
-
 h1,
 h2,
 h3,

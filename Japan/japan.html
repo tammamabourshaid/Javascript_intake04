@@ -1,66 +1,87 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Japan</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i"
-    rel="stylesheet">
-  <link rel="stylesheet" href="japan.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Document</title>
 </head>
 
 <body>
 
-  <h1> Why you should visit Japan</h1>
-
-  <p>There is nothing quite like traveling, like seeing a new place for the first time or returning to a favorite place.
-    People of all ages, from all countries, travel to foreign places for many different reasons – namely work, family
-    and leisure. Whether by plane, train, ship or automobile, travel is generally a pleasurable experience, at least for
-    the people who can financially afford comfortable and safe methods of travel. But it has more benefits than
-    satisfying one’s need to make money, as well as to see loved ones and enjoy one’s self on vacation. There are other
-    benefits of traveling that many people often overlook.
-
-
-  </p>
-  <img width="500" src="/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/Japan/ce-travel.jpg"
-    alt="Travel picture">
-
-  <h2>It's a modern country</h2>
-  <p> Japan is a perfect mix culture, history and modern comfort. There are skyscrapers, modern restaurants and
-    everything else you
-    can come across in the modern world. But, Japan does have it’s own unique, modern style and can’t be compared with
-    any other
-    modern country.</p>
-  <img width="500" src="/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/Japan/f0pwad_wide-mr.jpg"
-    alt="modern picture">
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
 
 
-  <h2> Nature</h2>
-  <p> Although Japan has big, heavily urbanised cities such as Tokyo, Kyoto and Osaka,
-    there is also a lot of nature to explore. In fact, two thirds of Japan is actually covered by forested mountains and
-    hills!
-    But in Japan you also have waterfalls, volcanoes, mountains and more.</p>
-  <img width="500"
-    src="/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/Japan/Japan_Tokyo_Parks_Flowering_trees_Rivers_Bridges_550548_3840x2400.jpg"
-    alt="nature picture">
-  <h2> Food</h2>
-  <p> in Japan you can find beautiful architecture. Especially the traditional Japanese style is unique and very
-    aesthetically
-    pleasing.
-    You’ll definitely enjoy the castles, temples and shrines.</p>
-  <img width="500" src="/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/Japan/food.jpg" alt="food picture">
-  <h2>Anime land</h2>
-  <p>Over two billion manga, Japanese comic books or graphic novels, are sold in Japan each year.
-    Book your ticket to Japan right now if you’re an anime fan.
-    Japan is the birthplace of anime, manga and video games.
-    Some of the best places to enjoy anime in Japan are the Tokyo Anime Center, Akihabara, J-World Tokyo and Pokémon
-    Mega
-    Center Tokyo.</p>
-  <img width="300"
-    src="/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/Japan/3965f3dc4af179f79e6e5fba3c5ff7b8.jpg"
-    alt="anime picture">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./f0pwad_wide-mr.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Japan is a modern country</h5>
+            Japan is a perfect mix culture, history and modern comfort. There are skyscrapers, modern restaurants and
+            everything else you
+            can come across in the modern world. But, Japan does have it’s own unique, modern style and can’t be
+            compared with
+            any other
+            modern country.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./cheryblossoms.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Nature</h5>
+            <p> Although Japan has big, heavily urbanised cities such as Tokyo, Kyoto and Osaka,
+            there is also a lot of nature to explore. In fact, two thirds of Japan is actually covered by forested
+            mountains and
+            hills!
+            But in Japan you also have waterfalls, volcanoes, mountains and more.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./food.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Food</h5>
+            <p>Japan has more amazing food than only ramen or sushi! For instance, try the Okonomiyaki pancakes, made
+              with cabbage and topped with a variety of options. This can be anything from meat to seafood! Other food
+              to try in Japan are Soba noodles, Yakiniku barbecue, Tempura, Sukiyaki, Yakitori and much, much more…</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

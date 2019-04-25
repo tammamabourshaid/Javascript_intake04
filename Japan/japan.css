@@ -1,4 +1,7 @@
 body{
     font-family: "Poppins";
     background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    
 }
