@@ -1,3 +1,3 @@
-window.render=function(template,node){
-    node.innerHTML = template;
+window.render=function(document){
+    document.getElementsByClassname("container");
 }
