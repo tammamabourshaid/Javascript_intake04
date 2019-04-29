@@ -1,0 +1,7 @@
+const buttonTagsArray = Array.from(document.getElementsByTagName("button"));
+buttonTagsArray.forEach(tag => {
+    tag.addEventListener("click", () => {
+        tag.innerText = tag.className;
+    });
+});
+
