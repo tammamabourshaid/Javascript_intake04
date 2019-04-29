@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Media Queries</title>
+    <style>
+      p.large {
+        display: block;
+      }
+      p.medium,
+      p.small {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        p.large,
+        p.small {
+          display: none;
+        }
+        p.medium {
+          display: block;
+        }
+      }
+      @media (max-width: 400px) {
+        p.small {
+          display: blocK;
+        }
+        p.large,
+        p.medium {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="large">This is a text for large screens</p>
+      <p class="medium">This is a text for medium screens</p>
+      <p class="small">This is a text for small screens</p>
+    </div>
+  </body>
+</html>
