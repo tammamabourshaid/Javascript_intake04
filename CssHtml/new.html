@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Document</title>
+ </head>
+ <body>
+   <h1 id="title">Austrian Rivers</h1>
+   <ul class="list">
+     <li>Donau</li>
+     <li>Salzach</li>
+     <li>Mur</li>
+     <li>Inn</li>
+     <li>Rhein</li>
+     <li>Enns</li>
+     <li>Drau</li>
+   </ul>
+ <script src="01-selectors.js"></script>
+ </body>
+</html>
+console.log(document.getElementById("title"));
+console.log(document.getElementsByTagName("li"));
+console.log(document.getElementsByClassName("list"));
+
+const title = document.getElementById("title");
+console.log(title.innerHTML);
+title.innerHTML = "Rivers of Austria";
+title.style.color = "white";
+title.style.backgroundColor = "royalblue";
+
