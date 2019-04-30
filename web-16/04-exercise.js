@@ -12,6 +12,9 @@ const makeElement = function (object, parent) {
     if (object.src) {
         child.src = object.src;
     }
+    if (object.alt) {
+        child.alt = object.alt;
+    }
     if (object.children && object.children.length > 0) {
         object.children.forEach(grandchild => {
             makeElement(grandchild, child);
