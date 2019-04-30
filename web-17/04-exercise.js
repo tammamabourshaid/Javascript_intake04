@@ -6,4 +6,4 @@ window.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', () => {
     paragraph.innerHTML = `${firstName.value} ${lastName.value}`;
   });
-})
+});
