@@ -1,0 +1,123 @@
+body {
+  text-align: center;
+  color: aliceblue;
+  font-family: helvetica, arial, sans-serif;
+}
+html {
+  background-image: url("bharath-g-s-388435-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+div.image img {
+  margin-top: 80px;
+  width: 458px;
+  height: 621px;
+}
+
+li {
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: hsl(48, 68%, 72%);
+  color: hsl(198, 32%, 39%);
+}
+
+.active {
+  background-color: #385d6d;
+  color: #e8d486;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+div.foo {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 8em;
+  margin: 0.2em;
+  position: relative;
+  color: #385d6d;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before,
+.letter:after {
+  position: absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top: 0;
+  left: 0;
+}
+.letter,
+.letter:before,
+.letter:after {
+  transition: all 0.3s ease-in-out;
+}
+.letter:before {
+  color: #ffffff;
+  text-shadow: -1px 0px 1px rgba(255, 255, 255, 0.8),
+    1px 0px 1px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+.letter:after {
+  color: rgba(0, 0, 0, 0.11);
+  z-index: 2;
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 1deg);
+}
+.letter:hover:before {
+  color: white;
+
+  transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.letter:hover:after {
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg)
+    skew(0deg, 22deg);
+}
+div.social a:hover {
+  filter: blur(2px);
+  transition-duration: 50ms;
+  filter: brightness(90%);
+}
+div.social a {
+  width: 100px;
+  height: 100px;
+}
+div.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
