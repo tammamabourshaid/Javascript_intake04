@@ -1,5 +1,5 @@
 const fs = require("fs");
-const html = fs.readFileSync("./web-17/02-exercise.html", "utf8");
+const html = fs.readFileSync("/Users/ace/Desktop/FrontEnd-js/i4-frontend-specialisation/web-17/02-exercise.html", "utf8");
 
 jest.dontMock("fs");
 
