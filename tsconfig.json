@@ -4,5 +4,5 @@
     "module": "commonjs",
     "strict": true
   },
-  "include": ["web-18/**/*"]
+  "include": ["web-18/*"]
 }
