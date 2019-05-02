@@ -10,7 +10,6 @@
   "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@types/jest": "^24.0.12",
     "@types/lodash": "^4.14.123",
     "@types/node": "^11.12.2",
     "axios": "^0.18.0",
@@ -20,11 +19,12 @@
     "jest-runner-tslint": "^1.0.5",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.12",
     "jest": "^24.7.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.2"
   }
 }
