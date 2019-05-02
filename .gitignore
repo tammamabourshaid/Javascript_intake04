@@ -1,3 +1,4 @@
 .idea
 coverage
 node_modules
+web-18/*.js
