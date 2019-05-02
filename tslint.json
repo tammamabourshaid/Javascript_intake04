@@ -1,0 +1,6 @@
+{
+  "extends": ["tslint-jest"],
+  "rules": {
+    "no-any": true
+  }
+}
