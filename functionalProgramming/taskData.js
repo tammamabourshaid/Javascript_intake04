@@ -2,32 +2,32 @@ const fs = require('fs');
 const Array1 = [{
         time: '12:00',
         location: 'mall',
-        value1:5,
-        value2:2
+        value1: 5,
+        value2: 2
     },
     {
         time: '9:00',
         location: 'store',
-        value1:5,
-        value2:3
+        value1: 5,
+        value2: 3
     },
     {
         time: '9:00',
         location: 'mall',
-        value1:5,
-        value2:4
+        value1: 5,
+        value2: 4
     },
     {
         time: '12:00',
         location: 'store',
-        value1:5,
-        value2:5
+        value1: 5,
+        value2: 5
     },
     {
         time: '12:00',
         location: 'market',
-        value1:5,
-        value2:6
+        value1: 5,
+        value2: 6
     },
 ];
 
@@ -50,13 +50,13 @@ const Array2 = [{
         Phase: "Phase 1",
         Step: "Step 2",
         time: '15:00',
-        
+
     },
     {
         Phase: "Phase 1",
         Step: "Step 2",
-            time: '17:00',
-       
+        time: '17:00',
+
     },
     {
         Phase: "Phase 2",
