@@ -1,4 +1,4 @@
 .idea
 coverage
 node_modules
-.vscode
+web-18/*.js
