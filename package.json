@@ -10,8 +10,10 @@
   "author": "<Rainer Hahnekamp>rainer.hahnekamp@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.7.4",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
     "password-validator": "^4.1.1",
     "prettier": "^1.16.4"
   },
