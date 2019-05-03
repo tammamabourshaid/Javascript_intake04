@@ -5,6 +5,6 @@ const getFrequencyTable = array => {
     frequency = array.reduce(reducer, object);
 
   return frequency;
-}
+};
 
 module.exports = { getFrequencyTable };
